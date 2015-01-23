@@ -1,0 +1,56 @@
+/*Default size (big)*/
+body { 	font-size: 12px; }
+h2 { font-size: 20px; margin: 10px 0 20px; padding: 0 0 0 20px; }
+input, 
+textarea, 
+select { font-size: 20px; padding: 4px 10px; border-radius: 4px; width: 280px; }
+input[type=checkbox]{ width: 20px; }
+input[type=radio]{width: 20px;}
+label { font-size: 20px; height: 28px; padding: 5px 10px 0 0; }
+.terms-field label{ font-size: 11px; padding: 3px 0 0; height: 15px; line-height: 14px; margin: 0 0 5px; width: 530px; }
+label span{ font-size: 12px; }
+select{ width: 300px; padding: 3px 5px 3px 10px; }
+textarea{ height: 80px; }
+.page-title { font-size: 18px; }
+.half-field input{ width: 85px; }
+label[for=card-message]{ height: 77px; }
+#delivery-type > li{ font-size: 20px; }
+.button{ min-width: 185px; padding: 9px 15px; font-size: 20px; }
+div.pages-nav .button{ min-width: 160px; padding: 9px 15px; font-size: 20px; margin: 0 0 0 4px; }
+.half-button{ min-width: 35px; padding: 5px; font-size: 16px; }
+.udBox{ width: 20px; position: absolute; margin: 0 0 0 -18px; }
+.udBox a{ 	height: 15px;	width: 15px; }
+.ui-date-picker{ width: 208px; }
+ul#delivery-content a.deliver-calendar{ height: 40px; width: 40px; }
+#dc-plastic > div#plastic-shipment {display: block;float: left; margin: 0 0 10px;width: 100%;}
+.previewstyle-0 figure#image-wrap.always-visible{height: 180px;}
+.previewstyle-1 figure#image-wrap.always-visible{height: 150px;}
+/*Default size end*/
+
+/*large size (big)*/
+.size-0 { 	font-size: 12px; }
+.size-0 h2 { font-size: 20px; margin: 10px 0 20px; padding: 0 0 0 20px; }
+.size-0 input, 
+.size-0 textarea, 
+.size-0 select { font-size: 20px; padding: 4px 10px; border-radius: 0; width: 280px; }
+.size-0 input[type=radio]{width: 20px;}
+.size-0 input[type=checkbox]{ width: auto; clear: left; padding: 0; height: auto; margin: 1px 5px 0 0;}
+.size-0 .terms-field label{ font-size: 11px; padding: 0; height: 15px; line-height: 14px; margin: 0 0 5px; width: 530px; }
+.size-0 label span{ font-size: 12px; }
+.size-0 select{ width: 300px; padding: 4px 5px 4px 10px; }
+.size-0 textarea{ height: 80px; }
+.size-0 .page-title { font-size: 18px; }
+.size-0 .half-field input{ width: 85px; }
+.size-0 label[for=card-message]{ height: 77px; }
+.size-0 #delivery-type > li{ font-size: 16px; height: 38px;}
+.size-0 #delivery-type > li.dt-active{ height: 39px;}
+.size-0 .button{ min-width: 185px; padding: 9px 15px; font-size: 20px; }
+.size-0 div.pages-nav .button{ min-width: 160px; padding: 9px 15px; font-size: 20px; margin: 0 0 0 4px; }
+.size-0 div.pages-nav .button > span{ width: 145px; }
+.size-0 .half-button{ min-width: 35px; padding: 5px; font-size: 16px; }
+.size-0 .udBox{ width: 20px; position: absolute; margin: 0 0 0 -18px; }
+.size-0 .udBox a{ 	height: 15px;	width: 15px; }
+.size-0 .ui-date-picker{ width: 208px; }
+.size-0 ul#delivery-content a.deliver-calendar{ height: 40px; width: 40px; }
+.size-0.previewstyle-0 figure#image-wrap.always-visible{height: 180px;}
+.size-0.previewstyle-1 figure#image-wrap.always-visible{height: 150px;}

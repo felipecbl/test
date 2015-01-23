@@ -1,0 +1,68 @@
+// 						standart		Cineplex		Fairmont		BP
+$previewstyle			: 0				1				2				3    ; 	
+//cards
+$ps-small-width 		:  56px		 	 56px			200px			200px;
+$ps-small-height 		:  42px		  	 35px			200px			200px;
+$ps-medium-width 		: 200px			197px			200px			200px;
+$ps-medium-height 		:  40px		 	 39px   		200px			200px;
+$ps-medium-padding 		: 110px		 	 84px			200px			200px;
+$ps-photo-width 		: 200px			197px			200px			200px;
+$ps-photo-height 		: 150px			124px   		200px			200px;
+$ps-big-width 			: 590px			571px			200px			200px;
+$ps-big-height	 		: 443px			360px			200px			200px;
+//preview
+$ps-value-margin  		:   0			10px			0				0;
+$ps-value-position 		: absolute		relative		absolute		relative;
+$ps-value-right  		:  60px			auto	     	 15px			auto;
+$ps-value-top  			:  40px			auto		 	 45px			auto;
+
+$ps-message-top			: 310px			auto 			490px 			auto;
+$ps-message-fontsize	:  22px			14px 			 18px 			18px;
+
+
+
+@for $i from 1 through length($previewstyle) {
+
+    .previewstyle-#{nth($previewstyle, $i)} {
+
+		// Small
+		.card-img img{
+			@include width-height(nth($ps-small-width, $i), nth($ps-small-height, $i));
+		}
+    	// Medium
+    	.choose-card{
+			@include width-height(nth($ps-medium-width, $i), nth($ps-medium-height, $i));
+			padding: nth($ps-medium-padding, $i) 0 0;
+    	}
+
+    	#photo-wrap{
+    		height: nth($ps-photo-height, $i)
+    	}
+
+    	//big
+    	#preview-image{
+			@include width-height(nth($ps-big-width, $i), nth($ps-big-height, $i));
+    	}
+
+    	#preview-window{
+
+    		#pw-value {
+    			margin: nth($ps-value-margin, $i);
+    			position: nth($ps-value-position, $i);
+    			right: nth($ps-value-right, $i);
+    			top: nth($ps-value-top, $i);
+    		}
+
+    		#pw-message {
+    			// @include border-box;
+    			// @include fdp;
+    			// padding: 0 15px;
+    			// width: 100%;
+    			// word-wrap: break-word;
+    			// left: auto;    			
+    			font-size: nth($ps-message-fontsize, $i);
+    			top: nth($ps-message-top, $i);
+    		}
+    	}
+    }
+}

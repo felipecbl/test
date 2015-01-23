@@ -1,0 +1,466 @@
+.card-image{
+	display: block;
+	height: 280px;
+	margin: 0 auto;
+	width:  460px;
+
+	@media #{$iPhone-landscape}{
+		width: 400px;
+		height: auto;
+	}
+
+	@media #{$iPhone-portrait}{
+		width: 500px;
+		height: auto;
+	}
+}
+
+.amount{
+	@include border-box;
+	@include txt-shadow;
+	float: left;
+	font-size: 26px;
+	font-weight: 100;
+	line-height: 100%;
+	margin: 0;
+	position: relative;
+	width: 100%;
+
+	@media #{$iPhone-landscape}{
+		font-size: $mobile-font-size + 20;
+		margin: 10px 0 20px;
+	}
+
+	@media #{$iPhone-portrait}{
+		font-size: $mobile-font-size + 20;
+		margin: 10px 0 20px;
+	}
+}
+
+.message{
+	@include border-box;
+	float: left;
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 16px;
+	margin: 10px 0;
+	padding: 0 20px;
+	position: relative;
+	// text-align: justify;
+	width: 100%;
+
+	@media #{$iPhone-landscape}{
+		font-size: $mobile-font-size + 5;
+		line-height: 100%;
+	}
+
+	@media #{$iPhone-portrait}{
+		font-size: $mobile-font-size + 5;
+		line-height: 100%;
+	}
+}
+
+.am-greetings{
+	color: $link-color;
+	margin: 10px 0 35px 0;
+	font-size: 14px;
+
+	@media #{$iPhone-landscape}{
+		font-size: $mobile-font-size;
+		line-height: 100%;
+	}
+
+	@media #{$iPhone-portrait}{
+		font-size: $mobile-font-size;
+		line-height: 100%;
+	}
+}
+
+.how-use{
+	@include border-box;
+	@include fdp;
+	padding: 0 20px 20px;
+	margin: 0 $offset-left-margin 10px;
+	width: $offset-width;
+
+
+	ul{
+		@include fdp;		
+	}
+
+	li{
+		@include fdp;
+		height: 50px;
+		width: 100%;
+		margin: 0;
+		padding: 10px 0;
+
+		@media #{$iPhone-landscape}{
+			height: auto;
+			margin: 10px 0;
+		}
+
+		@media #{$iPhone-portrait}{
+			height: auto;
+			margin: 10px 0;
+		}
+
+		.title-descripton{
+			@include fdp;
+			width: 420px;
+			padding: 5px 0 0;
+
+			@media #{$iPhone-landscape}{
+				// float: left;
+				position: relative;
+				clear: none;
+				display: inline-block;
+				padding: 0;
+				width: 380px;
+			}
+
+			@media #{$iPhone-portrait}{
+				// float: left;
+				clear: none;
+				display: inline-block;
+				position: relative;
+				width: 380px;
+				padding: 0;
+			}
+
+			span{
+
+				@media #{$iPhone-landscape}{
+					font-size: $mobile-font-size - 6;
+					width: 400px;
+					position: relative;
+					display: block;
+					line-height: $mobile-font-size - 6;
+				}
+
+				@media #{$iPhone-portrait}{
+					width: 380px;
+					font-size: $mobile-font-size - 6;
+					position: relative;
+					display: block;
+					line-height: $mobile-font-size - 6;
+				}
+			}
+
+		}
+		.number{
+			@include border-box;
+			@include circle;
+			border: 1px solid #ccc;
+			color: $link-color;
+			float: left;
+			font-size: 20px;
+			font-weight: lighter;
+			height: 36px;
+			line-height: 20px;
+			margin: 5px 12px 0 0 ;
+			padding: 6px 0;
+			position: relative;
+			text-align: center;
+			width:  36px;
+
+			@media #{$iPhone-landscape}{
+				font-size: $mobile-font-size + 24;
+				height: 70px;
+				line-height: $mobile-font-size + 24;
+				padding: 8px 0;
+				width:  70px;
+				margin: 0 22px 0 0;
+			}
+
+			@media #{$iPhone-portrait}{
+				font-size: $mobile-font-size + 24;
+				height: 70px;
+				line-height: $mobile-font-size + 24;
+				padding: 8px 0;
+				width:  70px;
+				margin: 0 22px 0 0;
+			}
+		}
+	}
+}
+
+.actions{
+	@include fdp;
+	display: inline-block;
+	margin: 40px $offset-left-margin;
+	width: $offset-width;
+	text-align: center;
+	// text-align: right;
+
+	@media #{$iPhone-landscape}{
+		@include border-box;
+	}
+
+	@media #{$iPhone-portrait}{
+		@include border-box;
+	}
+}
+
+.terms{
+    @include border-box;
+    border: #dbdbdb 1px solid;
+    border-left: none;
+    border-right: none;
+    display: block;
+    float: left;
+    margin: 5px 0;
+    padding: 15px 32px;
+    position: relative;
+    width: 100%;
+
+    p{
+		font-size: 12px;
+    	margin: 5px 0;
+    	text-align: center;
+
+    	@media #{$iPhone-landscape}{
+    		font-size: $mobile-font-size - 3;
+    	}
+
+    	@media #{$iPhone-portrait}{
+    		font-size: $mobile-font-size - 3;
+    	}
+    }
+}
+
+.reference{
+	@include border-box;
+	@include fdp;
+	font-size: 12px;
+	margin: 5px 0;
+	width: 100%;
+	
+	@media #{$iPhone-landscape}{
+		font-size: $mobile-font-size - 3;
+	}
+
+	@media #{$iPhone-portrait}{
+		font-size: $mobile-font-size - 3;
+	}
+				
+}
+
+#note{
+	@include fdp;
+	width: 100%;
+	font-size: 13px;
+	text-align: center;
+
+	p{
+		text-align: center;
+		line-height: 120%;
+
+		@media #{$iPhone-landscape}{
+			font-size: $mobile-font-size;
+		}
+
+		@media #{$iPhone-portrait}{
+			font-size: $mobile-font-size;
+		}
+	}
+}
+
+#card-numbers{
+	// margin: 0;
+	// width: 100%;
+	@include fdp;
+	color: $link-color;
+	margin: 0 $offset-left-margin 0;
+	text-align: center;
+	width: $offset-width;
+
+	&> div{
+		@include fdp;
+		color: $font-color;
+		font-family: Arial;
+		width: 100%;
+	    font-size: 11px;
+	}
+
+	.card-number{
+		@include border-box;
+		background: none repeat scroll 0 0 #706f73;
+		color: #fff;
+		display: block;
+		float: left;
+		font-family: Arial;
+		font-size: 16px;
+		font-weight: 100;
+		margin: 0;
+		padding: 7px 0;
+		position: relative;
+		width: 100%;
+	}
+
+	span{
+		margin: 0;
+	}
+
+	@media #{$iPhone-landscape}{
+		font-size: $mobile-font-size - 5;
+	}
+
+	@media #{$iPhone-portrait}{
+		font-size: $mobile-font-size - 5;
+	}
+}
+
+.support{
+	@include fdp;
+	width: 100%;
+	font-size: 12px;
+
+	@media #{$iPhone-landscape}{
+		font-size: $mobile-font-size - 8;
+		line-height: 100%;
+	}
+
+	@media #{$iPhone-portrait}{
+		font-size: $mobile-font-size - 8;
+		line-height: 100%;
+	}
+
+	p{
+		width: 100%;
+		margin: 0;
+	}
+}
+
+.logos{
+	@include fdp;
+	width: 100%;
+	margin: 10px auto;
+	height: 50px;
+}
+
+.logo{
+	display: inline-block;
+	// float: right;
+	height: 60px;
+	position: relative;
+	width: 100px;
+	text-align: center;
+
+	&.buyatab{
+		background: url('../images/logo.png') center no-repeat;
+	}
+	&.fourseasons{
+		background: url('../images/fourseasons.png') center no-repeat;
+	}
+}
+
+.logo + .logo{
+	margin: 0 0 0 20px;
+}
+
+.card-options{
+	@include fdp;
+	margin: 0;
+	padding: 10px 0 0;
+	text-align: center;
+	width: 100%;
+
+	ul{
+		display: inline-block;
+
+		li{
+			clear: none;
+			display: inline;
+		}
+	}
+
+	a{
+		@include fdp;
+		margin: 20px 14px;
+		width:  120px;
+
+		@media #{$iPhone-landscape}{
+			width: 80px;
+			margin: 10px 25px;
+		}
+
+		@media #{$iPhone-portrait}{
+			width: 200px;
+			margin: 10px 34px;
+		}
+
+		> .fa-stack{
+			@include fdp;
+			height: auto;
+			margin: auto;
+			width:  100%;
+
+			i{
+				@include border-box;
+				@include circle;
+				@include fdp;
+				border: 1px solid $bt-bg;
+				text-align: center;
+				clear: both;
+				font-size: 30px;
+				margin: 10px 34px 5px;
+				padding: 10px 0 0;
+				height: 50px;
+				width: 50px;
+
+				@media #{$iPhone-landscape}{
+					font-size: 40px;
+					height: 70px;
+					margin: 20px 5px 0;
+					padding: 15px 0 0;
+					width:  70px;
+				}
+
+				@media #{$iPhone-portrait}{
+					font-size: 70px;
+					height: 120px;
+					margin: 20px 40px 0;
+					padding: 22px 0 0;
+					width:  120px;
+				}
+			}
+
+			span{
+				@include fdp;
+				width: 100%;
+				text-align: center;
+				line-height: 100%;
+
+				@media #{$iPhone-landscape}{
+					text-transform: lowercase;
+					font-size: $mobile-font-size - 5;
+
+				}
+
+				@media #{$iPhone-portrait}{
+					// height: 20px;
+					text-transform: lowercase;
+				}
+			}
+		}
+		&:hover{
+			i{
+				@extend .fa-inverse;
+				@include transition(all 0.4s ease 0s);
+				background:$bt-bg;
+			}
+		}
+	}
+}
+
+
+.replay{
+	@include border-box;
+	@include fdp;
+	width: 100%;
+	margin: 10px 0;
+}
+
+
+

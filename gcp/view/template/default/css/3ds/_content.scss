@@ -1,0 +1,14 @@
+.wrap{
+	width: 700px;
+	margin: auto;
+	padding: 20px;
+
+	&:empty{
+		visibility: none;
+	}
+}
+
+.wrap-bg{
+	background: #fff;
+	margin: 20px auto;
+}

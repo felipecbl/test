@@ -1,0 +1,90 @@
+// 						Standard		Cineplex		Fairmont		BP
+$previewstyle			: 0				1				2				3    ; 	
+//cards
+$ps-small-width 		:  56px		 	 56px			 30px			200px;
+$ps-small-height 		:  42px		  	 35px			 45px			200px;
+$ps-medium-width 		: 200px			197px			108px			200px;
+$ps-medium-height 		:  40px		 	 39px   		160px			200px;
+$ps-medium-padding      : 110px          84px             0px           200px;
+$ps-medium-radius 		:  10px		 	 10px			  0px			  0px;
+$ps-photo-span          : block         block           none            block;
+$ps-photo-width 		: 197px			197px			108px			197px;
+$ps-photo-height 		: 124px			124px   		160px			124px;
+$ps-big-width 			: 571px			571px			400px			200px;
+$ps-big-height	 		: 428px			360px			600px			200px;
+//preview
+$ps-preview-width       : 570px         570px           400px           570px;
+$ps-preview-padding     :  10px          10px             0px            10px;
+$ps-value-margin  		:   0			 10px			  0				    0;
+$ps-value-position 		: absolute		relative		absolute		relative;
+$ps-value-right  		:  10px			auto	     	 15px			 auto;
+$ps-value-top           :  35px         auto             45px            auto;
+$ps-value-width         : 160px         100%            120px            auto;
+
+$ps-message-top         : 310px         auto            470px            auto;
+$ps-message-fontsize    :  18px         14px             14px            18px;
+$ps-message-position    : absolute      relative        absolute       absolute;
+$ps-message-padding 	:  15px	       	15px	 	     20px		     15px;
+
+#{$gcp-content}{
+
+    @for $i from 1 through length($previewstyle) {
+
+        &.previewstyle-#{nth($previewstyle, $i)} {
+
+            // Small
+            .card-img img {
+                @include width-height(nth($ps-small-width, $i), nth($ps-small-height, $i));
+            }
+            // Medium
+            .choose-card{
+                @include width-height(nth($ps-medium-width, $i), nth($ps-medium-height, $i));
+                @include rounded(nth($ps-medium-radius, $i));
+                padding: nth($ps-medium-padding, $i) 0 0;
+
+                span{
+                    display: nth($ps-photo-span, $i);
+                }
+            }
+
+            #photo-wrap{
+                @include width-height(nth($ps-photo-width, $i), nth($ps-photo-height, $i));
+                padding: 0;
+            }
+
+            //big
+            #preview-image{
+                @include width-height(nth($ps-big-width, $i), nth($ps-big-height, $i));
+            }
+
+            //preview
+            #preview-window{
+                width: nth($ps-preview-width, $i);
+                padding: nth($ps-preview-padding, $i);
+
+                #pw-value {
+                    margin: nth($ps-value-margin, $i);
+                    position: nth($ps-value-position, $i);
+                    right: nth($ps-value-right, $i);
+                    top: nth($ps-value-top, $i);
+                    width: nth($ps-value-width, $i);
+
+                    &.plastic{
+                        display: none;
+                    }
+                }
+
+                #pw-message {
+                    font-size: nth($ps-message-fontsize, $i);
+                    position: nth($ps-message-position, $i);
+                    top: nth($ps-message-top, $i);
+                    padding: 0 nth($ps-message-padding, $i);
+
+                    &.plastic{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

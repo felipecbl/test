@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Brandon Grotesque Bold';
+  src: url('../fonts/Brandon_bld.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Brandon_bld.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Brandon_bld.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Brandon_bld.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Brandon_bld.svg#41e76bd6e414417d52adb646f262964a') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'Brandon Grotesque Black';
+  src: url('../fonts/Brandon_blk.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Brandon_blk.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Brandon_blk.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Brandon_blk.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Brandon_blk.svg#31abb7704a87130091ce57face358af8') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Brandon Grotesque Light';
+  src: url('../fonts/Brandon_light.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Brandon_light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Brandon_light.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Brandon_light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Brandon_light.svg#354fd4633228a7e3ae69c73de8c58871') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  200;
+}
+
+@font-face {
+  font-family: 'Brandon Grotesque Regular';
+  src: url('../fonts/Brandon_reg.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Brandon_reg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Brandon_reg.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Brandon_reg.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Brandon_reg.svg#50bf5a2005a5412419d6a4b30314e68e') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+

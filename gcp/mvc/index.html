@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>MVC Test</title>
+	
+	<style>
+	body{
+		background: #ebf2fa;
+		font-family: Helvetica;	
+		font-size: 16px;
+		color: #404040;
+	}
+	#buyatabContent{
+		width: 600px;
+		display: block;
+		position: relative;
+		margin: 200px auto;
+		background: #fff;
+		padding: 0;
+	}
+	h1{
+		background: #60ace1;
+		color: #fff;
+		margin: 0;
+		font-style: italic;
+		font-weight: 100;
+		font-size: 18px;
+		padding: 10px 0 5px 40px;
+
+		float: left;
+		display: block;
+		position: relative;
+		width: 100%
+	}
+	.field{
+		float: left;
+		display: block;
+		position: relative;
+		width: 500px;
+		padding: 10px 50px;
+		margin: 20px 0;
+	}
+	label{
+		float: left;
+		display: block;
+		position: relative;
+		width: 150px;
+		padding: 10px 0 0;
+	}
+	.input-wrapp{
+		float: left;
+		display: block;
+		position: relative;
+		width: 350px;
+	}
+	input{
+		float: left;
+		display: block;
+		position: relative;
+		border-radius: 3px;
+		background: #fcfdfe;
+		border: 1px solid #e0e2e4;
+		font-size: 16px;
+		color: #404040;
+		padding: 10px;
+		height: 35px;
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	nav, .response{
+		float: left;
+		display: block;
+		position: relative;
+		margin: 20px 0;
+		width: 500px;
+		padding: 0 50px;
+	}
+	.button{
+		float: right;
+		display: block;
+		position: relative;
+		background: #4e97d6;
+		color: #fff;
+		min-width: 92px;
+		padding: 12px 15px 8px;
+		text-align: center;
+		text-decoration: none;
+		font-size: 14px;
+		font-weight: 100;
+		font-family: Helvetica;
+		border-radius: 3px;
+	}
+	.response{
+		text-align: center;
+	}
+	.success{
+		color: limegreen;
+	}
+	.fail{
+		color: crimson;
+	}
+
+	</style>
+</head>
+<body>
+	<div id="buyatabContent" style='overflow: hidden;'></div>
+	
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/handlebars-1.0.0.beta.6.js"></script>
+	<script type="text/javascript" src="js/templates.js"></script>
+	<script type="text/javascript" src="js/mvc.js"></script>
+	<script>$('#buyatabContent').bTemplate();</script>
+
+</body>
+</html>

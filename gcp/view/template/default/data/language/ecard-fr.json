@@ -1,0 +1,101 @@
+var language = {
+	"card":{
+		"replay": "revoir animation",
+		"barcode_zoom": "Cliquer pour boomer",
+		"card_number": "Numéro e-Carte:"
+	},
+	"instructions":{
+		"title_txt": "Comment utiliser ma Cybercarte?",
+		"title":{
+			"mobile": "Page Web Mobile",
+			"passbook": "Apple Passbook",
+			"print": "Imprimer"
+		},
+		"description":{
+			"mobile": "Créer un raccourci et afficher la page sur mon appareil mobile ou",
+			"passbook": "Afficher via Passbook (voir cette page sur iPhone avec option de téléchargement) ou",
+			"print": "Présenter une version imprimée"
+		},
+		"alert":{
+			"passbook": "{french}To add this card to your Passbook, view this card on your iPhone.",
+		}
+	},
+	"actions":{
+		"label":{
+			"passbook": "Passbook",
+			"bookmark": "Créer un raccourci",
+			"print": "Imprimer"
+		},
+		"description":{
+			"passbook": "Passbook",
+			"bookmark": "Créer un raccourci",
+			"print": "Imprimer"
+		}
+	},
+	"options":{
+		"title": "Autres options",
+		"description":{
+			"reload": "Recharger",
+			"buy_new": "Nouvel Achat",
+			"regift": "Re-diriger",
+			"thank": "Remercier",
+			"animation" : "Faire l'animation"
+		},
+		"label":{
+			"reload": "Recharger",
+			"buy_new": "Nouvel achat",
+			"regift": "Re-diriger",
+			"thank": "Remercier",
+			"animation" : "Faire l'animation"
+		},
+		"link":{
+			"download": {
+				"default": "",
+				"apple": "", 
+				"android": "",
+				"blackberry": "",
+				"windows": ""
+			},
+			"reload": "Recharger",
+			"buy_new": "Nouvel Achat",
+			"regift": "Re-diriger",
+			"thank": "Remercier",
+			"animation" : "Faire l'animation"
+		}
+	},
+	"support": {
+		"label": "Support",
+		"link": "http://gcp2.vm/gcp/ecard.html",
+		"description": "Conditions d’utilisation: Les Cartes Cadeaux ne peuvent être remboursées. Vous devez être en possession de la Carte Cadeau si elle est utilisée comme moyen de paiement. Pour vous informer des autres conditions, veuillez visiter <a href='http://www.buyatab.com/gcp/view/documentation/terms_fr.html' title='BUYATAB.com'> &nbsp;Buyatab.com. </a>"
+	},
+	"form":{
+		"title":{
+			"thank":"Email de remerciement",
+			"regift": "Re-diriger"
+		},
+		"description":{
+			"thank":"Envoyer un email de remerciement à l’expéditeur de la carte.",
+			"regift": "Envoyer cette carte cadeau à un autre destinataire."
+		},
+		"label":{
+			"subject": "Sujet",
+			"message": "Message",
+			"name": "Nom",
+			"email": "Email",
+			"your_email": "Votre adresse email"
+
+		},
+		"placeholder":{
+			"subject": "Merci",
+			"message": "Votre message ici",
+			"name": "Nom destinataire",
+			"email": "destinataire@email.com",
+			"your_email": "monadresse@email.com"
+
+		},
+		"buttons":{
+			"ok": "Ok",
+			"cancel": "Annuler"
+		}
+	}
+}

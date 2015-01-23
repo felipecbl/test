@@ -1,0 +1,86 @@
+<div id="wrapper" class='receipt'>
+	<header>
+		<hgroup>
+			<h1>{{{ MerchantName }}}</h1>
+			<h2>Merci d'avoir acheté une carte-cadeau!</h2>
+		</hgroup>
+			
+	</header>
+							
+	<div id="message">
+		<p>
+			<span class="bold"></span> Votre numéro de commande est <span class="bold">{{{ OrderNumber }}}</span>. Votre transaction est en cours de traitement par notre système, et quand elle sera complétée :  
+		</p>
+		<div class="action">
+		</br>
+			1. Un reçu sera envoyé à <span class="bold">{{{ PurchaserName }}}</span>  {{{ PurchaserEmail }}}.
+		</div>
+		</br>
+		<div class="action">
+			
+			{{#if_multi Cards.length}}
+				<span>2. Les carte-cadeaux avec le mode d'emploi sera envoyé à: </span> 
+			{{ else}}
+				<span>2. La carte-cadeau avec le mode d'emploi sera envoyé à: </span>
+			{{/if_multi}}
+			
+			{{#each Cards}}
+			<p class="name-address">
+					{{#if_eq DeliveryType "plastic"}}
+					<span class="bold">{{{ RecipientName }}} </span>
+					{{#if ShippingAddress }}
+						à {{{ ShippingAddress }}} 
+					{{/if}}
+					{{#if DeliveryDate }}
+					sur le {{{ DeliveryDate }}}
+					
+					{{/if}}
+				{{/if_eq}}
+				{{#if_eq DeliveryType "email"}}
+					<span class="bold">{{{ RecipientName }}} </span>
+					{{#if ShippingAddress }}
+						à {{{ ShippingAddress }}} 
+					{{/if}}
+					{{#if DeliveryDate }}
+					sur le {{{ DeliveryDate }}}
+					
+					{{/if}}
+				{{/if_eq}}
+				{{#if_eq DeliveryType "sms"}}
+					<span class="bold">{{{ RecipientName }}} </span>
+					sera recevoir un sms
+					{{#if DeliveryDate }}
+					sur le {{{ DeliveryDate }}}
+					
+					{{/if}}
+				{{/if_eq}}
+				{{#if_eq DeliveryType "print"}}
+					<span class="bold">{{{ ../../PurchaserName }}} </span>
+					à {{{ ../../PurchaserEmail }}} 
+
+					{{#if DeliveryDate }}
+					sur le {{{ DeliveryDate }}}
+					{{/if}}
+				{{/if_eq}}
+
+			</p>	
+			{{/each}}
+		</div>
+		
+	</div>
+
+	<footer>
+		<div id='sub-footer'>
+			<p>
+				Si vous avez des questions ou si  vous avez besoin d'aide, veuillez envoyer un courriel à {{{ SupportEmail }}} ou appelez-nous au {{{ SupportPhone }}}.
+			</p>
+		</div>
+		
+		<div class="pages-nav">
+			<a href="javascript:window.print()" class='button continue-button no-icon'>
+				<span>Imprimer</span>
+			</a>
+		</div>
+	</footer>
+</div>
+

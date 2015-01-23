@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<!-- <meta name="viewport" content="width=device-width"> -->
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0, width=device-width" />
+	<title>Buyatab Gift Card</title>
+	<link rel="stylesheet" type="text/css" href="view/template/default/css/style.css" id='default-style'>
+	<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="view/template/default/css/ie.css">
+	<![endif]-->
+</head>
+<body class='register'>
+	<div id="buyatabContent" style='overflow: hidden;'></div>
+	<noscript>
+		<div id="noscript">
+			<p>
+				Please <a href="https://support.microsoft.com/gp/howtoscript">enable JavaScript</a> in your browser.<br>
+				S'il vous pla&Icirc;t  <a href="https://support.microsoft.com/gp/howtoscript"> activer JavaScript</a> dans votre navigateur.
+			</p>
+			<p>
+				Customer support: 1-888-782-8980 <br>
+				Service client&egrave;le: 1-888-782-8980
+			</p>
+		</div>
+	</noscript>
+	<script type="text/javascript" src="view/js/json2.js"></script>
+	<script type="text/javascript" src="view/js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="view/js/jquery-ui.js"></script>
+
+	<!-- <script type="text/javascript" src="xxx/view/js/buyatabTemp.jquery.js?v=1.09.30"></script> -->
+	<script type="text/javascript" src="view/js/register.js"></script>
+	<script>
+	var rbuyatab = $('#buyatabContent').bRegister( {productId: getParam( 'pid' ), merchantId: getParam( 'id' ) } );
+	if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		$('body').addClass('ui-mobile');
+	}
+	</script>
+</body>
+</html>

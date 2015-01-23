@@ -1,0 +1,76 @@
+#{$gcp-content}{
+	float: left;
+	margin: 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+#preview-window-bg, #confirmation-window-bg, .full-bg {
+	// background: url("../images/obg.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: $bg-transparent;
+	cursor: pointer;
+	display: none;
+	float: left;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: $z6;
+}
+
+#wrapper {
+	margin: 0 auto;
+	overflow: hidden;
+	padding: $wrapper-padding;
+	position: relative;
+	text-align: left;
+	width: $wrapper-width - ($wrapper-padding * 2);
+
+	&.with-cart{
+		width: $wrapper-with-cart;
+
+		#pages-wrapper{
+			width:$wrapper-with-cart - $cart-width - $cart-margin;
+		}
+	}
+
+	&.no-cart{
+		
+		#pages-wrapper{
+			width: 100%;
+		}
+
+		#cart-embed{
+			display: none;
+		}
+	}
+
+	#pages-wrapper{
+		@include border-box;
+		@include fdp;
+		@include margin-padding(0, 0 30px);
+		border: 1px solid #ddd;
+	}
+}
+
+#content{
+	@include fdp;
+	margin: 0;
+	width: 100%;
+
+	#cart-embed{
+
+		&.active{
+			@include border-box;
+			display: block;
+			padding: 20px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: $cart-width;
+			margin: 0 0 0 $cart-margin;
+			z-index: $z3;
+		}
+	}
+}
+

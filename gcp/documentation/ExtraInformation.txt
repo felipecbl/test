@@ -1,0 +1,24 @@
+﻿======================
+WEB CONFIG 
+======================
+
+<system.webServer>
+    <staticContent>
+        <mimeMap fileExtension=".json" mimeType="application/json" />
+        <mimeMap fileExtension=".handlebars" mimeType="text/plain" />
+    </staticContent>
+</system.webServer>
+
+
+<!--================================= GCP KEYS =============================================-->
+      <!--TEST KEYS : If a value is set to true, skips that section-->
+      <add key="CreditcardTestMode" value="false"/>      <!--Indicates whether to use test credentials for the cc processor or not-->
+      <add key="SkipValidation" value="false"/>      <!--Skip the initial validation step-->
+      <add key="SkipRA" value="false"/>      <!--Skip the risk analysis-->
+      <add key="SkipCreditcard" value="false"/>      <!--Skip the credit card processing. I.E. No Pre-auth or completion-->
+      <add key="SkipCardGeneration" value="false"/>      <!--Skip the gift card number generation-->
+      <add key="SkipEmail" value="false"/>      <!--Skip the sending of emails-->
+      <add key="SkipDatabase" value="false"/>      <!--Skip all database insertion-->
+      <add key="SkipDelivery" value="false"/>      <!--Skip all card delivery-->
+      <add key="CreditcardAlwaysSuccess" value="true"/>   <!--Regardless of the response from the credit card processing, force success-->
+      <add key="ForceHeldTransaction" value="false"/>    <!--Regardless of risk analysis values, force a held transaction to occur-->

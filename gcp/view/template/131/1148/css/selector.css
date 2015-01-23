@@ -1,0 +1,158 @@
+div#ulWrapper{
+	background: transparent;
+    height: 150px;
+    left: 0;
+    padding: 20px 40px;
+    position: absolute;
+    top: 0;
+    width: 510px;
+    z-index: 999;
+	display: none;
+}
+
+ul.image-selector {
+	background: transparent;
+    height: 150px;
+    left: 40px;
+    list-style: none outside none;
+    margin: 0;
+    top: 0;
+    width: 440px;
+    position: relative;
+}
+ul.image-selector li {
+	height: 150px;
+	width: 200px;
+	text-align: center;
+	cursor: pointer;
+}
+ul.image-selector li.roundabout-in-focus {
+	cursor: pointer;
+	height: auto !important;
+	width: auto !important;
+}
+ul.image-selector li img {
+	width: 100%;
+	/* display: block;
+	-webkit-box-shadow:  00px 0px 5px 1px #666;       
+	box-shadow:  00px 0px 5px 1px #666;
+	cursor: pointer;
+	border-radius: 5px; */
+}
+
+#carbonads-container .carbonad {
+	margin: 0 auto;
+}
+/* img{
+} */
+
+#image-wrap .prev, #image-wrap .next {
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    /*top: 80px;*/
+    bottom: 60px;
+    z-index: 99999;
+}
+#image-wrap .prev{
+	background-position: -15px -490px;
+	left: 0;
+}
+#image-wrap .next {
+	background-position: -15px -450px;
+	right: 0;
+}
+#image-wrap .prev:active{
+	background-position: -16px -490px;
+	left: 0;
+}
+#image-wrap .next:active{
+	background-position: -14px -450px;
+	right: 0;
+}
+.always-visible{
+	display: block;
+}
+figure#image-wrap.always-visible{
+	float: left;
+	display: block;
+	position: relative;
+	width: 100%;
+}
+figure#image-wrap.always-visible div#ulWrapper{
+	padding: 20px 40px 10px;
+}
+.always-visible div#ulWrapper{
+	display: block;
+}
+div#card-selector .button{
+	float: left;
+}
+
+
+/*New swiper*/
+.ui-mobile #image-wrap{
+    float: left;
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.ui-mobile #ulWrapper {
+    height: auto;
+    display: block;
+    float: left;
+    padding: 0;
+    position: relative;
+}
+.ui-mobile #image-wrap .prev, .ui-mobile #image-wrap .next {
+    bottom: auto;
+    top: 50%;
+    margin: -15px 0 0;
+}
+.swiper-container{
+    float: left;
+    display: block;
+    position: relative;
+    width: 100% !important;
+    padding: 20px 0 !important;
+}
+.swiper-container .swiper-slide{
+    float: left;
+    text-align: center;
+    height: auto !important;
+}
+.swiper-container .swiper-slide img{
+    height: auto;
+    width:  auto;
+    max-width: 80%;
+}
+#image-wrap .pagination {
+    position: relative;
+    left: 0;
+    text-align: center;
+    bottom: 5px;
+    width: 100%;
+}
+#image-wrap .swiper-pagination-switch {
+    -moz-border-radius: 10px;
+    -moz-box-shadow: 0px 1px 2px #E0E2E4 inset;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -webkit-box-shadow: 0px 1px 2px #E0E2E4 inset;
+    background: #E0E2E4;
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px #E0E2E4 inset;
+    cursor: pointer;
+    display: inline-block;
+    height: 10px;
+    margin: 0 3px;
+    width: 10px;
+}
+#image-wrap .swiper-active-switch {
+    background: #999;
+}
+
+

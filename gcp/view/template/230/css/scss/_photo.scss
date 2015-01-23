@@ -1,0 +1,101 @@
+
+/*
+*************************************************************************************
+*************************************************************************************
+*************************************************************************************
+                                    Photo card
+*************************************************************************************
+*************************************************************************************
+*************************************************************************************
+*/
+
+#photo-tools {
+  float: left;
+  display: block;
+  position: relative;
+  width: 300px;
+  > div {
+    clear: both;
+  }
+}
+
+h2.photo-title {
+  margin: 0;
+  padding: 0;
+}
+
+#photo-tools .photo-bt {
+  float: right;
+  margin: 10px 0 0 10px;
+  min-width: 20px !important;
+  width: 59px;
+  padding: 3px;
+  &:last-of-type {
+    margin: 10px 0 0;
+  }
+  span {
+    font-size: 12px;
+    height: 15px;
+    padding: 29px 3px 0 0 !important;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.photo-bt {
+  &[data-action="save"] span {
+    background-position: 0 -766px;
+  }
+  &[data-action="reset"] span {
+    background-position: 0 -726px;
+  }
+  &[data-action="fit"] span {
+    background-position: 0 -686px;
+  }
+  &[data-action="zoom"] span {
+    background-position: 0 -646px;
+  }
+}
+
+#photo-slider {
+  border-radius: 10px;
+  height: 7px;
+  border: 1px solid #e4e4e4;
+  background: url(../images/slider-bg2.png) no-repeat right, url(../images/slider-bg.png) repeat-x;
+  margin: 0 0 6px;
+  .ui-slider-range {
+    background: #f8f8f8;
+    height: 7px;
+    border: 1px solid #e4e4e4;
+  }
+  .ui-slider-handle {
+    background: url(../images/slider-handler.png) no-repeat center;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 2px 0 2px 0 #999999;
+    height: 20px;
+    top: -7px;
+    width: 20px;
+  }
+}
+
+#photo-wrap img {
+  position: absolute !important;
+  -webkit-transition: width .25s, top .25s, left .25s, bottom .25s, right .25s;
+  -moz-transition: width .25s, top .25s, left .25s, bottom .25s, right .25s;
+  -ms-transition: width .25s, top .25s, left .25s, bottom .25s, right .25s;
+  -o-transition: width .25s, top .25s, left .25s, bottom .25s, right .25s;
+  transition: width .25s, top .25s, left .25s, bottom .25s, right .25s;
+}
+
+#photo-in {
+  float: left;
+  display: block;
+  position: relative;
+  height: 100px;
+  width: 200px;
+  overflow: hidden;
+}
+
+#plastic-shipment > select#existing-address {
+  margin: 0 0 0 275px;
+}

@@ -1,0 +1,40 @@
+.ui-datepicker{
+	z-index: $z4 !important;
+}
+
+.ui-spinner{
+	// @include rounded;
+	border: none;
+	background: none;
+
+	input{
+		@include border-box;
+		background-color: $bg-color;
+		border: none;
+		border-left: solid 4px $theme-color ;
+		float: left;
+		font-family: 'BaskervilleItalic';
+		font-size: $fs-big;
+		height: 32px;
+		margin: 0 0 5px;
+		padding: 5px 10px;	
+		width: 150px;	
+	}
+
+	// .ui-icon-triangle-1-n{
+	// 	background: none;
+	// 	@extend .fa;
+	// 	@extend .fa-caret-up;
+	// }
+
+	// .ui-icon-triangle-1-s{
+	// 	background: none;
+	// 	@extend .fa;
+	// 	@extend .fa-caret-down;
+	// }
+}
+
+.ui-spinner-button{
+	background: none !important;
+	border: none !important;
+}

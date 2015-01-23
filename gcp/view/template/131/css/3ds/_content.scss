@@ -1,0 +1,48 @@
+.wrap{
+	width: 972px;
+	margin: auto;
+	padding: 15px;
+
+	&:empty{
+		visibility: none;
+	}
+}
+
+.wrap-bg{
+	background: #fff;
+	margin: 20px auto;
+}
+
+#fsLogo {
+	background: url("img/3ds-logo.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	height: 108px;
+	position: absolute;
+	top: 0;
+	width: 132px;
+}
+
+.mod-banner{
+	height: 184px;
+	background: #000 url(img/3ds-hero.jpg) center top no-repeat;
+
+	.left {
+		float: left;
+		padding: 100px 0 5px;
+	}
+
+	.title {
+		color: #ffffff;
+		font-size: 10px;
+		font-family: times;
+		font-weight: 700;
+		line-height: 40px;
+		text-transform: uppercase;
+	}
+
+	.header {
+		font-size: 38px;
+		color: #ffffff;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+}

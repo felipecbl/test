@@ -1,0 +1,31 @@
+{
+    "options" : {
+		"debugMode": false,
+    	"valueType" : "buttons",
+    	"cartScroll" : 2,
+    	"beforeStep" : "",
+    	"topSelector": false,
+    	"isWidth" : 440,
+    	"initHeight" : 0,
+    	"moneySign" : "$",
+		"showDollar": true,
+		"minCustomize": true,
+		"minCheckout": true,
+		"minHeader" : false,
+		"stepWidth" : 944,
+		"intro" : false,
+		"additionalScript": [],
+		"settings": {
+			"Amount" : {
+				"Open" : true,
+				"Range": "50,75,100,150,200"
+			},
+			"Merchant":{
+				"AddChargeType" : 2,
+				"ChargeForCustomCard": 3.00,
+				"PreviewType" : 1,
+				"Domain": "http://bostonpizza.com/"
+			}
+		}
+    }
+}

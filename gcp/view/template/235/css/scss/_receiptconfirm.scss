@@ -1,0 +1,414 @@
+
+/*
+*************************************************************************************
+*************************************************************************************
+*************************************************************************************
+                                    Receipt
+*************************************************************************************
+*************************************************************************************
+*************************************************************************************
+
+*/
+/*Header*/
+
+#watermark {
+  display: none;
+  position: absolute;
+}
+
+.lang-en .receipt {
+  background: url('../images/watermark.png');
+}
+
+.lang-fr .receipt {
+  background: url('../images/watermark-fr.png');
+}
+
+.receipt {
+  font-size: 14px;
+  line-height: 16px;
+  min-height: 600px;
+  .bold {
+    font-weight: bold;
+  }
+  .ta-right {
+    text-align: right;
+  }
+  .name-address {
+    padding: 2% 0 0 5%;
+  }
+  .action {
+    padding: 0 0 0 4%;
+  }
+  header {
+    border: none;
+  }
+  hgroup {
+    float: left;
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+  h2 {
+    margin: 10px 0;
+    padding: 0;
+  }
+  hgroup {
+    h1, h2 {
+      width: 100%;
+      float: left;
+      display: block;
+      position: relative;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      font-size: 20px;
+    }
+  }
+  div {
+    &#sub-title {
+      float: left;
+      display: block;
+      position: relative;
+      width: 100%;
+      .sub-left {
+        float: left;
+        display: block;
+        position: relative;
+        width: 280px;
+      }
+      .sub-right {
+        float: left;
+        display: block;
+        position: relative;
+        width: 280px;
+        float: right;
+        text-align: right;
+      }
+      .sub-left div span {
+        display: block;
+        float: left;
+        position: relative;
+        clear: both;
+      }
+    }
+    &#items {
+      float: left;
+      display: block;
+      position: relative;
+      font-size: 12px;
+    }
+  }
+  ul#items-detail {
+    float: left;
+    display: block;
+    position: relative;
+    margin: 20px 0 0;
+    width: 100%;
+    > li {
+      float: left;
+      display: block;
+      position: relative;
+      margin: 0 0 20px;
+      padding: 0 0 25px;
+      width: 100%;
+      border-bottom: 1px solid #dedede;
+      > div {
+        float: left;
+        display: block;
+        position: relative;
+        width: 150px;
+        &.second-column {
+          width: 200px;
+        }
+      }
+    }
+    div.card-img {
+      float: left;
+      margin: 0 20px 0 10px;
+      width: 56px;
+      padding: 4px 0 0;
+      img {
+        box-shadow: 0 0 3px 0;
+        cursor: pointer;
+        height: 42px;
+        width: 56px;
+        float: left;
+        display: block;
+        position: relative;
+      }
+    }
+  }
+  div#summary {
+    float: left;
+    display: block;
+    position: relative;
+    width: 100%;
+    > div {
+      float: left;
+      display: block;
+      position: relative;
+      width: 100%;
+      text-align: right;
+      font-size: 18px;
+      line-height: 22px;
+      > div {
+        float: right;
+        clear: both;
+        > span {
+          width: 100px;
+          float: left;
+          display: block;
+          position: relative;
+          &.value {
+            border-bottom: 1px dotted #cecece;
+            width: 100px;
+            text-align: right;
+            margin: 0 0 0 5px;
+            span {
+              float: left;
+              &.fr-currency {
+                float: right;
+              }
+            }
+          }
+        }
+      }
+    }
+    div#total-summary {
+      color: #333;
+      border-top: double 4px #dedede;
+      margin: 20px 0 0;
+      padding: 5px 0 0;
+    }
+  }
+  footer {
+    color: #000;
+    margin: 20px 0 0;
+    text-align: left;
+    
+    div {
+      &#sub-footer, &.note {
+        float: left;
+        display: block;
+        position: relative;
+        width: 100%;
+      }
+      &#sub-footer > div {
+        float: left;
+        display: inline-block;
+        position: relative;
+        margin: 30px 0 10px;
+        width: 290px;
+        &.sub-right {
+          float: right;
+          width: 200px;
+        }
+      }
+    }
+  }
+  div.customer-service {
+    float: left;
+    display: block;
+    position: relative;
+    width: 100%;
+    font-size: 12px;
+    margin: 20px 0 0;
+    text-align: center;
+    > div {
+      display: inline-block;
+      position: relative;
+      margin: 0 15px;
+    }
+  }
+  footer div.note {
+    border: 1px solid #dedede;
+    padding: 5px 0;
+    margin: 10px 0;
+    text-align: center;
+  }
+  h2 {
+    float: none;
+  }
+}
+
+/* Addition for order confirmation */
+
+.confirmation #items-detail{
+  
+  .first-column{
+    width: 35%;
+  }
+    .second-column{
+      width: 45%;
+  }
+
+} 
+
+/* end Addition for order confirmation */
+
+/*Items*/
+
+/*Footer*/
+
+.p-cards {
+  li {
+    margin: 10px 0;
+    border-bottom: 1px solid #dedede;
+    padding: 10px;
+    > div {
+      margin: 0 0 5px;
+    }
+  }
+  figure {
+    float: left;
+    margin: 0 10px 0 0;
+  }
+}
+
+@media print {
+  .pages-nav {
+    display: none;
+  }
+  #watermark {
+    display: block;
+    position: absolute;
+  }
+}
+
+/*Progress bar button*/
+
+.button.loading {
+  -webkit-background-size: 40px 40px, 1px 160px;
+  -moz-background-size: 40px 40px, 1px 160px;
+  -o-background-size: 40px 40px, 1px 160px;
+  background-size: 40px 40px, 1px 200px;
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(0, 0, 0, 0.05)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(0, 0, 0, 0.05)), color-stop(0.75, rgba(0, 0, 0, 0.05)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent), url("../images/bt-bg.png");
+  background-image: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent), url("../images/bt-bg.png");
+  background-image: -ms-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent), url("../images/bt-bg.png");
+  background-image: -o-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent), url("../images/bt-bg.png");
+  background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent), url("../images/bt-bg.png");
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity = 60);
+  opacity: .6;
+  cursor: default;
+  -webkit-animation: animate-stripes 2s linear infinite;
+  -moz-animation: animate-stripes 2s linear infinite;
+  animation: animate-stripes 2s linear infinite;
+  span {
+    color: #333;
+    background: none;
+  }
+}
+
+.progress-bar {
+  -webkit-background-size: 40px 40px, 1px 160px;
+  -moz-background-size: 40px 40px, 1px 160px;
+  -o-background-size: 40px 40px, 1px 160px;
+  background-size: 40px 40px, 1px 200px;
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(0, 0, 0, 0.05)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(0, 0, 0, 0.05)), color-stop(0.75, rgba(0, 0, 0, 0.05)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent), url("../images/bt-bg-3.png");
+  background-image: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent), url("../images/bt-bg-3.png");
+  background-image: -ms-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent), url("../images/bt-bg-3.png");
+  background-image: -o-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent), url("../images/bt-bg-3.png");
+  background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent), url("../images/bt-bg-3.png");
+  cursor: default;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  height: 30px;
+  -webkit-animation: animate-stripes2 2s linear infinite;
+  -moz-animation: animate-stripes2 2s linear infinite;
+  animation: animate-stripes2 2s linear infinite;
+  background-image: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent), url("../images/bt-bg.png");
+  background-image: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent), url("../images/bt-bg.png");
+  background-image: -ms-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent), url("../images/bt-bg.png");
+  background-image: -o-linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent), url("../images/bt-bg.png");
+  background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent), url("../images/bt-bg.png");
+}
+
+.button {
+  &.add_photo.loading-wrap {
+    cursor: default;
+    padding: 3px;
+    margin: 50px auto;
+    width: 290px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity = 100);
+    opacity: 1;
+  }
+  &.loading-wrap > span {
+    background-image: none;
+    color: #fff;
+    padding: 6px 0 0;
+    position: absolute;
+    width: 290px;
+    text-shadow: 0 -1px 2px rgba(0, 0, 0, 0.65);
+    -webkit-transition: width .7s ease-in-out;
+    -moz-transition: width .7s ease-in-out;
+    -ms-transition: width .7s ease-in-out;
+    -o-transition: width .7s ease-in-out;
+    transition: width .7s ease-in-out;
+  }
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0, 0 -102px;
+  }
+  100% {
+    background-position: 80px 0, 0 -102px;
+  }
+}
+
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0, 0 -102px;
+  }
+  100% {
+    background-position: 80px 0, 0 -102px;
+  }
+}
+
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0, 0 -102px;
+  }
+  100% {
+    background-position: 80px 0, 0 -102px;
+  }
+}
+
+
+@-webkit-keyframes animate-stripes2 {
+  0% {
+    background-position: 0 0, 0 0px;
+  }
+  100% {
+    background-position: 80px 0, 0 0px;
+  }
+}
+
+
+@-moz-keyframes animate-stripes2 {
+  0% {
+    background-position: 0 0, 0 0px;
+  }
+  100% {
+    background-position: 80px 0, 0 0px;
+  }
+}
+
+
+@keyframes animate-stripes2 {
+  0% {
+    background-position: 0 0, 0 0px;
+  }
+  100% {
+    background-position: 80px 0, 0 0px;
+  }
+}

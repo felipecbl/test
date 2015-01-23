@@ -1,0 +1,471 @@
+{{! <!-- the 'wrapper' holds everything together --> }}
+<div id='wrapper'>
+	
+	{{! Confirmation page }}
+	<div id="confirmation-window-bg">
+		<div id="confirmation-window">
+
+			<div id="cw-content">
+				<div class="summary">
+					<h2>{{{confirmation.order_summary}}}</h2>
+					<div class='cw-order'><div>{{{confirmation.order_total}}}</div><span></span></div>
+					<div class='cw-discount'><div>{{{confirmation.discount_total}}}</div><span></span></div>
+					<div class='cw-total'><div>{{{confirmation.total}}}</div><span></span></div>
+				</div>
+				<div class="summary">
+					<h2>{{{confirmation.card_info}}}</h2>
+					<div class="cw-type"><div>{{{confirmation.card_type}}}</div><span></span></div>
+					<div class="cw-number"><div>{{{confirmation.card_number}}}</div><span></span></div>
+					<div class="cw-date"><div>{{{confirmation.card_expiration}}}</div><span></span></div>
+				</div>
+				<div class="summary">
+					<h2>{{{confirmation.billing_address}}}</h2>
+					<div class="cw-email"><div>{{{confirmation.email_address}}}</div><span></span></div>
+					<div class="cw-phone"><div>{{{confirmation.phone}}}</div><span></span></div>
+					<div class="cw-address"><div>{{{confirmation.address}}}</div><span></span></div>
+					<div class="cw-city"><div>{{{confirmation.city}}}</div><span></span></div>
+					<div class="cw-state"><div>{{{confirmation.state}}}</div><span></span></div>
+					<div class="cw-country"><div>{{{confirmation.coutry}}}</div><span></span></div>
+					<div class="cw-zip"><div>{{{confirmation.zip}}}</div><span></span></div>
+				</div>
+			</div>
+
+			{{! <!-- Pages Navigation --> }}
+			<div class="pages-nav">
+				<div class='group-error'></div>
+				<a href="javascript:void(0)" class='button back-button back-to-purchaser-info'>
+					<span>{{{checkout.text.back_to_purchaser_info}}}</span>
+				</a>
+
+				<a href="javascript:void(0)" class='button continue-button go-to-summary'>
+					<span>{{{checkout.text.go_to_purchaser_info}}}</span>
+				</a>
+			</div>
+			{{! <!-- Pages Navigation end --> }}
+		</div>
+	</div>	
+	{{! Confirmation Page end }}
+
+	{{! <!-- Content --> }}
+	<div id='content'>	
+
+		{{! <!-- Pages Wrapper --> }}
+		<div id='pages-wrapper'>
+
+			<ul id="pages">
+				{{! <!-- Page 1 (select card ) --> }}
+				<li id='select' class='validate' data-step='1'>
+					
+					<ul class="fields">
+						<li id="get-gcard">
+							<h2> {{{reload.text.enter_card}}} </h2>
+
+							{{! <!-- GC number --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='gcard_number'> {{{reload.label.gcard_number}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='gcard_number' id='gcard_number' class='required number' placeholder='{{{reload.placeholder.gcard_number}}}'>
+									</div>
+									<div class='field-detail'> {{{reload.detail.gcard_number}}} </div>
+								</div>
+							</div>
+							{{! <!-- cc number end --> }}
+
+							{{! <!-- PIN Number --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='pin_number'> {{{reload.label.pin_number}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='pin_number' id='pin_number' class='required pin' placeholder='{{{reload.placeholder.pin_number}}}'>
+									</div>
+									<div class='field-detail'> {{{reload.detail.pin_number}}} </div>
+								</div>
+							</div>
+							{{! <!-- PIN Number end --> }}
+
+							<div class='field no-border'>
+								<p> {{{reload.text.scene_points}}} </p>
+							</div>
+							{{! <!-- Pages Navigation --> }}
+							<div class="pages-nav checkcard-nav">
+								<div class='group-error'></div>
+								<a href="javascript:void(0)" class='button continue-button checkcard'>
+									<span>{{{buttons.continue}}}</span>
+								</a>
+							</div>
+							{{! <!-- Pages Navigation end --> }}
+						</li>
+
+						<li id="reload-details">
+								<div class= 'field no-border'>
+									<label id='gcard-number'>{{{reload.text.your_card}}} <div></div> </label>
+									<p id='gcard-balance'>{{{reload.text.balance}}} <span></span> </p>
+								</div>
+								
+								{{! <!-- Ammount field --> }}
+								<div class='field'>
+									<div class='field-left'>
+										<div>
+											<label for='card_value'> {{{customize.label.value_reload}}} </label>
+										</div>
+										<div class='field-error'></div>
+									</div>
+									<div class='field-right'>
+										<div class='input-holder'>
+											<input type='text' name='card_value' id='card_value' class='required ammount number no-tab' placeholder='{{{customize.placeholder.value}}}'><span class='dollar-sign'>$</span>
+											<div class='field-detail'> {{{customize.detail.value}}} </div>
+										</div>
+											<div class='values-wrap'>
+												{{! <!-- Buttons with values here --> }}
+											</div>
+									</div>
+								</div>
+								{{! <!-- Ammount field end --> }}
+
+								{{! <!-- Pages Navigation --> }}
+								<div class="pages-nav">
+									<div class='group-error'></div>
+									<a href="javascript:void(0)" class="button back-button back-to-card">
+									<span>{{{buttons.back}}}</span>
+									</a>
+									<a href="javascript:void(0)" class='button main-button checkout no-tab'>
+										<span>{{{buttons.checkout}}}</span>
+									</a>
+								</div>
+								{{! <!-- Pages Navigation end --> }}
+						</li>
+					</ul>
+
+				</li>
+				{{! <!-- Page 1 end --> }}
+
+				{{! <!-- Page 2 (checkout) --> }}
+				<li id='checkout' data-step='2'>
+					{{! <!-- Fields --> }}
+					<ul class='fields'>
+						{{! <!-- CC info --> }}
+						<li id='cc-info' class='tab-group'>
+							<h2> {{{checkout.text.card_info}}} </h2>
+							{{! <!-- CC type --> }}
+
+							<ul id="cc-type-selector">
+								<li class='visa'></li>
+								<li class='mastercard'></li>
+								<li class='amex'></li>
+							</ul>
+							<input type="hidden" name='cc_type' id='cc_type' value='visa'>
+							{{! <!-- CC type end --> }}
+
+							{{! <!-- CC number --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_number'> {{{checkout.label.cc_number}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='number' id='cc_number' class='required number creditcard' placeholder='{{{checkout.placeholder.cc_number}}}'>
+									</div>
+									<div class='field-detail'> {{{checkout.detail.cc_number}}} </div>
+								</div>
+							</div>
+							{{! <!-- cc number end --> }}
+
+							{{! <!-- Name on cc --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_name'> {{{checkout.label.cc_name}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='nameoncard' id='cc_name' class='required name' placeholder='{{{checkout.placeholder.cc_name}}}'>
+									</div>
+									<div class='field-detail'> {{{checkout.detail.cc_name}}} </div>
+								</div>
+							</div>
+							{{! <!-- Name on cc end --> }}
+
+							{{! <!-- Expiration date --> }}
+							<div class='field absolute-z'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_expiration'> {{{checkout.label.cc_expiration}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='cc_expiration' id='cc_expiration' class='required expdate' placeholder='{{{checkout.placeholder.cc_expiration}}}'>
+									</div>
+									<div class='field-detail'> {{{checkout.detail.cc_expiration}}} </div>
+								</div>
+							</div>
+							{{! <!-- Expiration date end --> }}
+
+							{{! <!-- CVD --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_cvd'> {{{checkout.label.cc_cvd}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='verification' id='cc_cvd' class='  no-tab number optional' placeholder='{{{checkout.placeholder.cc_cvd}}}'>
+									</div>
+									<div class='field-detail'>
+										<a href="javascript:void(0)" id='cvd-a' onclick="{{{checkout.detail.cvd_url}}}" >
+											{{{checkout.detail.cc_cvd}}} 
+										</a> 
+									</div>
+								</div>
+							</div>
+							{{! <!-- CVD end --> }}
+							
+							{{! <!-- Pages Navigation --> }}
+							<div class="pages-nav checkout-nav">
+								<div class='group-error'></div>
+								<a href="javascript:void(0)" class='button back-button back-to-cart'>
+									<span>{{{checkout.text.back_to_cart}}}</span>
+								</a>
+								<a href="javascript:void(0)" class='button continue-button go-to-cc-billing'>
+									<span>{{{checkout.text.go_to_cc_billing}}}</span>
+								</a>
+							</div>
+							{{! <!-- Pages Navigation end --> }}
+
+						</li>
+						{{! <!-- CC info end --> }}
+
+						{{! <!-- Billing info --> }}
+						<li id='billing-info' class='tab-group'>
+							<h2> {{{checkout.text.billing_info}}} </h2>
+							{{! <!-- Address --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_address'> {{{checkout.label.cc_address}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='address1' id='cc_address' class='required' placeholder='{{{checkout.placeholder.cc_address}}}'>
+									</div>
+									<div class='field-detail'> {{{checkout.detail.cc_address}}} </div>
+								</div>
+							</div>
+							{{! <!-- Address end --> }}
+
+							{{! <!-- Address2 --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_address2'> {{{checkout.label.cc_address2}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='address2' id='cc_address2' class='optional add2' placeholder='{{{checkout.placeholder.cc_address2}}}'>
+									</div>
+									<div class='field-detail'> {{{checkout.detail.cc_address2}}} </div>
+								</div>
+							</div>
+							{{! <!-- Address2 end --> }}
+
+							{{! <!-- city --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_city'> {{{checkout.label.cc_city}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='city' id='cc_city' class='required' placeholder='{{{checkout.placeholder.cc_city}}}'>
+									</div>
+									<div class='field-detail'> {{{checkout.detail.cc_city}}} </div>
+								</div>
+							</div>
+							{{! <!-- city end --> }}
+
+							{{! <!-- country --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_country'> {{{checkout.label.cc_country}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<select name='country' id='cc_country' class='required' id="cc_country">
+											
+										</select>
+									</div>
+									<div class='field-detail'> {{{checkout.detail.cc_country}}} </div>
+								</div>
+							</div>
+							{{! <!-- country end --> }}
+
+							{{! <!-- state --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_state'> {{{checkout.label.cc_state}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<select name='cc_state' id='cc_state' class='required' id="cc_state"></select>
+									</div>
+									<div class='field-detail'> {{{checkout.detail.cc_state}}} </div>
+								</div>
+							</div>
+							{{! <!-- state date end --> }}
+
+							{{! <!-- zip --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_zip'> {{{checkout.label.cc_zip}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='zip' id='cc_zip' class='required zip zipca no-tab' placeholder='{{{checkout.placeholder.cc_zip}}}'>
+									</div>
+									<div class='field-detail'> {{{checkout.detail.cc_zip}}} </div>
+								</div>
+							</div>
+							{{! <!-- zip end --> }}
+							
+							{{! <!-- Pages Navigation --> }}
+							<div class="pages-nav checkout-nav">
+								<div class='group-error'></div>
+								<a href="javascript:void(0)" class='button back-button back-to-cc-billing'>
+									<span>{{{checkout.text.back_to_cc_billing}}}</span>
+								</a>
+								<a href="javascript:void(0)" class='button continue-button go-to-purchaser-info'>
+									<span>{{{checkout.text.go_to_purchaser_info}}}</span>
+								</a>
+							</div>
+							{{! <!-- Pages Navigation end --> }}
+
+						</li>
+						{{! <!-- Billing info end --> }}
+
+						{{! <!-- Purchaser info --> }}
+						<li id='purchaser-info' class='tab-group'>
+							<h2> {{{checkout.text.purchaser_info}}} </h2>
+							{{! <!-- phone --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_phone'> {{{checkout.label.cc_phone}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='phone' id='cc_phone' class='required phone' placeholder='{{{checkout.placeholder.cc_phone}}}'>
+									</div>
+									<div class='field-detail'> {{{checkout.detail.cc_phone}}} </div>
+								</div>
+							</div>
+							{{! <!-- phone end --> }}
+
+							{{! <!-- email --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_email'> {{{checkout.label.cc_email}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='email' id='cc_email' class='required email no-tab' placeholder='{{{checkout.placeholder.cc_email}}}'>
+									</div>
+									<div class='field-detail'>{{{checkout.detail.cc_email}}}</div>
+								</div>
+							</div>
+							{{! <!-- email end --> }}
+
+							{{! <!-- Terms --> }}
+								<div class='terms-field'>
+									<input type='checkbox' name='cc_terms' id='cc_terms' class='required check'>
+									<label for='cc_terms'> {{{checkout.label.cc_terms}}} </label>
+									<div class='field-detail'>
+										<a id='terms-a' class='tip' href="javascript:void(0)" onclick="{{{checkout.detail.terms_url}}}" target="_blank">
+											{{{checkout.detail.cc_terms}}}
+										</a>
+									</div>
+									<div class='field-error'></div>
+								</div>
+							{{! <!-- Terms end --> }}
+
+							{{! <!-- Pages Navigation --> }}
+							<div class="pages-nav">
+								<div class='group-error'></div>
+								<a href="javascript:void(0)" class='button back-button back-to-purchaser-info'>
+									<span>{{{checkout.text.back_to_purchaser_info}}}</span>
+								</a>
+
+								<a href="javascript:void(0)" class='main-button button purchase'>
+									<span>{{{checkout.text.pay_bt}}}</span>
+								</a>
+								{{!-- <img id='verisign' alt='Click to Verify - This site has chosen an SSL Certificate to improve Web site security' src='view/template/default/images/getseal.gif'/> --}}
+							</div>
+							{{! <!-- Pages Navigation end --> }}
+
+						</li>
+						{{! <!-- Purchaser info end --> }}
+
+					</ul>
+					{{! <!-- Fields end --> }}
+
+				</li>
+				{{! <!-- Page 2 end --> }}
+			</ul>
+
+		</div>
+		{{! <!-- Pages Wrapper end --> }}
+	{{! <!-- Embed Cart --> }}
+		<div id='cart-embed'></div>
+	{{! <!-- Embed Cart end --> }}
+
+	</div>
+	{{! <!-- Content end --> }}
+
+	{{! <!-- Footer --> }}
+	<footer>
+		<span>{{{footer.text.customer_support}}}</span> 
+		<span id="contact-number"></span>
+		<p><span>{{{footer.text.buyatab_rights}}}</span></p>
+	</footer>
+	{{! <!-- Footer end --> }}
+
+</div>
+{{! <!-- Wrapper end --> }}

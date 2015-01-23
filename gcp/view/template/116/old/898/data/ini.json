@@ -1,0 +1,30 @@
+{
+    "options" : {
+		"debugMode": false,
+    	"valueType" : "buttons",
+    	"cartScroll" : 2,
+    	"beforeStep" : "",
+    	"topSelector": false,
+    	"isWidth" : 440,
+    	"initHeight" : 0,
+    	"moneySign" : "$",
+		"showDollar": true,
+		"minCustomize": true,
+		"minCheckout": true,
+		"minHeader" : false,
+		"intro" : false,
+		"settings": {
+			"Merchant":{
+				"Domain": "https://www.kegsteakhouse.com",
+				"MaxCards" : 50,
+				"confirmationPage": true,
+				"IsPlastic": false,
+				"IsElectronic": true,
+				"SMS": false,
+				"Facebook": {
+					"Enabled": false
+				}
+			}
+		}
+    }
+}

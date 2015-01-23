@@ -1,0 +1,60 @@
+body{
+	background: #3B3B3B;
+	color: #333;
+	font: $fs-micro $main-font;
+	height: auto;
+	line-height: 100%;
+	position: relative;
+}
+
+a{
+	outline: 0;
+	color: $link-color;
+}
+
+b{
+	font-weight: 700;
+}
+
+details{
+	display: inline-block;
+}
+
+footer{
+	@include border-box;
+	@include fdp;
+	// background: #1d1d1d;
+	color: #fff;
+	font-size: 12px;
+	margin: 0;
+	text-align: center;
+	width: 100%;
+	padding: 20px 0;
+}
+
+header{
+	// background: #343434;
+	// color: #fff;
+	display: block;
+	height: 87px;
+	margin: 30px 0 0;
+	position: relative;
+
+	.wrap{
+		background: #000;
+		border-bottom: 6px solid #A6A685;
+		height: 100%;
+	}
+}
+
+iframe{
+	width: 100%;
+}
+
+p{
+	@include fdp;
+	@include border-box;
+	width: 100%;
+}
+
+

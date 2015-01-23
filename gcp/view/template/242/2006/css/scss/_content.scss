@@ -1,0 +1,287 @@
+#content{
+	@include fdp;
+	margin: 0;
+	width: 100%;
+}
+
+#pages{
+	@include fdp;
+	@include margin-padding;
+	@include transition(all 0.4s ease 0s);
+	width: 100%;
+
+	& > li{
+		@include fdp;
+		@include border-box;
+		margin: 0 2px 0 0;
+		overflow: hidden;
+		padding: 0;
+		width: 100%;
+	}
+}
+
+.fields{
+	@include margin-padding;
+	@include fdp;
+	width: 100%;
+
+	& > li{
+		@include fdp;
+		@include border-box;
+		margin: 0 0 20px;
+		padding: 0;
+		width: 100%;
+	}
+
+	p{
+		margin: 10px 0;
+	}
+}
+
+.field {
+	@include fdp;
+	@include border-box;
+	border-bottom: 1px solid #EBEBEB;
+	clear: both;
+	margin: 0;
+	padding: 20px 0 15px;
+	// width: 620px;
+	width: 100%;
+	z-index: $z2;
+}
+
+.field-left {
+	width: 290px;
+	display: inline-block;
+	float: left;
+	position: relative;
+	width: 240px;
+}
+
+.field-right {
+	// width: 310px;
+	margin: 0 0 0 290px;
+}
+
+.half-field {
+	@include fdp;
+	margin: 10px 0 0;
+	width: 100%;
+
+	label, div, input {
+		display: inline;
+		float: left;
+		width: 100%;
+	}
+
+	label{
+		padding: 0;
+	}
+}
+
+.input-holder{
+	@include fdp;
+	@include border-box;
+	width: 100%
+}
+
+.field-detail{
+	@include border-box;
+	clear: none;
+	display: inline;
+	float: left;
+	margin: 10px 0 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+
+#chars, #chars-lines, #char-line {
+	display: inline-block;
+	margin: 0 2px 0 0;
+	position: relative;
+}
+
+.dollar-sign {
+	font-size: $fs-micro + 1;
+	left: 9px;
+	position: absolute;
+	top: 9px;
+}
+
+#card_value {
+	padding-left: 20px;
+}
+
+.field-error{
+	@extend .field-detail;
+}
+
+#orientation-buttons {
+	display: block;
+	height: 125px;
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	width: 50px;
+
+	&.buttons-3 .photo-button{
+		margin: 5px 0;
+	}
+
+	.photo-button{
+		@include rounded;
+		background: #E3E3E3;
+		border: #{$border};
+		cursor: pointer;
+		display: block;
+		float: left;
+		height: 32px;
+		min-width: 45px;
+		overflow: hidden;
+		padding: 0;
+		position: relative;
+		width: 45px;
+		background-repeat: no-repeat !important;
+
+		// &:after{
+		// 	// background: #fafafa;
+		// 	content: "";
+		// 	display: block;
+		// 	position: absolute;
+		// }
+
+		&.orientation-right/* :after */ {
+			// height: 34px;
+			// right: 0;
+			// width: 10px;
+			background-position: right !important;
+		}
+
+		&.orientation-bottom/* :after */ {
+			// bottom: 0;
+			// height: 10px;
+			// width: 45px;
+			background-position: bottom !important;
+		}
+
+		&.orientation-left/* :after */ {
+			// height: 34px;
+			// left: 0;
+			// width: 10px;
+			background-position: left !important;
+		}
+
+		&.orientation-top {
+			background-position: top !important;
+		}
+
+		&.active{
+			// background: #ccc;
+			@include shadow(0 0 2px 1px $link-color);
+		}
+	}
+}
+
+.field.validation-error .field-error, .half-field.validation-error .field-error {
+	@include fdp;
+	height: 15px;
+	padding: 1px 0 0 20px;
+
+	&:before{
+		@extend .fa;
+		@extend .fa-times-circle;
+		font-size: 14px;
+		margin: 0 5px 0 0;
+	}
+}
+
+.field.validation-warning .field-error {
+	height: 15px;
+	padding: 1px 0 0 20px;
+
+	&:before{
+		@extend .fa;
+		@extend .fa-exclamation-triangle;
+
+		font-size: 14px;
+		margin: 0 5px 0 0;
+	}
+}
+
+.field.validation-error, 
+.field.validation-error label, 
+.field.validation-error .field-error, 
+.half-field.validation-error label, 
+.half-field.validation-error .field-error{
+	color: #FF3333
+}
+
+#cc-type-selector {
+	margin: 0 0 10px 290px;
+	overflow: hidden;
+	width: 180px;
+
+	li{
+		@include transition(all 0.2s ease 0s);
+		background-image: url($images-path + "cc_flags.png");
+		background-position: 0 0;
+		border-radius: 3px;
+		float: left;
+		height: 32px;
+		margin-right: 8px;
+		width: 51px;
+
+		&.mastercard{
+			background-position: 204px 0;
+
+			&.off{
+				background-position: 204px 32px;
+			}
+		}
+		&.visa{
+			background-position: 255px 0;
+
+			&.off{
+				background-position: 255px 32px;
+			}
+		}
+		&.amex{
+			background-position: 0 0;
+
+			&.off{
+				background-position: 0 32px;
+			}
+		}
+	}
+}
+
+.terms-field {
+	@include border-box;
+	@include fdp;
+	border-bottom: #{$border};
+	margin: 10px 0 0;
+	min-height: 60px;
+	padding: 10px 15px;
+	width: 100%;
+
+	label {
+		@include border-box;
+		@include width-height(100%, auto);
+		font-size: 12px;
+		// height: auto;
+		line-height: 14px;
+		margin: 0 0 0 15px;
+		padding: 2px;
+		// width: 100%;
+	}
+}
+
+.shipping-option{
+	label{
+		padding: 0 0 0 30px;
+	}
+}
+
+
+

@@ -1,0 +1,11 @@
+{
+	"header" : {
+		"customize" : "customise"
+	},
+	"customize" : {
+		"text" : {
+			"title" : "customise your card",
+			"customize_card" : "Customise your card"
+		}
+	}
+}

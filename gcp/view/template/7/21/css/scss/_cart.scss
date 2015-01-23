@@ -1,0 +1,107 @@
+#{$gcp-content}{
+	#cart {
+		@include margin-padding;
+		display: inline-block;
+		list-style: none;
+
+		h2{
+			@include border-box;
+			font-size: 22px;
+			font-weight: 100;
+			height: 30px;
+			margin: 0 0 25px;
+			padding: 6px 0 0 0;
+			width: 100%;
+
+			&:before{
+				@extend .fa;
+				@extend .fa-shopping-cart;
+				font-size: 26px;
+			}
+		}
+
+		#summary{
+			@include fdp;
+			width: 100%;
+
+			& > div{
+				@include fdp;
+				width: 100%;
+			}
+		}
+	}
+
+	#page-cart{
+
+		#cards > div > li {
+			@include fdp;
+			border-bottom: #{$border};
+			margin: 0 0 20px;
+			padding: 0 0 10px;
+			width: 100%;
+		}
+
+		div.card-img{
+			float: left;
+			margin: 0 20px 0 10px;
+
+			img {
+				@include shadow;
+				@include fdp;
+				cursor: pointer;
+				height: auto;
+				width: 56px;
+			}
+		}
+
+		.card-info > div {
+			float: left;
+			width: 200px;
+			margin: 0 0 3px;
+		}
+
+		.card-nav {
+			float: right;
+			margin: 25px 0 0;
+		}
+
+		#control{
+			@include fdp;
+			margin: 20px 0 0;
+			width: 100%;
+
+			.button{
+				float: left;
+
+				&.main-button{
+					float: right;
+				}
+			}
+
+		}
+	}
+
+	.s-total {
+		@include fdp;
+		font-size: 20px;
+		margin: 20px 0;
+		text-align: left;
+		width: 100%;
+
+		span{
+			float: right;
+			margin: 0;
+		}
+	}
+
+	.sb-total{
+		@include fdp;
+		width: 150px;
+		clear: both;
+		margin: 5px 0 0;
+
+		span{
+			margin: 0 0 0 10px;
+		}
+	}
+}

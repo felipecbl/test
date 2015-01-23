@@ -1,0 +1,35 @@
+{
+    "options" : {
+		"debugMode": false,
+    	"valueType" : "buttons",
+    	"cartScroll" : 2,
+    	"beforeStep" : "",
+    	"topSelector": false,
+    	"isWidth" : 440,
+    	"initHeight" : 0,
+    	"moneySign" : "$",
+		"showDollar": true,
+		"minCustomize": true,
+		"minCheckout": true,
+		"minHeader" : false,
+		"intro" : false,
+		"additionalScript": ["omniture.js", "https://www.cineplex.com/Scripts/s_code_new.js", "https://www.buyatab.com/gcp/view/template/133/js/analytics.js", "//www.googleadservices.com/pagead/conversion.js"],
+		"settings": {
+			"Merchant":{
+				"Analytics":{
+					"Enabled": true,
+					"Type": "omni",
+					"Id": "cplxcineplexcom"
+					},
+				"confirmationPage": true,
+				"MaxCards" : 30,
+				"IsPlastic": false,
+				"IsElectronic": true,
+				"SMS": true,
+				"Facebook": {
+					"Enabled": false
+				}
+			}
+		}
+    }
+}

@@ -1,0 +1,77 @@
+// Mixins
+@mixin fdp{
+	float: left;
+	display: block;
+	position: relative;
+}
+
+@mixin circle($radius: 200px){
+	@include border-radius($radius);
+}
+
+@mixin rounded($radius: $general-rounded){
+	@include border-radius($radius);
+}
+
+@mixin border-box{
+	@include box-sizing(border-box);
+}
+
+@mixin txt-shadow{
+	@include text-shadow(#dcdcdc 0 0 2px);
+}
+
+@mixin shadow($shadow-settings: #dcdcdc 1px 1px 2px){
+	@include box-shadow($shadow-settings);
+}
+
+@mixin animation( $options ){
+	-webkit-animation: $options;
+	-moz-animation: $options; 
+	animation: $options;
+}
+
+@mixin mar-pad($m: 0, $p: 0){
+	margin: $m;
+	padding: $p;
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content};
+  :-moz-placeholder           {@content};
+  ::-moz-placeholder          {@content};
+  :-ms-input-placeholder      {@content};
+}
+
+@mixin clip-mask( $path ){
+	-webkit-clip-path: url($path);
+	-webkit-mask: url($path);
+	clip-path: url(#{$path}#svgClip);
+}
+
+.center{
+	text-align: center !important;
+}
+
+.middle{
+	margin: 50% 0 0;
+}
+
+.white{
+	background: #fff;
+}
+
+.hide-me{
+	opacity: 0;
+	background: #fff;
+}
+
+.ecard-transition{
+	@include transition(all 2s ease 1s);
+}
+
+@media print{
+    .no-printing{
+    	display: none;
+    }
+}

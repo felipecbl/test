@@ -1,0 +1,65 @@
+{
+	"options" : {
+		"*additionalScript": ["functions.js"],
+		"*Country": 1,
+		"debugMode": false,
+		"intro" : false,
+		"minCheckout": true,
+		"minCustomize": true,
+		"minHeader" : false,
+		"openCard": false,
+		"showDollar": true,
+		"stepWidth" : 944,
+		"beforeStep" : "",
+		"cartScroll" : 2,
+		"initHeight" : 0,
+		"isWidth" : 440,
+		"moneySign" : "$",
+		"topSelector": false,
+		"valueType" : "buttons",
+		"settings": {
+			"Amount":{
+				"InitialAmount" : 10,
+				"Range": "50,75,100,150,200"
+			},
+			"Style": {
+				"PresetId":0,
+				"FontFamily":"",
+				"Size":0
+			},
+			"Merchant":{
+				"*AddChargeType" : 2,
+				"*CCProcessors":null,
+				"*ChargeForCustomCard": 4.50,
+				"confirmationPage": false,
+				"ContactNumber":"1-888-267-0447",
+				"Domain":"buyatab.com",
+				"EC":true,
+				"FC":true,
+				"*IsActive":true,
+				"*IsElectronic": true,
+				"IsMobile": false,
+				"*IsPlastic": false,
+				"Language":"en",
+				"MaxCards" : 1000,
+				"*OptIn":false,
+				"*photoCard": true,
+				"PreviewType":3,
+				"QuantityPerCard": 30,
+				"SFP" : false,
+				"*SMS": true,
+
+
+				"Analytics":{
+					"Enabled":false,
+					"Type":"",
+					"Id":"",
+					"Files":[""]
+				},
+				"*Facebook": {
+					"Enabled": false
+				}
+			}
+		}
+	}
+}

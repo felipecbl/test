@@ -1,0 +1,406 @@
+{
+    "title": "Buy a giftcard for - ",
+    "header": {
+        "customize": "carte",
+        "delivery": "envoi",
+        "editcart": "panier",
+        "checkoutpage": "paiement",
+        "billing": "facturation",
+        "purchaser": "finale"
+    },
+    "buttons" : {
+        "continue" : "Continuez",
+        "back" : "Précédent",
+        "checkout" : "Caisse"
+    },
+    "dialogs": {
+        "yes": "Oui",
+        "no": "Non",
+        "ok": "D'accord",
+        "cancel": "Annulez",
+        "editing_card": "Une carte est en cours de modification. Voulez-vous vraiment continuer?",
+        "load_local": "Ces cartes-cadeaux sont retenus dans votre panier depuis votre dernière visite. Voulez-vous les garder?",
+        "delete_card": "Voulez-vous vraiment supprimer cette carte?",
+        "processing": "Traitement de vos données…",
+        "shipping_options" : "Options d'expédition",
+        "shipping_option" : "Vous devez sélectionner une option",        
+        "checkout_error": "Désolé, mais votre demande n'a pu être complétée. Veuillez contacter le soutien à la clientèle aux coordonnées ci-dessous.",
+        "exception_error": "Une erreur inattendue s'est produite lors de votre transaction. Au moyen des coordonnées ci-dessous, veuillez contacter le soutien avant d'essayer de nouveau.",
+        "max_transaction": "Désolé, mais vous avez atteint le montant maximal par transaction."
+    },
+    "errors": {
+        "quantity": "Choisissez entre 1 et ",
+        "value": "Minimum de",
+        "maxvalue": "Maximum de",
+        "required": "Ce champ est obligatoire",
+        "optional_sender_name": "Le nom du titulaire de la carte de crédit sera plutôt utilisé",
+        "check": "Vous devez accepter ces modalités",
+        "group": "Il y a des erreurs. Veuillez revoir les champs ci-dessus.",
+        "past_date" : "Ne peut être une date antérieure",
+        "inavctive" : "Veuillez nous excuser, l'achat de cartes cadeaux est indisponible pour ce marchand. Pour voir la liste de toutes nos cartes cadeaux, venez ici: <p><a href='https://www.buyatab.com'>www.buyatab.com</a></p>",
+
+        "1002": "Le nom du titulaire de la carte de crédit sera utilisé",
+        "1003": "Assurez-vous que votre carte ne comporte aucun CVV",
+        "1010": "Champ obligatoire",
+        "1012": "Utilisez une adresse courriel valide",
+        "1015": "La carte de crédit est expirée",
+        "1016": "Entrez un numéro de carte de crédit valide",
+        "1017": "Entrez un code de zone/postal valide",
+        "1018" : "Veuillez entrer un Code Postal (USA)",
+        "1019": "Entrez un numéro de téléphone valide",
+        "1022": "Le nom ne doit pas comporter plus de 50 caractères.",
+        "1024": "L’adresse ne doit pas dépasser 50 caractères.",
+        "1025": "Le nom ne doit pas comporter plus de 50 caractères.",
+        "1027": "Ce doit être un Canada / États-Unis numéro de téléphone valide 10 chiffres",
+        "1030": "L'adresse courriel de l'expéditeur sera utilisée",
+        "1032": "Le nom du titulaire de la carte de crédit sera utilisé",
+        "1033": "L'adresse courriel de l'acheteur sera utilisée",
+        "1034": "Assurez-vous d'entrer toute l'information",
+        "1035": "Pour les questions de notification de livraison",
+        "1026" : "Trop de cartes",
+        "1027" : "Le numéro de téléphone est incorrect",
+        "1028" : "Echec",
+        "1029" : "L' e-mail de confirmation est vide",
+        "1090" : "S'il vous plaît télécharger une image",
+
+        "10"  : "Impossible d'obtenir les données liées au Marchand",
+        "20"  : "Impossible d'obtenir les données liées à la Chaîne",
+
+        "100" : "Erreur lors de la mise à jour du solde",
+        "110" : "Erreur lors de la verification du solde",
+        "120" : "Numéro de carte ou API invalide",
+        "130" : "Echec dans la création d'une nouvelle carte",
+        "190" : "Un problème est survenu lors de la recharge de votre carte",
+
+        "200" : "EncryptedProductReferenceId ne peut être analysé",
+        "210" : "Impossible de rassembler les données liées à la carte cadeau",
+        "220" : "Une erreur s'est produite lors du paiement",
+        "222" : "Address shouldn't be longer than 50 chars",
+        "230" : "Paiement refusé",
+        "240" : "Echec mise a jour de la balance (API erreur)",
+        "290" : "Un problème est survenu lors de la recharge de votre carte",
+        "300" : "La transaction a été suspendu",
+        "310" : "Cette carte n'est pas rechargeable",
+        "320" : "Cette carte est Suspendue"
+    },
+    "customize": {
+        "text": {
+            "title": "Personnalisez votre carte",
+            "customize_card": "Personnalisez votre carte",
+            "delivery_info": "Options de livraison",
+            "change_card": "Cliquez ici pour changer le modèle",
+            "change_design_bt": "Personnalisez",
+            "preview_bt": "Prévisualisez",
+            "add_to_cart_bt": "Ajouter au panier",
+            "update_cart_bt": "Sauvegardez les changements",
+            "go_to_delivery": "Continuez",
+            "back_to_card": "Précédent",
+            "open_card": "Cliquez sur la carte pour ouvrir / fermer",
+            "add_photo": "Ajouter une photo en cliquant sur Parcourir puis recadrer la photo sur le côté. Cliquez sur la bande pour un aperçu.",
+            "additional_charge": "Un supplément pour la photo carte en plastique sera appliquée."
+        },
+        "label": {
+            "quantity": "Quantité",
+            "message": "Message",
+            "value": "Choisissez/entrez un montant",
+            "value_reload" : "Ajouter un montant",
+            "value_mobile": "Montant",
+            "email": "E-mail",
+            "print": "Imprimer",
+            "facebook": "Facebook",     
+            "uploading": "Envoi des données",
+            "browse_photo" : "Sélectionner une photo"
+        },
+        "detail": {
+            "message": "caractères restants",
+            "message_lines": "lignes restantes",
+            "value_mobile": "Les valeurs comprises entre",
+            "value": "Une valeur comprise entre",
+            "value2" : "Choisir un montant"
+        },
+        "placeholder": {
+            "message": "Écrivez votre message ici…",
+            "value": "$$$"
+        },
+        "email": {
+            "title": "E-mail",
+            "text": {
+                "page_info": "Les cartes cadeaux seront envoyées directement au destinataire par e-mail."
+            },
+            "label": {
+                "recipient_name": "Nom du destinataire",
+                "recipient_email": "E-mail du destinataire",
+                "confirmation_email" : "Confirmer e-mail",
+                "from_name": "Nom de l'expéditeur",
+                "delivery_date": "Date de livraison"
+            },
+            "detail": {
+                "recipient_name": "Le nom de la personne à qui vous enverrez la carte",
+                "recipient_email": "L'adresse courriel où nous enverrons la carte",
+                "confirmation_email" : "Veuillez confirmer l'adresse e-mail",
+                "from_name": "Le nom de la personne qui expédie la carte",
+                "delivery_date": "Envoyez la carte maintenant ou un peu plus tard…",
+                "immediately" : "Send immediately"
+            },
+            "placeholder": {
+                "recipient_name": "Nom complet",
+                "recipient_email": "destinataire@courriel.com",
+                "from_name": "Votre nom",
+                "delivery_date": ""
+            }
+        },
+        "plastic": {
+            "title": "Courrier",
+            "text": {
+                "page_info" : "La carte sera livrée à l'adresse indiquée",
+                "shipping_info": "Détails Livraison",
+                "new_address" : "Vous pouvez selectionner une précédente adresse sans frais supplémentaire ou entrer une nouvelle et choisir une autre option de livraison",
+                "shipping_option" : "Option de livraison"
+            },
+            "label": {
+                "recipient_name": "Nom du destinataire",
+                "recipient_phone": "Téléphone du destinataire",
+                "recipient_email": "Adresse courriel du destinataire",
+                "from_name": "Nom de l'expéditeur",
+                "from_email": "Sender email",
+                "address" : "Adresse 1",
+                "address2" : "Adresse 2",
+                "city" : "Ville",
+                "country" : "Pays",
+                "state" : "État/Province",
+                "zip" : "Code de zone/postal",
+                "continue": "Continuez",
+                "new_address": "Nouvelle addresse"
+            },
+            "detail": {
+                "recipient_name": "Le nom de la personne à qui vous enverrez la carte",
+                "recipient_phone": "Le numéro de téléphone du destinataire",
+                "recipient_email": "L'adresse courriel où nous enverrons la carte",
+                "from_name": "Le nom de la personne qui expédie la carte",
+                "from_email": "So we can send the card to you to print it",
+                "name" : "Le nom de la personne qui expédie la carte",
+                "expiration" : "Mois et année",
+                "address" : "Adresse de facturation",
+                "address2" : "Information additionnelle sur l'adresse",
+                "city" : "Votre ville",
+                "country" : "Choisissez votre pays",
+                "state" : "Choisissez votre État/province",
+                "zip" : "Entrez votre code de zone/postal"
+            },
+            "placeholder": {
+                "recipient_name": "Nom complet",
+                "recipient_phone": "+1 (555) 666-777",
+                "from_name": "Votre nom",
+                "address" : "1234 votre rue",
+                "address2" : "App 1002",
+                "city" : "Votre ville",
+                "country" : "Votre pays",
+                "state" : "Votre Province",
+                "zip" : "A1B 2C3"
+            }
+        },
+        "print": {
+            "title": "Imprimez",
+            "text": {
+                "page_info": "Les cartes cadeaux vous sont envoyées par e-mail afin de les offrir par vous-même."
+            },
+            "label": {
+                "recipient_name": "Nom du destinataire",
+                "recipient_email": "Adresse courriel du destinataire",
+                "from_name": "Nom de l'expéditeur",
+                "from_email": "Courriel de l'expéditeur"
+            },
+            "detail": {
+                "recipient_name": "Le nom de la personne à qui vous enverrez la carte",
+                "recipient_email": "L'adresse courriel où nous enverrons la carte",
+                "from_name": "Le nom de la personne qui expédie la carte",
+                "from_email": "Pour que nous puissions vous envoyer la carte pour l'imprimer"
+            },
+            "placeholder": {
+                "recipient_name": "Nom complet",
+                "recipient_email": "destinataire@courriel.com",
+                "from_name": "Votre nom",
+                "from_email": "vous@courriel.com"
+            }
+        },
+        "facebook": {
+            "title": "Facebook",
+            "text": {
+                "page_info": "Lorem ipsum labore ut quis reprehenderit proident voluptate enim in magna Ut irure aliqua laboris adipisicing culpa"
+            },
+            "label": {},
+            "detail": {},
+            "placeholder": {}
+        },
+        "sms" : {
+            "title" : "SMS/Text",
+            "text" : {
+                "page_info" : "La Carte sera envoyé au destinataire par SMS/Text"
+            },
+            "label" : {
+                "recipient_name" : "Nom Destiantaire",
+                "recipient_phone" : "N° de telephone Destinataire",
+                "from_name" : "Nom expéditeur",
+                "delivery_date" : "Date de livraison"
+            },
+            "detail" : {
+                "recipient_name" : "Nom Prénom du destinataire",
+                "recipient_phone" : "Un numéro de téléphone valide Canadien/US",
+                "from_name" : "Nom et Prénom de l’expéditeur",
+                "delivery_date" : "Envoyer cette carte tout de suite ou plus tard…",
+                "immediately" : "Envoyer immédiatement"
+            },
+            "placeholder" : {
+                "recipient_name" : "Nom et Prénom",
+                "recipient_phone" : "(555) 666-7777",
+                "from_name" : "Votre nom",
+                "delivery_date" : ""
+            }
+        }
+    },
+    "photo" : {
+        "errors":{
+            "0": "Succès ",
+            "1": "Une erreur s’est produite en choisissant ce fichier. Essayez à nouveau ou utiliser une image différente.",
+            "2": "L’image sélectionnée ne correspond pas aux critères de taille et/ou poids requis.",
+            "3": "Le fichier sélectionné est trop petit (100 kb). L’image sera étirée et/ou floue. Veuillez sélectionner un autre fichier.",
+            "4": "Le format de fichier est invalide. Veuillez sélectionner un fichier de type .png, .jpeg, .jpg, .gif, .tiff.",
+            "5": "Le format de fichier est invalide. Veuillez sélectionner un fichier de type .png, .jpeg, .jpg, .gif, .tiff.",
+            "6": "La taille du fichier sélectionné est trop importante (plus de 6 MB). Veuillez sélectionner un fichier de taille inférieur.",
+            "local_storage": "Certaines ou toutes les images pour photocard ne sont plus disponibles. "
+        },
+        "edit_photo": "Modifier photo",
+        "photo_instructions": "Faites glisser l'image dans la carte pour le positionner.",
+        "photo_terms" : "J'ai lu entièrement, accepté et suis en accord avec <a href=\"#\" onclick=\"javascript:window.open('view/documentation/phototerms_fr.html', 'Terms', 'width=800,height=600, menubar=0, scrollbars=1, status=0, titlebar=0, toolbar=0'); return false;\"> voir les conditions</a>. ",
+        "buttons": {
+            "save" : "Sauver",
+            "reset": "Remise",
+            "zoom" : "Zoom",
+            "fit"  : "Fixer"
+        }
+    },
+    "checkout": {
+        "text": {
+            "title": "caisse",
+            "pay_bt": "Achetez",
+            "card_info": "Information de la carte de crédit",
+            "billing_info": "Information de la facturation",
+            "back_to_cart": "Précédent",
+            "purchaser_info": "Information de l'acheteur",
+            "go_to_cc_billing": "Continuez",
+            "back_to_cc_billing": "Précédent",
+            "go_to_purchaser_info": "Continuez",
+            "back_to_purchaser_info": "Précédent"
+        },
+        "label": {
+            "cc_number": "Numéro de la carte de crédit",
+            "cc_name": "Nom du titulaire de la carte",
+            "cc_expiration": "Date d'expiration",
+            "cc_cvd": "CVV",
+            "cc_address": "Adresse 1",
+            "cc_address2": "Adresse 2",
+            "cc_city": "Ville",
+            "cc_country": "Pays",
+            "cc_state": "État/Province",
+            "cc_zip": "Code de zone/postal",
+            "cc_phone": "Numéro de téléphone de la facturation",
+            "cc_email": "Adresse courriel",
+            "cc_email_confirmation" : "Confirmer e-mail",
+            "cc_terms": "J'accepte les modalités et que cet achat soit identifié en tant que <strong> \"e-Gift\"</strong> sur mon relevé",
+            "cc_optin" : "Je m'abonne à la newsletter",
+            "cc_term_buyatab": "J'ai accepté les conditions de Buyatacc_term_buyatab"
+        },
+        "detail": {
+            "cc_number": "Les numéros magiques",
+            "cc_name": "Identiques à ceux sur la carte",
+            "cc_expiration": "Mois et année",
+            "cc_cvd": "Qu'est-ce que le CVV?",
+            "cvd_url": "javascript:window.open('view/documentation/cvd_fr.html', 'Terms', 'width=485,height=510, menubar=0, scrollbars=1, status=0, titlebar=0, toolbar=0'); return false;",
+            "cc_address": "Adresse de facturation",
+            "cc_address2": "Information additionnelle sur l'adresse",
+            "cc_city": "Votre ville",
+            "cc_country": "Choisissez votre pays",
+            "cc_state": "Choisissez votre État/province",
+            "cc_zip": "Entrez votre code de zone/postal",
+            "cc_phone": "Le numéro qui apparaît sur votre relevé de compte bancaire",
+            "cc_email": "Pour que nous puissions vous envoyer une confirmation",
+            "cc_email_confirmation" : "Veuillez confirmer votre e-mail",
+            "cc_terms": "Voir les conditions",
+            "terms_url": "javascript:window.open('view/documentation/terms_fr.html', 'Terms', 'width=800,height=600, menubar=0, scrollbars=1, status=0, titlebar=0, toolbar=0'); return false;",
+            "cc_term_buyatab": "Je comprends que cet achat apparaîtra sur mon relevé comme étant un \"e-Gift\""
+        },
+        "placeholder": {
+            "cc_number": "0000 0000 0000 0000",
+            "cc_name": "Votre nom",
+            "cc_expiration": "00/0000",
+            "cc_cvd": "123",
+            "cc_address": "1234, votre rue",
+            "cc_address2": "App. 1002",
+            "cc_city": "Votre ville",
+            "cc_country": "Choisissez votre pays",
+            "cc_state": "Choisissez votre État/province",
+            "cc_zip": "Votre code de zone/postal",
+            "cc_phone": "+1 (555) 666-7777",
+            "cc_email": "vous@courriel.com",
+            "cc_email_confirmation" : "you@email.com" 
+        }
+    },
+    "cart": {
+        "text": {
+            "title": "Votre panier",
+            "new_card": "Nouvelle carte",
+            "checkout": "Caisse",
+            "discount" : "Remise",
+            "add_charges" : "Des frais supplémentaires",
+            "enclosure" : "Enceinte",
+            "summary": "Total",
+            "sub_total": "Sous-total",
+            "shipping_total": "Livraison",
+            "empty": "<center>Votre panier est vide.</center>"
+        }
+    },
+    "footer": {
+        "text": {
+            "customer_support": "Soutien à la clientèle:",
+            "direct_number": "Numéro direct: 1-604-678-3275",
+            "buyatab_rights": "Buyatab Online Inc. Tous droits réservés"
+        }
+    },
+    "confirmation" : {
+        "city"  : "Ville: ",
+        "total"  : "Total: ",
+        "coutry"  : "Pays: ",
+        "address"  : "Adresse: ",
+        "phone"  : "Numéro de  téléphone: ",
+        "zip"  : "Code Postal: ",
+        "card_type"  : "Type de carte: ",
+        "state"  : "Province: ",
+        "card_number"  : "Numéro de Carte: ",
+        "order_total"  : "Votre Commade: ",
+        "order_summary" : "Détail de la commandery",
+        "card_info"  : "Informations Carte Bancaireon",
+        "email_address"  : "Adresse e-mail: ",
+        "discount_total"  : "Remise: ",
+        "add_charges" : "Des frais supplémentaires",
+        "shipping_total"  : "Frais de Livraison: ",
+        "card_expiration"  : "Date d’expiration: ",
+        "billing_address"  : "Adresse de facturation" 
+    },
+    "reload" : {
+        "text" : {
+            "enter_card" : "Recharger votre carte",
+            "your_card" : "Votre carte: ",
+            "balance" : "Solde actuel: ",
+            "scene_points" : "Veuillez noter: recharger sa carte cadeau ne vous offre pas de SCENE POINTS."
+        },
+        "label": {
+            "gcard_number" : "Carte Cadeau numéro"
+        },
+        "detail" : {
+            "gcard_number" : "Numéo au dos de la carte"
+        },
+        "placeholder" : {
+            "gcard_number" : "0000 0000 0000 0000 0000"
+        }
+    }
+}

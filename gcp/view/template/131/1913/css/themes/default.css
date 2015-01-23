@@ -1,0 +1,80 @@
+/* Theme-3 - Grey*/
+body, h2, label, input, textarea, select{
+	color: #666;
+}
+input, textarea, select, div#exp-widget{
+	border: solid 1px #d9d8d8;
+	background: #fff;
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f7f7f7 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f7f7f7));
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f7f7f7 100%);
+	background: -o-linear-gradient(top,  #ffffff 0%,#f7f7f7 100%);
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f7f7f7 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#f7f7f7 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f7f7f7',GradientType=0 );
+}
+input[type=checkbox]{
+	background: none;
+	border: none;
+	filter: none;
+}
+input::-webkit-input-placeholder { /* WebKit browsers */
+    color: #dedede;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #dedede;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #dedede;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #dedede;
+}
+textarea::-webkit-input-placeholder { /* WebKit browsers */
+    color: #dedede;
+}
+textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #dedede;
+}
+textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #dedede;
+}
+textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #999;
+}
+input[placeholder], [placeholder], *[placeholder]{
+    /*color:#999;*/
+}
+.button > span, .half-button > span, 				/*buttons*/
+ul#delivery-content a.deliver-calendar, 					/*calendar*/
+#image-wrap .next, #image-wrap .prev, /*img selector*/
+div#exp-widget button.ew-arrow,							/*expiration date*/ 
+#cart h2,													/*cart icon*/
+.udBox a, 													/*up-down*/
+div#cart-embed button.ew-arrow,
+.cart-button{ 
+	background-image: url('../../images/icons-3.png'); 
+}
+header ul#status-bar > li .theme-color-bg > div{ 
+	background: url('../../images/header-bevel.png') 0px -2px no-repeat; 
+	color: #fff;
+}
+header ul#status-bar > li .theme-color-bg:after{
+	background: #7a7a7a;
+}
+a, .button, .half-button, 
+div#preview-window-bg span#pw-close, 
+.terms-field > label strong{
+	color: #7a7a7a;
+}
+.button, .half-button, .main-button{
+	background-image: url('../../images/bt-bg-3.png');
+}
+.main-button{
+	color: #FFF;
+	border: 1px solid #aaa;
+}
+div#cart-embed.active{
+	background: #FFF;
+}
+/*Theme-3 end*/

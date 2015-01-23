@@ -1,0 +1,14 @@
+{
+    "options" : {
+    	"valueType" : "buttons",
+    	"cartScroll" : 2,
+    	"beforeStep" : "",
+    	"imgWrap" : "div#card-selector",
+    	"isWidth" : 440,
+    	"initHeight" : 1200,
+    	"moneySign" : "$",
+		"showDollar": true,
+		"minCustomize": false,
+		"minCheckout": false
+    }
+}

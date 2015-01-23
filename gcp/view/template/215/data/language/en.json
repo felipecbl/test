@@ -1,0 +1,93 @@
+{
+	"dialogs" : {
+		"shipping_options" : "Shipping & handling"
+	},
+	"errors" : {
+		
+		"1017" : "Enter a valid Zip code"
+	},
+	"customize" : {
+		"text"	:	{
+			"add_photo": "After you have read and accepted the Terms & Conditions, please select your frame and upload your personal photo.  Image size must be between 100kb and 6MB. </br>Personal images are subject to a screening review process.  Those that do not meet the criteria as outlined in the accepted Terms and Conditions may result in delay or order cancellation.</br>",
+			"delivery_note"	: "",
+			"delivery_description": "Please select from one of the options below:",
+			"delivery_info":"Delivery",
+			"additional_charge": "An additional charge of <span class='aditional-value'>$$$</span> for a personalized Tim Card will be applied, plus additional charges apply for delivery (costs vary depending on delivery method chosen)."
+			},
+        "plastic": {
+            "label": {
+                "state": "State",
+                "zip": "Zip code"
+            },
+            "detail": {
+                "state": "Select Recipient's State",
+				"country" : "",
+                "zip": "Enter Recipient's Zip code"
+            },
+            "placeholder": {
+                "state": "State"
+            },
+            "text": {
+                "page_info" : "The Tim Cards will be delivered to the address provided below.</br>You may only send a personalized Tim Card to a recipient who has provided their consent for the purposes of this offer.  The card will be delivered with a note including your name and indicating it was sent by you.</br></br>All personalized Tim Card orders will be are usually processed within 24 hours and shipped according to your selected options.</br>All Personalized Tim Card orders submitted after 8pm EST on Fridays or on Statutory holidays will be processed on the following business day."
+            }
+        },
+		"email": {
+			"text" : {
+				"page_info" : "Tim Cards will be delivered directly to the recipient's email account. </br>All personalized E-Gift card orders will be processed with 24 hours.</br>Send a personalized Tim Card to your family or friends! You may only send a card via email or text to family related through marriage, a common-law partnership, or parent-child relationship, or to friends with whom you have a personal relationship, and who have provided their consent."
+			}
+		},
+		"print" : {
+			"text" : {
+				"page_info" : "Tim Cards will be delivered to your email account instead of the recipient's, for you to hand deliver.</br>Send a personalized Tim Card to your family or friends! You may only send a card via email or text to family related through marriage, a common-law partnership, or parent-child relationship, or to friends with whom you have a personal relationship, and who have provided their consent."
+			},
+			"detail" : {
+				"recipient_name" : "The name of the person you're sending the card to"
+			}
+		},
+		"sms" : {
+			"text" : {
+				"page_info" : "Tim Cards will be delivered to the recipient's phone by SMS/Text.</br>Send a personalized Tim Card to your family or friends! You may only send a card via email or text to family related through marriage, a common-law partnership, or parent-child relationship, or to friends with whom you have a personal relationship, and who have provided their consent.</br>Standard messaging or data rates may apply depending on your provider plan"
+			},
+			"detail" : {
+				"recipient_name" : "The name of the person you're sending the card to",
+				"recipient_phone" : "A valid US mobile smart phone number required"
+			}
+		}
+	},
+	"checkout" : {
+		"label" : {
+            "cc_optin" : "Yes, I would like the opportunity to receive information and offers from Tim Hortons. You may later withdraw your consent. </br></br>Your consent is sought by Tim Hortons.* If you have any questions, please contact us by writing to 874 Sinclair Road Oakville, ON L6K 2Y1, by completing our web form <a href='http://www.timhortons.com/ca/en/about/contact-form.php' target='_blank'>click here</a>, or by calling us at 1-888-601-1616.</br></br>*Tim Hortons includes Tim Hortons Inc., which is seeking consent on its own behalf and on behalf of its subsidiaries, including, TDL Group Corp. and Tim Hortons Advertising & Promotion Fund (Canada) Inc. </br>",
+			"cc_state" : "State", 
+			"cc_zip" : "Zip code"
+		},
+		"detail" : {
+			"cc_state" : "Select your State", 
+			"cc_zip" : "Enter your Zip code"
+		},
+		"placeholder" : {
+			"cc_state" : "State"
+		}			
+	},
+	"photo" : {
+		"photo_terms" : "I have fully read, accepted and agreed to these two sets of Terms & Conditions. <a href=\"#\" onclick=\"javascript:window.open('view/template/215/documentation/phototerms.html', 'Terms', 'width=800,height=600, menubar=0, scrollbars=1, status=0, titlebar=0, toolbar=0'); return false;\">Terms and Conditions of Photo Gift Card Purchases</a> and <a href='http://www.timhortons.com/us/en/timcard/timcard-terms-conditions.php' target='_blank' >Tim Card ® Terms and Conditions</a>."
+	},
+
+	"footer" : {
+		"text" : {
+			"customer_support": "<a href=\"#\" onclick=\"javascript:window.open('view/template/215/documentation/phototerms.html', 'Terms', 'width=800,height=600, menubar=0, scrollbars=1, status=0, titlebar=0, toolbar=0'); return false;\">Terms and Conditions of Photo Gift Card Purchases</a></br><a href='http://www.timhortons.com/us/en/timcard/timcard-terms-conditions.php' target='_blank' >Tim Card ® Terms and Conditions</a></br>Customer Support: ",
+			"buyatab_rights": "All Rights Reserved"
+		} 
+	},
+
+	"confirmation" : {
+
+		"zip"  : "Zip Code: ",
+		"state"  : "State: "
+	},
+	"extrafields" : {
+		"text":{
+			"mandatory":"All fields are mandatory unless otherwise noted",
+			"holiday_note":""
+		}
+	}
+}

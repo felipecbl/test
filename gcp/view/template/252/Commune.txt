@@ -1,0 +1,25 @@
+Commune Hotels
+
+1990 - JDV Hotels
+ - USD
+1989 - JDV Hotels
+ - CAN
+2054 - JDV Hotels - Mobile - USD
+2055 - JDV Hotels - Mobile - CAD
+
+1991 - Thompson Hotels
+ - CAD
+1992 - Thompson Hotels
+ - USD
+2052 - Thompson Hotels - Mobile
+ - CAD
+2053 - Thompson Hotels - Mobile
+
+ - USD
+1987 - Commune
+ - CAD
+1988 - Commune
+ - USD
+2056 - Commune - Mobile
+ - USD
+2057 - Commune - Mobile - CAD

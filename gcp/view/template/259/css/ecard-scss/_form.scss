@@ -1,0 +1,26 @@
+
+.field{
+	@include fdp;
+	width: 100%;
+	margin: 0 0 15px;
+}
+.error-message{
+	@include fdp;
+	@include border-box;
+	width: 100%;
+	color: red;
+	height: 15px;
+	margin: 5px 0 0;
+	padding: 0;
+	font-size: 12px;
+
+	@media #{$iPhone-landscape}{
+		font-size: $mobile-font-size - 5;
+		height: $mobile-font-size;
+	}
+
+	@media #{$iPhone-portrait}{
+		font-size: $mobile-font-size - 10;
+		height: $mobile-font-size - 5;
+	}
+}

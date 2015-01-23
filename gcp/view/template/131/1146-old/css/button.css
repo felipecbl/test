@@ -1,0 +1,185 @@
+div#preview-window-bg span#pw-close{
+	background-image: url("../images/x-bg.png");
+    font-family: arial;
+    font-size: 14px;
+    font-weight: bold;
+    height: 24px;
+    padding: 9px 0 0 12px;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    width: 20px;
+    cursor: pointer;
+}
+.button{
+	clear: none;
+	float: left;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	min-width: 160px; 
+	padding: 2px; 
+	font-size: 12px; 
+	margin: 0 0 5px;
+}
+.half-button{
+	-webkit-box-shadow: 0 0 2px 0 #dedede;
+	box-shadow: 0 1px 3px 0 #dedede;
+	clear: none;
+	float: left;
+	display: block;
+	margin: 3px;
+	text-decoration: none;
+	text-align: center;
+	border: 1px solid #dadada;
+	background-position: 0px -102px;
+	background-repeat: repeat-x ;
+}
+.button > span{
+	background: url("../images/bg-btn-blk.png") repeat-x scroll center top transparent;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    display: block;
+    font-family: "museo-sans","museo-sans-2","Arial","Helvetica",sans-serif;
+    font-weight: bold;
+    padding: 10px 36px 8px;
+}
+.main-button{
+	background-position: top left;
+	background-repeat: repeat-x ;
+	background: none repeat scroll 0 0 #F73F30;
+}
+.main-button > span{
+	background: url("../images/bg-btn-red.png") repeat-x scroll center top transparent;
+}
+.button:hover{
+	background: none repeat scroll 0 0 #F73F30;
+}
+.button:hover > span{
+	background: none;
+}
+/*Icons*/
+.no-icon{
+	background-image: none;
+}
+a.checkout, a.new-card{
+	display: none;
+}a.new-card{
+	display: none !important;
+}
+.change_design_bt{
+	display: none;
+}
+.preview_bt {
+	background: none repeat scroll 0 0 transparent !important;
+    height: 220px;
+    position: absolute;
+    top: -235px;
+    width: 296px;	
+}
+div.pages-nav  .button.add-to-cart, div.pages-nav  .button.continue-button, 
+div.pages-nav .main-button.button,  div.pages-nav  .button.update-cart {
+    float: right;
+}
+div.pages-nav  .button.update-cart{
+	display: none;
+}
+div.checkout-nav a{
+	clear: none;	
+}
+div.pages-nav  .button.back-button{
+	float: left;
+}
+
+.half-button > span {
+	padding: 0 30px 0 0;
+	min-width: 60px;
+	float: left;
+	text-align: left;
+}
+
+.udBox a{
+	float: left;
+	display: block;
+	position: relative;
+	clear: both;
+	border: 1px solid #dedede;
+}
+.udBox .qUp{
+	background-position: right -13px;
+}
+.udBox .qDown{
+	background-position: right -51px;
+}
+.udBox .qUp:active{
+	background-position: right -14px;
+}
+.udBox .qDown:active{
+	background-position: right -50px;
+}
+ul#delivery-content a.deliver-calendar{
+	display: inline-block;
+	background-position: right -400px;
+	float: left;
+	margin: -4px 0 0 5px;
+}
+ul#delivery-content a.deliver-calendar:hover{
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+	filter: alpha(opacity=60);
+	opacity: 0.6;
+}
+div#cart-embed button.ew-arrow{
+	float: left;
+	position: relative;
+	width: 170px;
+	height: 20px;
+	margin: 0;
+	cursor: pointer;
+	border: 1px solid transparent;	
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-image: url('../images/icons-3.png');
+	display: none;
+}
+div#cart-embed button.ew-arrow:hover{
+	border: 1px solid #ddd;	
+}
+div#cart-embed button.ew-arrow-up{
+	background-position: 50px -10px;
+	margin: 0 0 5px;
+}
+div#cart-embed button.ew-arrow-down{
+	background-position: 50px -50px;
+}
+
+div#exp-widget button.ew-arrow{
+	float: left;
+	display: block;
+	position: relative;
+	width: 46px;
+	height: 20px;
+	margin: 0 5px;
+	cursor: pointer;
+	border: 1px solid transparent;	
+	background-repeat: no-repeat;
+	background-color: transparent;
+
+	background-image: url('../images/icons.png');
+}
+button.ew-arrow:hover{
+	border: 1px solid #ddd;	
+}
+
+div#exp-widget button.ew-arrow-up{
+	background-position: -10px -10px;
+}
+div#exp-widget button.ew-arrow-down{
+	background-position: -10px -50px;
+}
+
+div#exp-widget button.ew-arrow-up:active{
+	background-position: -10px -11px;
+}
+div#exp-widget button.ew-arrow-down:active{
+	background-position: -10px -49px;
+}

@@ -1,0 +1,1079 @@
+
+{{! <!-- the 'wrapper' holds everything together --> }}
+<div id='wrapper'>
+	
+	{{! <!-- Preview Window --> }}
+	<div id='preview-window-bg'>
+		<div id='preview-window'>
+			<img id='preview-image' src=''>
+			<span id="pw-close">x</span>
+			<span id="pw-value"></span>
+			<span id="pw-message"></span>
+		</div>
+	</div>
+	{{! <!-- Preview Window end --> }}
+
+	{{! Confirmation page }}
+	<div id="confirmation-window-bg">
+		<div id="confirmation-window">
+
+			<div id="cw-content">
+				<div class="summary">
+					<h2>{{{confirmation.order_summary}}}</h2>
+					<div class='cw-order'><div>{{{confirmation.order_total}}}</div><span></span></div>
+					<div class='cw-shipping'><div>{{{confirmation.shipping_total}}}</div><span></span></div>
+					<div class='cw-discount'><div>{{{confirmation.discount_total}}}</div><span></span></div>
+					<div class='cw-total'><div>{{{confirmation.total}}}</div><span></span></div>
+				</div>
+				<div class="summary">
+					<h2>{{{confirmation.card_info}}}</h2>
+					<div class="cw-type"><div>{{{confirmation.card_type}}}</div><span></span></div>
+					<div class="cw-number"><div>{{{confirmation.card_number}}}</div><span></span></div>
+					<div class="cw-date"><div>{{{confirmation.card_expiration}}}</div><span></span></div>
+				</div>
+				<div class="summary hundred-percent">
+					<h2>{{{confirmation.billing_address}}}</h2>
+					<div class="cw-email"><div>{{{confirmation.email_address}}}</div><span></span></div>
+					<div class="cw-phone"><div>{{{confirmation.phone}}}</div><span></span></div>
+					<div class="cw-address"><div>{{{confirmation.address}}}</div><span></span></div>
+					<div class="cw-city"><div>{{{confirmation.city}}}</div><span></span></div>
+					<div class="cw-state"><div>{{{confirmation.state}}}</div><span></span></div>
+					<div class="cw-country"><div>{{{confirmation.coutry}}}</div><span></span></div>
+					<div class="cw-zip"><div>{{{confirmation.zip}}}</div><span></span></div>
+				</div>
+			</div>
+
+			{{! <!-- Pages Navigation --> }}
+			<div class="pages-nav">
+				<div class='group-error'></div>
+				<a href="javascript:void(0)" class='button back-button back-to-purchaser-info'>
+					<span>{{{checkout.text.back_to_purchaser_info}}}</span>
+				</a>
+
+				<a href="javascript:void(0)" class='button continue-button go-to-summary'>
+					<span>{{{checkout.text.go_to_purchaser_info}}}</span>
+				</a>
+			</div>
+			{{! <!-- Pages Navigation end --> }}
+		</div>
+	</div>	
+	{{! Confirmation Page end }}
+
+
+
+	{{! <!-- Status bar --> }}
+	<header>
+		<ul id='status-bar'>
+			<li id='header-customize' class='status-page'>
+				<div class='theme-color-bg'><div>1</div></div>
+				<div class='page-title'> {{{customize.text.title}}} </div>
+			</li> 
+			<li class='separator'></li>
+			<li id='header-checkout'  class='status-page'>
+				<div class='theme-color-bg'><div>2</div></div>
+				<div class='page-title'> {{{checkout.text.title}}} </div>
+			</li>
+		</ul>
+	</header>
+	{{! <!-- Status bar end --> }}
+
+	{{! <!-- Content --> }}
+	<div id='content'>	
+
+
+		{{! <!-- Pages Wrapper --> }}
+		<div id='pages-wrapper'>
+		<h1>Fairmont Gift Cards</h1>
+
+			<ul id="pages">
+				{{! <!-- Page 1 (customize card(s) ) --> }}
+				<li id='customize' class='validate' data-step='step1'>
+					
+					{{! <!-- Fields --> }}
+					<ul class='fields'>
+						{{! <!-- Card info --> }}
+						<li id='customize_card' class='tab-group'>
+							<h2> {{{customize.text.customize_card}}} </h2>
+							{{! <!-- Card selector --> }}
+
+							{{! Design selector }}
+							{{! tab }}
+							<ul id='custom-type'  class='dnumber-2'>
+								<input type="hidden" name='customize-type' id='customize-type' value='default'>
+								<li data-ctype='default' class='dt-active' data-id='0'>Choose a design</li>
+								<li data-ctype='photo' data-id='1'>Upload a photo</li>
+							</ul>
+							{{! tab end }}
+
+							{{! Design panels }}
+							<ul id="design-selector">
+								
+								{{! Choose Design }}
+								<li id='choose-design' class='validate'>									
+									{{! Top Image Wrap }}
+									<figure id='image-wrap'></figure>
+									{{! Top Image Wrap end }}				
+
+									<div id='card-selector'>
+										{{! Top Image Wrap }}
+										<div id='image-wrap'></div>
+										{{! Top Image Wrap end }}
+
+										<div class='field-left'>
+											{{! <!-- Card image. on click shows the carousel --> }}
+											<div class='choose-card'><span>{{{customize.text.change_card}}}</span></div>
+											{{! <!-- Default value = 1 > chainID/images/card/1.png --> }}
+											<input type="hidden" name='card_design' id='card_design'>
+											<input type="hidden" name='card_src' id='card_src'>
+										</div>
+										<div class='field-right'>
+											<a href='javascript:void(0)' class='button change_design_bt'>
+												<span>{{{customize.text.change_design_bt}}}</span>
+											</a>
+											<a href='javascript:void(0)' class='button preview_bt'>
+												<span>{{{customize.text.preview_bt}}}</span>
+											</a>
+											<div class='quantity half-field'> {{! validation-error }}
+												<label for='card_quantity'> {{{customize.label.quantity}}} </label>
+												<div>
+													<input type='text' name='card_quantity' id='card_quantity' class='quantity up-down-number number' value='1'> 
+												</div>
+												<div class='field-error'></div>
+											</div>
+										</div>
+									</div>
+									{{! <!-- Card selector end --> }}
+								</li>
+								{{! Choose Design end}}
+
+								{{! Upload photo }}
+								<li id='upload-photo'>
+									{{! <h2>Instructions</h2> }}
+									<p>Add a photo clicking on the blank card and then crop on the side.</p>
+
+									<div id="photo-selector">
+										
+										<div class='field-left'>
+											{{! Photo wrap }}
+											<div id='photo-wrap'> <div id="photo-in"></div> <span>Click to preview</span></div>
+											{{! Photo wrap end}}
+											<div class='half-field'>
+												<div class='field-error'></div>
+												<input id='saved-photo' type="hidden" class='required photo' />
+											</div>
+										</div>
+
+										<div class='field-right'>
+											<div id="up-panel">												
+												<a class="button add_photo" href="javascript:void(0)">
+													<span>{{{customize.label.browse_photo}}}</span>
+													<div id="p-bar"></div>
+													<input id='photo-file' type="file" class='hide-it' name="files[]" accept="image/jpg" />
+												</a>
+											</div>
+										</div>
+									</div>
+								</li>
+								{{! Upload photo end}}
+
+							</ul>
+							{{! Design panels end }}
+
+							{{! Design selector end }}
+
+							<div id="customize-data">
+								{{! <!-- Message field --> }}
+								<div class='field'>
+									<div class='field-left'>
+										<div>
+											<label for='card_message'> {{{customize.label.message}}} </label>
+										</div>
+										<div class='field-error'></div>
+									</div>
+									<div class='field-right'>
+										<div class='input-holder'>
+											<textarea name='card_message' id='card_message' cols='30' rows='10' class='required message' placeholder='{{{customize.placeholder.message}}}'></textarea>
+										</div>									
+										<div class='field-detail'><div id='chars'></div><div id='char-line'> {{{customize.detail.message}}} (</div><div id='chars-lines'> </div> {{{customize.detail.message_lines}}} )</div>
+									</div>
+								</div>
+								{{! <!-- Message field end --> }}
+
+								{{! <!-- Ammount field --> }}
+								<div class='field'>
+									<div class='field-left'>
+										<div>
+											<label for='card_value'> {{{customize.label.value}}} </label>
+										</div>
+										<div class='field-error'></div>
+									</div>
+									<div class='field-right'>
+										<div class='input-holder'>
+											<input type='text' name='card_value' id='card_value' class='required ammount number no-tab' placeholder='{{{customize.placeholder.value}}}'><span class='dollar-sign'>$</span>
+											<div class='field-detail'> {{{customize.detail.value}}} </div>
+											<div class='field-detail-value'>{{{customize.detail.value3}}}</div>
+										</div>
+										<div class='values-wrap'>
+											{{! <!-- Buttons with values here --> }}
+										</div>
+									</div>
+								</div>
+								{{! <!-- Ammount field end --> }}
+							</div>
+
+							{{! <!-- Pages Navigation --> }}
+							<div class="pages-nav customize-nav">
+								<div class='group-error'></div>
+								<a href="javascript:void(0)" class='button continue-button go-to-delivery no-tab'>
+									<span>{{{customize.text.go_to_delivery}}}</span>
+								</a>
+							</div>
+							{{! <!-- Pages Navigation end --> }}
+
+						</li>
+						{{! <!-- Card info end --> }}
+
+						{{! <!-- Delivery info --> }}
+						<li id='delivery-info' class='tab-group'>
+							<h2> {{{customize.text.delivery_info}}} </h2>
+							{{! <!-- Select the delivery type  --> }}
+							<ul id='delivery-type'>
+								<input type="hidden" name='delivery_type' id='delivery_type' value='email'>
+								<li data-delivery="plastic" data-dnature='plastic'><span> {{{customize.plastic.title}}} </span></li>
+								<li data-delivery="email" data-dnature='electronic'><span> {{{customize.email.title}}} </span></li>
+								<li data-delivery="print" data-dnature='electronic'><span> {{{customize.print.title}}} </span></li>
+								<li data-delivery="facebook" data-dnature='electronic'><span> {{{customize.facebook.title}}} </span></li>
+								<li data-delivery="sms" data-dnature='electronic'><span> {{{customize.sms.title}}} </span></li>
+							</ul>
+							{{! <!-- Select the delivery type end --> }}
+							
+							{{! <!-- Delivery type content. It changes depending on the selection --> }}
+							<ul id='delivery-content'>
+								
+								{{! <!-- Plastic delivery --> }}
+								<li id='dc-plastic' data-dnature='plastic'>
+									<p> {{{customize.plastic.text.page_info}}} </p>
+
+									<h2> {{{customize.plastic.text.shipping_info}}} </h2>
+									
+									{{! <!-- Plastic shipment --> }}
+									<div id="plastic-shipment"></div>
+
+									
+									{{! <!-- New shipment --> }}
+									<div id="new-shipment">
+										{{! <!-- Recipiente name field --> }}
+										<div class='field'>
+											{{! <!-- validation-error --> }}
+											<div class='field-left'>
+												<div>
+													<label for='plastic_recipient_name'> {{{customize.plastic.label.recipient_name}}} </label>
+												</div>
+												<div class='field-error'></div>
+											</div>
+											<div class='field-right'>
+												<div class='input-holder'>
+													<input type='text' name='plastic_recipient_name' id='plastic_recipient_name' class='required name' placeholder='{{{customize.plastic.placeholder.recipient_name}}}'>
+												</div>
+												<div class='field-detail'> {{{customize.plastic.detail.recipient_name}}} </div>
+											</div>
+										</div>
+										{{! <!-- Recipiente name field end --> }}
+
+										{{! <!-- Recipiente phone field --> }}
+										<div class='field'>
+											{{! <!-- validation-error --> }}
+											<div class='field-left'>
+												<div>
+													<label for='plastic_recipient_phone'> {{{customize.plastic.label.recipient_phone}}} </label>
+												</div>
+												<div class='field-error'></div>
+											</div>
+											<div class='field-right'>
+												<div class='input-holder'>
+													<input type='text' name='plastic_recipient_phone' id='plastic_recipient_phone' class='required phone' placeholder='{{{customize.plastic.placeholder.recipient_phone}}}'>
+												</div>
+												<div class='field-detail'> {{{customize.plastic.detail.recipient_phone}}} </div>
+											</div>
+										</div>
+										{{! <!-- Recipiente name field end --> }}
+
+
+
+										{{! <!-- Address --> }}
+										<div class='field'>
+											<div class='field-left'>
+												<div>
+													<label for='plastic_address'> {{{customize.plastic.label.address}}} </label>
+												</div>
+												<div class='field-error'></div>
+											</div>
+											<div class='field-right'>
+												<div class='input-holder'>
+													<input type='text' name='plastic_address' id='plastic_address' class='required name' placeholder='{{{customize.plastic.placeholder.address}}}'>
+												</div>
+												<div class='field-detail'> {{{customize.plastic.detail.address}}} </div>
+											</div>
+										</div>
+										{{! <!-- Address end --> }}
+
+										{{! <!-- Address2 --> }}
+										<div class='field'>
+											<div class='field-left'>
+												<div>
+													<label for='plastic_address2'> {{{customize.plastic.label.address2}}} </label>
+												</div>
+												<div class='field-error'></div>
+											</div>
+											<div class='field-right'>
+												<div class='input-holder'>
+													<input type='text' name='plastic_address2' id='plastic_address2' class='optional add2' placeholder='{{{customize.plastic.placeholder.address2}}}'>
+												</div>
+												<div class='field-detail'> {{{customize.plastic.detail.address2}}} </div>
+											</div>
+										</div>
+										{{! <!-- Address2 end --> }}
+
+										{{! <!-- city --> }}
+										<div class='field'>
+											<div class='field-left'>
+												<div>
+													<label for='plastic_city'> {{{customize.plastic.label.city}}} </label>
+												</div>
+												<div class='field-error'></div>
+											</div>
+											<div class='field-right'>
+												<div class='input-holder'>
+													<input type='text' name='plastic_city' id='plastic_city' class='required' placeholder='{{{customize.plastic.placeholder.city}}}'>
+												</div>
+												<div class='field-detail'> {{{customize.plastic.detail.city}}} </div>
+											</div>
+										</div>
+										{{! <!-- city end --> }}
+
+										{{! <!-- country --> }}
+										<div class='field'>
+											<div class='field-left'>
+												<div>
+													<label for='plastic_country'> {{{customize.plastic.label.country}}} </label>
+												</div>
+												<div class='field-error'></div>
+											</div>
+											<div class='field-right'>
+												<div class='input-holder'>
+													<select name='plastic_country' id='plastic_country' class='required' id="cc_country">
+														
+													</select>
+												</div>
+												<div class='field-detail'> {{{customize.plastic.detail.country}}} </div>
+											</div>
+										</div>
+										{{! <!-- country end --> }}
+
+										{{! <!-- state --> }}
+										<div class='field'>
+											<div class='field-left'>
+												<div>
+													<label for='plastic_state'> {{{customize.plastic.label.state}}} </label>
+												</div>
+												<div class='field-error'></div>
+											</div>
+											<div class='field-right'>
+												<div class='input-holder'>
+													<select name='plastic_state' id='plastic_state' class='required' id="cc_state"></select>
+												</div>
+												<div class='field-detail'> {{{customize.plastic.detail.state}}} </div>
+											</div>
+										</div>
+										{{! <!-- state date end --> }}
+
+										{{! <!-- zip --> }}
+										<div class='field'>
+											<div class='field-left'>
+												<div>
+													<label for='plastic_zip'> {{{customize.plastic.label.zip}}} </label>
+												</div>
+												<div class='field-error'></div>
+											</div>
+											<div class='field-right'>
+												<div class='input-holder'>
+													<input type='text' name='plastic_zip' id='plastic_zip' class='required zip zipca no-tab' placeholder='{{{customize.plastic.placeholder.zip}}}'>
+													<input type="hidden" id="plastic_shipping_option" class="required"/>
+												</div>
+												<div class='field-detail'> {{{customize.plastic.detail.zip}}} </div>
+											</div>
+										</div>
+										{{! <!-- zip end --> }}
+
+										<div id="shipping-options"></div>
+										
+										{{! <!-- Pages Navigation --> }}
+										<div class="pages-nav">
+											<div class='group-error'></div>
+											<a href="javascript:void(0)" class='button continue-button get-shipment'>
+												<span>{{{customize.plastic.label.continue}}}</span>
+											</a>
+										</div>
+										{{! <!-- Pages Navigation end --> }}
+									</div>
+									{{! <!-- end new-shipment --> }}
+								</li>
+								{{! <!-- Plastic delivery end --> }}
+
+								{{! <!-- Email delivery --> }}
+								<li id='dc-email' class='validate' data-dnature='electronic'>
+									<p> {{{customize.email.text.page_info}}} </p>
+
+									{{! <!-- Recipiente name field --> }}
+									<div class='field'>
+										{{! <!-- validation-error --> }}
+										<div class='field-left'>
+											<div>
+												<label for='email_recipient_name'> {{{customize.email.label.recipient_name}}} </label>
+											</div>
+											<div class='field-error'></div>
+										</div>
+										<div class='field-right'>
+											<div class='input-holder'>
+												<input type='text' name='email_recipient_name' id='email_recipient_name' class='required name' placeholder='{{{customize.email.placeholder.recipient_name}}}'>
+											</div>
+											<div class='field-detail'> {{{customize.email.detail.recipient_name}}} </div>
+										</div>
+									</div>
+									{{! <!-- Recipiente name field end --> }}
+
+									{{! <!-- Recipiente email field --> }}
+									<div class='field'>
+										{{! <!-- validation-warning --> }}
+										<div class='field-left'>
+											<div>
+												<label for='email_recipient_email'> {{{customize.email.label.recipient_email}}} </label>
+											</div>
+											<div class='field-error'></div>
+										</div>
+										<div class='field-right'>
+											<div class='input-holder'>
+												<input type='text' name='email_recipient_email' id='email_recipient_email' class='required email' placeholder='{{{customize.email.placeholder.recipient_email}}}'>
+											</div>
+											<div class='field-detail'> {{{customize.email.detail.recipient_email}}} </div>
+										</div>
+									</div>
+									{{! <!-- Recipiente email field end --> }}
+
+									{{! <!-- Recipiente email field --> }}
+									<div class='field'>
+										{{! <!-- validation-warning --> }}
+										<div class='field-left'>
+											<div>
+												<label for='confirmation_email_recipient_email'> {{{customize.email.label.confirmation_email}}} </label>
+											</div>
+											<div class='field-error'></div>
+										</div>
+										<div class='field-right'>
+											<div class='input-holder'>
+												<input type='text' data-confirm="email_recipient_email" name='confirmation_email_recipient_email' id='confirmation_email_recipient_email' class='econfirm' placeholder='{{{customize.email.placeholder.recipient_email}}}'>
+											</div>
+											<div class='field-detail'> {{{customize.email.detail.confirmation_email}}} </div>
+										</div>
+									</div>
+									{{! <!-- Recipiente email field end --> }}
+
+									{{! <!-- From name field --> }}
+									<div class='field'>
+										<div class='field-left'>
+											<div>
+												<label for='email_from_name'> {{{customize.email.label.from_name}}} </label>
+											</div>
+											<div class='field-error'></div>
+										</div>
+										<div class='field-right'>
+											<div class='input-holder'>
+												<input type='text' name='email_from_name' id='email_from_name' class='optional sname name' placeholder='{{{customize.email.placeholder.from_name}}}'>
+											</div>
+											{{! <!-- Name not required. If empty use the purchaser's Name --> }}
+											<div class='field-detail'> {{{customize.email.detail.from_name}}} </div>
+										</div>
+									</div>
+									{{! <!-- From name field end --> }}
+
+									{{! <!-- Delivery date field --> }}
+									<div class='field  absolute-z'>
+										<div class='field-left'>
+											<div>
+												<label for='email_delivery_date'> {{{customize.email.label.delivery_date}}} </label>
+											</div>
+											<div class='field-error'></div>
+										</div>
+										<div class='field-right'>
+											<div class='input-holder'>
+												<input type='text' name='email_delivery_date' id='email_delivery_date' class='required date no-tab' placeholder='{{{customize.email.placeholder.delivery_date}}}'>
+											</div>
+											<div class='field-detail'> {{{customize.email.detail.delivery_date}}} </div>
+										</div>
+									</div>
+									{{! <!-- Delivery date field end --> }}
+
+								</li>
+								{{! <!-- Email delivery end --> }}
+
+								{{! <!-- Print at home delivery --> }}
+								<li id='dc-print' data-dnature='electronic'>
+									<p> {{{customize.print.text.page_info}}} </p>
+
+									{{! <!-- Recipiente name field --> }}
+									<div class='field'>
+										<div class='field-left'>
+											<div>
+												<label for='print_recipient_name'> {{{customize.print.label.recipient_name}}} </label>
+											</div>
+											<div class='field-error'></div>
+										</div>
+										<div class='field-right'>
+											<div class='input-holder'>
+												<input type='text' name='print_recipient_name' id='print_recipient_name' class='required name' placeholder='{{{customize.print.placeholder.recipient_name}}}'>
+											</div>
+											<div class='field-detail'> {{{customize.print.detail.recipient_name}}} </div>
+										</div>
+									</div>
+									{{! <!-- Recipiente name field end --> }}
+
+									
+
+									{{! <!-- From name field --> }}
+									<div class='field'>
+										<div class='field-left'>
+											<div>
+												<label for='print_from_name'> {{{customize.print.label.from_name}}} </label>
+											</div>
+											<div class='field-error'></div>
+										</div>
+										<div class='field-right'>
+											<div class='input-holder'>
+												{{! <!-- Optional: No required class. jQuery to add (optional) to the label? --> }}
+												<input type='text' name='print_from_name' id='print_from_name' class='optional sname name' placeholder='{{{customize.print.placeholder.from_name}}}'>
+											</div>
+											{{! <!-- Name not required. If empty use the purchaser's Name --> }}
+											<div class='field-detail'> {{{customize.print.detail.from_name}}} </div>
+										</div>
+									</div>
+									{{! <!-- From name field end --> }}
+									
+									{{! <!-- Recipiente email field --> }}
+									<div class='field'>
+										<div class='field-left'>
+											<div>
+												<label for='print_recipient_email'> {{{customize.print.label.from_email}}} </label>
+											</div>
+											<div class='field-error'></div>
+										</div>
+										<div class='field-right'>
+											<div class='input-holder'>
+												{{! <!-- Optional: No required class. jQuery to add (optional) to the label? --> }}
+												<input type='text' name='print_recipient_email' id='print_recipient_email' class='required email semail' placeholder='{{{customize.print.placeholder.from_email}}}'>
+											</div>
+											{{! <!-- Email not required. If empty use the purchaser's email --> }}
+											<div class='field-detail'> {{{customize.print.detail.from_email}}} </div>
+										</div>
+									</div>
+									{{! <!-- Recipiente email field end --> }}
+								</li>
+								{{! <!-- Print at home delivery end --> }}
+
+								{{! <!-- Facebook delivery --> }}
+								<li id='dc-facebook' data-dnature='electronic'>
+									<p> {{{customize.facebook.text.page_info}}} </p>
+									
+								</li>
+								{{! <!-- Facebook delivery end --> }}
+
+								{{! <!-- sms delivery --> }}
+								<li id='dc-sms' data-dnature='electronic'>
+									<p> {{{customize.sms.text.page_info}}} </p>
+									
+									{{! <!-- Recipiente name field --> }}
+									<div class='field'>
+										{{! <!-- validation-error --> }}
+										<div class='field-left'>
+											<div>
+												<label for='sms_recipient_name'> {{{customize.sms.label.recipient_name}}} </label>
+											</div>
+											<div class='field-error'></div>
+										</div>
+										<div class='field-right'>
+											<div class='input-holder'>
+												<input type='text' name='sms_recipient_name' id='sms_recipient_name' class='required name' placeholder='{{{customize.sms.placeholder.recipient_name}}}'>
+											</div>
+											<div class='field-detail'> {{{customize.sms.detail.recipient_name}}} </div>
+										</div>
+									</div>
+									{{! <!-- Recipiente name field end --> }}
+
+									{{! <!-- Recipiente sms field --> }}
+									<div class='field'>
+										{{! <!-- validation-warning --> }}
+										<div class='field-left'>
+											<div>
+												<label for='sms_recipient_phone'> {{{customize.sms.label.recipient_phone}}} </label>
+											</div>
+											<div class='field-error'></div>
+										</div>
+										<div class='field-right'>
+											<div class='input-holder'>
+												<input type='text' name='sms_recipient_phone' id='sms_recipient_phone' class='required sms' placeholder='{{{customize.sms.placeholder.recipient_phone}}}'>
+											</div>
+											<div class='field-detail'> {{{customize.sms.detail.recipient_phone}}} </div>
+										</div>
+									</div>
+									{{! <!-- Recipiente sms field end --> }}
+
+									{{! <!-- From name field --> }}
+									<div class='field'>
+										<div class='field-left'>
+											<div>
+												<label for='sms_from_name'> {{{customize.sms.label.from_name}}} </label>
+											</div>
+											<div class='field-error'></div>
+										</div>
+										<div class='field-right'>
+											<div class='input-holder'>
+												<input type='text' name='sms_from_name' id='sms_from_name' class='optional sname name' placeholder='{{{customize.sms.placeholder.from_name}}}'>
+											</div>
+											{{! <!-- Name not required. If empty use the purchaser's Name --> }}
+											<div class='field-detail'> {{{customize.sms.detail.from_name}}} </div>
+										</div>
+									</div>
+									{{! <!-- From name field end --> }}
+
+									{{! <!-- Delivery date field --> }}
+									<div class='field  absolute-z'>
+										<div class='field-left'>
+											<div>
+												<label for='sms_delivery_date'> {{{customize.sms.label.delivery_date}}} </label>
+											</div>
+											<div class='field-error'></div>
+										</div>
+										<div class='field-right'>
+											<div class='input-holder'>
+												<!-- <input type='checkbox' name='immediately' id='immediately' class='required check'>
+												<label for='immediately'><span>{{{customize.sms.detail.immediately}}}</span> </label> -->
+												<input type='text' name='sms_delivery_date' id='sms_delivery_date' class='required date no-tab' placeholder='{{{customize.sms.placeholder.delivery_date}}}'>
+											</div>
+											<div class='field-detail'> {{{customize.sms.detail.delivery_date}}} </div>
+										</div>
+									</div>
+									{{! <!-- Delivery date field end --> }}
+								</li>
+								{{! <!-- sms delivery end --> }}
+							</ul>	
+							{{! <!-- Delivery type content end --> }}
+							
+							{{! <!-- Pages Navigation --> }}
+							<div class="pages-nav">
+								<div class='group-error'></div>
+								<a href="javascript:void(0)" class='button back-button back-to-card'>
+									<span>{{{customize.text.back_to_card}}}</span>
+								</a>
+
+								<a href="javascript:void(0)" class='button add-to-cart no-tab'>
+									<span>{{{customize.text.add_to_cart_bt}}}</span>
+								</a>
+
+								<a href="javascript:void(0)" class='button update-cart'>
+									<span>{{{customize.text.update_cart_bt}}}</span>
+								</a>
+							</div>
+							
+							{{! <!-- Pages Navigation end --> }}
+						</li>
+						{{! <!-- Delivery info end --> }}
+
+					</ul>
+					{{! <!-- Fields end --> }}
+
+
+				</li>
+				{{! <!-- Page 1 end --> }}
+
+				{{!<!-- Page Cart end --> }}
+				<li id='page-cart' data-step='step2'>
+					
+					<ul class="fields">
+						
+						{{! <!-- Cart --> }}
+						<li id='cart'>
+							<h2> {{{cart.text.title}}} </h2>
+
+							<button class="ew-arrow ew-arrow-up" data-direction='up'></button>
+
+							<div id="cards-wrapper">
+								
+								{{! <!-- Cards --> }}
+								<ul id="cards"></ul>
+								{{! <!-- Cards end --> }}
+
+							</div>
+
+							<button class="ew-arrow ew-arrow-down" data-direction='down'></button>
+							
+							{{! <!-- Summary here --> }}
+							<div id="summary">
+								{{{cart.text.empty}}}
+							</div>
+							{{! <!-- Summary ends --> }}
+
+							{{! <!-- Buttons --> }}
+							<div id="control">
+								<a href="javascript:void(0)" class='button new-card'><span>{{{cart.text.new_card}}}</span></a>
+								<a href="javascript:void(0)" class='button main-button checkout no-tab'><span>{{{cart.text.checkout}}}</span></a>
+							</div>
+							{{! <!-- Buttons end --> }}
+
+						</li>
+						{{! <!-- Cart end --> }}
+
+					</ul>		
+				</li>
+				{{! <!-- Page 2 (checkout) --> }}
+				<li id='checkout' data-step='step3'>
+					{{! <!-- Fields --> }}
+					<ul class='fields'>
+						{{! <!-- CC info --> }}
+						<li id='cc-info' class='tab-group'>
+							<h2> {{{checkout.text.card_info}}} </h2>
+							{{! <!-- CC type --> }}
+
+							<ul id="cc-type-selector">
+								<li class='mastercard'></li>
+								<li class='visa'></li>
+								<li class='amex'></li>
+							</ul>
+							<input type="hidden" name='cc_type' id='cc_type' value='visa'>
+							{{! <!-- CC type end --> }}
+
+							{{! <!-- CC number --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_number'> {{{checkout.label.cc_number}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='cc_number' id='cc_number' class='required number creditcard' placeholder='{{{checkout.placeholder.cc_number}}}'>
+									</div>
+									<div class='field-detail'> {{{checkout.detail.cc_number}}} </div>
+								</div>
+							</div>
+							{{! <!-- cc number end --> }}
+
+							{{! <!-- Name on cc --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_name'> {{{checkout.label.cc_name}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='cc_name' id='cc_name' class='required name' placeholder='{{{checkout.placeholder.cc_name}}}'>
+									</div>
+									<div class='field-detail'> {{{checkout.detail.cc_name}}} </div>
+								</div>
+							</div>
+							{{! <!-- Name on cc end --> }}
+
+							{{! <!-- Expiration date --> }}
+							<div class='field absolute-z'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_expiration'> {{{checkout.label.cc_expiration}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='cc_expiration' id='cc_expiration' class='required expdate' placeholder='{{{checkout.placeholder.cc_expiration}}}'>
+									</div>
+									<div class='field-detail'> {{{checkout.detail.cc_expiration}}} </div>
+								</div>
+							</div>
+							{{! <!-- Expiration date end --> }}
+
+							{{! <!-- CVD --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_cvd'> {{{checkout.label.cc_cvd}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='cc_cvd' id='cc_cvd' class='  no-tab number optional' placeholder='{{{checkout.placeholder.cc_cvd}}}'>
+									</div>
+									<div class='field-detail'>
+										<a href="javascript:void(0)" id='cvd-a' onclick="{{{checkout.detail.cvd_url}}}" >
+											{{{checkout.detail.cc_cvd}}} 
+										</a> 
+									</div>
+								</div>
+							</div>
+							{{! <!-- CVD end --> }}
+							
+							{{! <!-- Pages Navigation --> }}
+							<div class="pages-nav checkout-nav">
+								<div class='group-error'></div>
+								<a href="javascript:void(0)" class='button back-button back-to-cart'>
+									<span>{{{checkout.text.back_to_cart}}}</span>
+								</a>
+								<a href="javascript:void(0)" class='button continue-button go-to-cc-billing'>
+									<span>{{{checkout.text.go_to_cc_billing}}}</span>
+								</a>
+							</div>
+							{{! <!-- Pages Navigation end --> }}
+
+						</li>
+						{{! <!-- CC info end --> }}
+
+						{{! <!-- Billing info --> }}
+						<li id='billing-info' class='tab-group'>
+							<h2> {{{checkout.text.billing_info}}} </h2>
+							{{! <!-- Address --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_address'> {{{checkout.label.cc_address}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='cc_address' id='cc_address' class='required' placeholder='{{{checkout.placeholder.cc_address}}}'>
+									</div>
+									<div class='field-detail'> {{{checkout.detail.cc_address}}} </div>
+								</div>
+							</div>
+							{{! <!-- Address end --> }}
+
+							{{! <!-- Address2 --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_address2'> {{{checkout.label.cc_address2}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='address2' id='cc_address2' class='optional add2 addressline' data-address='cc_address' placeholder='{{{checkout.placeholder.cc_address2}}}'>
+									</div>
+									<div class='field-detail'> {{{checkout.detail.cc_address2}}} </div>
+								</div>
+							</div>
+							{{! <!-- Address2 end --> }}
+
+							{{! <!-- city --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_city'> {{{checkout.label.cc_city}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='cc_city' id='cc_city' class='required name' placeholder='{{{checkout.placeholder.cc_city}}}'>
+									</div>
+									<div class='field-detail'> {{{checkout.detail.cc_city}}} </div>
+								</div>
+							</div>
+							{{! <!-- city end --> }}
+
+							{{! <!-- country --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_country'> {{{checkout.label.cc_country}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<select name='cc_country' id='cc_country' class='required' id="cc_country">
+											
+										</select>
+									</div>
+									<div class='field-detail'> {{{checkout.detail.cc_country}}} </div>
+								</div>
+							</div>
+							{{! <!-- country end --> }}
+
+							{{! <!-- state --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_state'> {{{checkout.label.cc_state}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<select name='cc_state' id='cc_state' class='required' id="cc_state">
+											{{! <!-- <option selected="selected" value="0">   Select One   </option> --> }}
+											<option value="52">Alberta</option>
+											<option value="53">British Columbia</option>
+											<option value="54">Manitoba</option>
+											<option value="55">New Brunswick</option>
+											<option value="56">Newfoundland</option>
+											<option value="81">Northwest Territories</option>
+											<option value="57">Nova Scotia</option>
+											<option value="82">Nunavut</option>
+											<option value="58">Ontario</option>
+											<option value="59">Prince Edward Island</option>
+											<option value="60">Quebec</option>
+											<option value="61">Saskatchewan</option>
+											<option value="83">Yukon</option> 
+										</select>
+									</div>
+									<div class='field-detail'> {{{checkout.detail.cc_state}}} </div>
+								</div>
+							</div>
+							{{! <!-- state date end --> }}
+
+							{{! <!-- zip --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_zip'> {{{checkout.label.cc_zip}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='cc_zip' id='cc_zip' class='required zip zipca no-tab' placeholder='{{{checkout.placeholder.cc_zip}}}'>
+									</div>
+									<div class='field-detail'> {{{checkout.detail.cc_zip}}} </div>
+								</div>
+							</div>
+							{{! <!-- zip end --> }}
+							
+							{{! <!-- Pages Navigation --> }}
+							<div class="pages-nav checkout-nav">
+								<div class='group-error'></div>
+								<a href="javascript:void(0)" class='button back-button back-to-cc-billing'>
+									<span>{{{checkout.text.back_to_cc_billing}}}</span>
+								</a>
+								<a href="javascript:void(0)" class='button continue-button go-to-purchaser-info'>
+									<span>{{{checkout.text.go_to_purchaser_info}}}</span>
+								</a>
+							</div>
+							{{! <!-- Pages Navigation end --> }}
+
+						</li>
+						{{! <!-- Billing info end --> }}
+
+						{{! <!-- Purchaser info --> }}
+						<li id='purchaser-info' class='tab-group'>
+							<h2> {{{checkout.text.purchaser_info}}} </h2>
+							{{! <!-- phone --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_phone'> {{{checkout.label.cc_phone}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='cc_phone' id='cc_phone' class='required phone' placeholder='{{{checkout.placeholder.cc_phone}}}'>
+									</div>
+									<div class='field-detail'> {{{checkout.detail.cc_phone}}} </div>
+								</div>
+							</div>
+							{{! <!-- phone end --> }}
+
+							{{! <!-- email --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_email'> {{{checkout.label.cc_email}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' name='cc_email' id='cc_email' class='required email no-tab' placeholder='{{{checkout.placeholder.cc_email}}}'>
+									</div>
+									<div class='field-detail'>{{{checkout.detail.cc_email}}}</div>
+								</div>
+							</div>
+							{{! <!-- email end --> }}
+
+							{{! <!-- email --> }}
+							<div class='field'>
+								<div class='field-left'>
+									<div>
+										<label for='cc_email_confirmation'> {{{checkout.label.cc_email_confirmation}}} </label>
+									</div>
+									<div class='field-error'></div>
+								</div>
+								<div class='field-right'>
+									<div class='input-holder'>
+										<input type='text' data-confirm="cc_email" name='confirmation_cc_email' id='confirmation_cc_email' class='econfirm' placeholder='{{{checkout.placeholder.cc_email_confirmation}}}'>
+									</div>
+									<div class='field-detail'>{{{checkout.detail.cc_email_confirmation}}}</div>
+								</div>
+							</div>
+							{{! <!-- email end --> }}
+
+							{{! <!-- Terms --> }}
+							<div class='terms-field'>
+								<input type='checkbox' name='cc_terms' id='cc_terms' class='required check'>
+								<label for='cc_terms'> {{{checkout.label.cc_terms}}} </label>
+								<div class='field-detail'>
+									<a id='terms-a' class='tip' href="javascript:void(0)" onclick="{{{checkout.detail.terms_url}}}" target="_blank">
+										{{{checkout.detail.cc_terms}}}
+									</a>
+								</div>
+								<div class='field-error'></div>
+							</div>
+							{{! <!-- Terms end --> }}
+
+							{{! <!-- Pages Navigation --> }}
+							<div class="pages-nav">
+								<div class='group-error'></div>
+								<a href="javascript:void(0)" class='button back-button back-to-purchaser-info'>
+									<span>{{{checkout.text.back_to_purchaser_info}}}</span>
+								</a>
+
+								<a href="javascript:void(0)" class='main-button button purchase'>
+									<span>{{{checkout.text.pay_bt}}}</span>
+								</a>
+								{{!-- <img id='verisign' alt='Click to Verify - This site has chosen an SSL Certificate to improve Web site security' src='view/template/default/images/getseal.gif'/> --}}
+							</div>
+							{{! <!-- Pages Navigation end --> }}
+
+						</li>
+						{{! <!-- Purchaser info end --> }}
+
+					</ul>
+					{{! <!-- Fields end --> }}
+
+				</li>
+				{{! <!-- Page 2 end --> }}
+			</ul>
+
+		</div>
+		{{! <!-- Pages Wrapper end --> }}
+		{{! <!-- Embed Cart --> }}
+		<div id='cart-embed'></div>
+		{{! <!-- Embed Cart end --> }}
+
+	</div>
+	{{! <!-- Content end --> }}
+
+	{{! </div> }}
+	{{! <!-- Wrapper end --> }}
+</div>

@@ -1,0 +1,1110 @@
+//Preview Style 0 (Default)
+$card_small_height_ps0:             176px !default;
+$card_small_width_ps0:              234px !default;
+
+$card_large_height_ps0:             386px !default;
+$card_large_width_ps0:              515px !default;
+
+//Preview Style 1 (Cineplex)
+$card_small_height_ps1:             147px !default;
+$card_small_width_ps1:              234px !default;
+
+$card_large_height_ps1:             325px !default;
+$card_large_width_ps1:              515px !default;
+
+//Preview Style 2 (Fairmont)
+$card_small_height_ps2:             147px !default;
+$card_small_width_ps2:              234px !default;
+
+$card_large_height_ps2:             600px !default;
+$card_large_width_ps2:              400px !default;
+
+//photo banner
+$banner_horizontal_small_height:    42px !default;
+$banner_horizontal_small_width:     $card_small_width_ps1 !default;
+
+$banner_vertical_small_height:      $card_small_height_ps1 !default;
+$banner_vertical_small_width:       60px !default;
+
+$banner_horizontal_large_height:    92px !default;
+$banner_horizontal_large_width:     $card_large_width_ps1 !default;
+
+$banner_vertical_large_height:      $card_large_height_ps1 !default;
+$banner_vertical_large_width:       132px !default;
+
+$remote_server:                      'https://images.buyatab.com/gcp/view/cards/default/ecard/';
+$local_server:                      '/gcp/view/template/default/images/card-animation/';
+
+$perspective:                       1200px;
+
+.index1{
+    @include transition(all 0s);
+    z-index: 1;
+}
+
+.index2{
+    z-index: 2;
+}
+
+.index3{
+    z-index: 3;
+}
+
+.ecard{
+
+    .card-wrapper{
+        height: card_large_height_ps1;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        width:  card_large_width_ps1;
+        z-index: 3;
+
+        figure{
+            background: none;
+
+            &.small{
+                @include rounded(12px);
+                height: $card_small_height_ps1;
+                width:  $card_small_width_ps1;
+                overflow: hidden;
+            }
+
+            &.large{
+                @include rounded(30px);
+                height: $card_large_height_ps1;
+                margin: auto;
+                overflow: hidden;
+                width:  $card_large_width_ps1;
+                z-index: 5;
+            }
+        }
+    }
+
+    .card-image{
+        display: block;
+        height: 280px;
+        margin: 0 auto;
+        position: relative;
+        width:  460px;
+        z-index: 2;
+
+        &.small{
+            height: $card_small_height_ps1;
+            width:  $card_small_width_ps1;
+            margin: 0;
+        }
+
+        &.large{
+            @include transition(all .5s, z-index 0s);
+            height: $card_large_height_ps1;
+            width:  $card_large_width_ps1;
+        }
+
+        @media #{$iPhone-landscape}{
+            width: 400px;
+            height: auto;
+        }
+
+        @media #{$iPhone-portrait}{
+            width: 500px;
+            height: auto;
+        }
+    }
+
+    .amount{
+        @include border-box;
+        @include txt-shadow;
+        float: left;
+        font-size: 26px;
+        font-weight: 100;
+        line-height: 100%;
+        margin: 10px 0 20px;
+        position: relative;
+        width: 100%;
+
+        @media #{$iPhone-landscape}{
+            font-size: $mobile-font-size + 20;
+            margin: 10px 0 20px;
+        }
+
+        @media #{$iPhone-portrait}{
+            font-size: $mobile-font-size + 20;
+            margin: 10px 0 20px;
+        }
+    }
+
+    .message-wrapper{
+        @include fdp;
+        width: 100%;
+        height: 55%;
+        margin: 0;
+        z-index: 1;
+    }
+
+    .message{
+        @include border-box;
+        @include fdp;
+        color: #404040;
+        font-size: 16px;
+        font-weight: 100;
+        line-height: 120%;
+        margin: 10px 0;
+        padding: 0 20px;
+        text-align: center;
+        width: 100%;
+        word-wrap:break-word;
+
+        @media #{$iPhone-landscape}{
+            font-size: $mobile-font-size - 3;
+            line-height: 100%;
+        }
+
+        @media #{$iPhone-portrait}{
+            font-size: $mobile-font-size;
+            line-height: 100%;
+        }
+    }
+
+    .card{
+
+        &.animation1{
+
+            // @include perspective(1200px); //***
+            cursor: pointer;
+            height: 320px;
+            width: 550px;
+            margin: 20px auto 0;
+            position: relative;
+            @include transition(all .5s);
+            font-family: helvetica;
+
+            .message{
+                padding: 0 72px 0 54px;
+            }
+
+            .amount{
+                margin: 10px 0 20px;
+            }
+
+            .tile {
+                width: 550px;
+                height: 306px;
+                position: absolute;
+
+                @media print {
+                    background: none !important;
+                    height: auto !important;
+                    -moz-transform: none !important;
+                    -webkit-transform: none !important;
+                    transform: none !important;
+                    position: relative !important;
+                    float: left !important;
+                }
+            }
+
+            .front {
+                @include transform-style(preserve-3d);                
+
+                .outside, .inside {
+                    @include backface-visibility(hidden);
+                    @include transition-duration(0.75s);
+                    position: absolute;
+                }
+
+                .outside {
+                    //Background set from JS
+                    @include transform-origin(0, 0);  //***
+                    -moz-transform:perspective($perspective) rotateX(0deg);
+                    -webkit-transform:perspective($perspective) rotateX(0deg);
+                    transform:perspective($perspective) rotateX(0deg);
+                    // z-index: 100;
+                }
+
+                .inside {
+                    @include transform-origin(0, 100%);  //***
+                    // background: url("../images/card-animation/tile_top.png") no-repeat left top;
+                    top: -306px;
+
+                    -moz-transform:perspective($perspective) rotateX(-179.9deg);
+                    -webkit-transform:perspective($perspective) rotateX(-179.9deg);
+                    transform:perspective($perspective) rotateX(-179.9deg);
+
+                    @media print {
+                        top: auto !important;
+                    }
+                }
+            }
+
+            &.open{
+                padding: 306px 0 0;
+
+                .front {
+
+                    .outside{
+                        -webkit-transform:perspective($perspective) rotateX(179.9deg);
+                        -moz-transform:perspective($perspective) rotateX(179.9deg);
+                        transform:perspective($perspective) rotateX(179.9deg);
+                    }
+
+                    .inside{
+                        -moz-transform:perspective($perspective) rotateX(0);
+                        -webkit-transform:perspective($perspective) rotateX(0);
+                        transform:perspective($perspective) rotateX(0);
+                    }
+                }
+
+                .in-bottom {
+                    @include transition-duration(0.75s);
+                    z-index: 3;
+                }
+            }
+
+            .in-bottom {
+                // background: url("../images/card-animation/tile_bottom.png") no-repeat left top;
+                z-index: 1;
+            }
+
+            .card-wrapper{
+                background: url($remote_server + "card-mask.png") no-repeat center center;
+                height: 179px;
+                margin: 20px auto 0;
+                padding: 30px 0 0 30px;
+                position: relative;
+                width:  264px;
+
+                @media print {
+                    margin: 0 !important;
+                    height: auto !important;
+                    width: 100% !important;
+                    padding: 0 !important;
+                }
+
+                figure{
+
+                    &.small{
+                        // @include clip_mask($remote_server + "clip.svg");
+                        @include clip_mask($local_server + "clip.svg");
+                        @include box-shadow(2px 1px 2px grey);
+                    }
+
+                    &.large{
+                        @include box-shadow(4px 5px 8px 0 rgba(50, 50, 50, 0.45));
+                        @include rounded(30px);
+                        @include transition(all .5s, z-index 0s);
+                        left: 50%;
+                        margin: -130px 0 0 -140px;
+                        top: -50px;
+                    }
+
+                    @media print {
+                        @include rounded(30px !important);
+                        margin: auto !important;
+                        -webkit-mask: none !important;
+                        -webkit-clip-path: none !important;
+                        clip-path: none !important;
+                        -moz-transform: scale(0.8);
+                        -webkit-transform: scale(0.8);
+                        transform: scale(0.8);
+
+                    }
+                }
+            }
+        }
+
+        // vertical animation
+        &.animation2{
+
+            // @include perspective(1200px);
+            @include transition(all .5s);
+            cursor: pointer;
+            font-family: helvetica;
+            height: 413px;
+            margin: 20px auto 0;
+            position: relative;
+            width: 279px;
+
+            .message{
+                padding: 0 30px 0 40px;
+            }
+
+            .tile {
+                width: 306px;
+                height: 416px;
+                position: absolute;
+
+                @media print {
+                    background: none !important;
+                    height: auto !important;
+                    -moz-transform: none !important;
+                    -webkit-transform: none !important;
+                    transform: none !important;
+                    position: relative !important;
+                    float: left !important;
+                }
+            }
+
+            .front {
+                @include transform-style(preserve-3d);                
+
+                .outside, .inside {
+                    @include backface-visibility(hidden);
+                    @include transition-duration(0.75s);
+                    position: absolute;
+                }
+
+                .outside {
+                    //Background set from JS
+                    @include transform-origin(0, 0);
+                    -moz-transform:perspective($perspective) rotateY(0deg);
+                    -webkit-transform:perspective($perspective) rotateY(0deg);
+                    transform:perspective($perspective) rotateY(0deg);
+                    // z-index: 100;
+                }
+
+                .inside {
+                    @include transform-origin(100%, 0);
+                    // background: url("../images/card-animation/tile_left.png") no-repeat left top;
+                    left: -306px;
+
+                    -moz-transform:perspective($perspective) rotateY(179.9deg);
+                    -webkit-transform:perspective($perspective) rotateY(179.9deg);
+                    transform:perspective($perspective) rotateY(179.9deg);
+
+                    @media print {
+                        top: auto !important;
+                    }
+                }
+            }
+
+            &.open{
+                padding: 0 0 0 279px;
+
+                .front {
+
+                    .outside{
+                        -webkit-transform:perspective($perspective) rotateY(-179.9deg);
+                        -moz-transform:perspective($perspective) rotateY(-179.9deg);
+                        transform:perspective($perspective) rotateY(-179.9deg);
+                    }
+
+                    .inside{
+                        -moz-transform:perspective($perspective) rotateY(0);
+                        -webkit-transform:perspective($perspective) rotateY(0);
+                        transform:perspective($perspective) rotateY(0);
+                    }
+                }
+                
+                .in-bottom {
+                    @include transition-duration(0.75s);
+                    z-index: 3;
+                }
+            }
+
+            .in-bottom {
+                // background: url("../images/card-animation/tile_right.png") no-repeat left top;
+                z-index: 1;
+            }
+
+            .card-wrapper{
+                background: url($remote_server + "card-mask.png") no-repeat center center;
+                height: 179px;
+                margin: 50px 0 0;
+                padding: 30px 0 0 30px;
+                position: relative;
+                width:  264px;
+
+                @media print {
+                    margin: 0 !important;
+                    height: auto !important;
+                    width: 100% !important;
+                    padding: 0 !important;
+                }
+
+                &.small{
+                    transform: scale(.9) rotate(0deg);
+                    -moz-transform: scale(.9) rotate(0deg);
+                    -webkit-transform: scale(.9) rotate(0deg);
+                }
+
+                &.large{
+
+                }
+
+                figure{
+
+                    &.small{
+                        @include box-shadow(0px 2px 2px grey);
+                        // @include clip_mask($remote_server + "clip.svg");
+                        @include clip_mask($local_server + "clip.svg");
+                    }
+
+                    &.large{
+                        @include box-shadow(10px 15px 10px 10px rgba(50, 50, 50, 0.20));
+                        @include rounded(30px);
+                        @include transition(all .5s, z-index 0s);
+                        left: 50%;
+                        margin: -100px 0 0 -285px;
+                        top: -50px;
+                    }
+
+                    @media print {
+                        @include rounded(30px !important);
+                        margin: auto !important;
+                        -webkit-mask: none !important;
+                        -webkit-clip-path: none !important;
+                        clip-path: none !important;
+                        -moz-transform: scale(0.8);
+                        -webkit-transform: scale(0.8);
+                        transform: scale(0.8);
+                    }
+                }
+            }
+        }
+
+        // Flip animation
+        &.animation3{
+
+            // @include perspective(1200px);
+            @include transition(all .5s);
+            cursor: pointer;
+            font-family: helvetica;
+            margin: 20px auto;
+            position: relative;
+            height: $card_large_height_ps2;
+            width: $card_large_width_ps2;
+
+            .message{
+                padding: 0 30px 0 40px;
+                font-size: 18px;
+            }
+
+            .tile {
+                height: $card_large_height_ps2;
+                width: $card_large_width_ps2;
+                position: absolute;
+
+                @media print {
+                    background: none !important;
+                    -moz-transform: none !important;
+                    -webkit-transform: none !important;
+                    transform: none !important;
+                }
+
+                .printing-only{
+                    position: absolute;
+                }
+            }
+
+            .front {
+                @include transform-style(preserve-3d); 
+
+                .outside, .inside {
+                    @include backface-visibility(hidden);
+                    @include shadow(2px 2px 3px #ccc);               
+                    @include transition-duration(0.75s);
+                    position: absolute;
+                }
+
+                .outside {
+                    -moz-transform:perspective($perspective) rotateY(0deg);
+                    -webkit-transform:perspective($perspective) rotateY(0deg);
+                    transform:perspective($perspective) rotateY(0deg);
+                }
+
+                .inside {
+                    -moz-transform:perspective($perspective) rotateY(180deg);
+                    -webkit-transform:perspective($perspective) rotateY(180deg);
+                    transform:perspective($perspective) rotateY(180deg);
+
+                    @media print {
+                        background: none !important;
+                    }
+                }
+            }
+
+            &.open{
+                padding: 0;
+
+                .front {
+
+                    .outside{
+                        -webkit-transform:perspective($perspective) rotateY(-180deg);
+                        -moz-transform:perspective($perspective) rotateY(-180deg);
+                        transform:perspective($perspective) rotateY(-180deg);
+                    }
+
+                    .inside{
+                        -moz-transform:perspective($perspective) rotateY(0);
+                        -webkit-transform:perspective($perspective) rotateY(0);
+                        transform:perspective($perspective) rotateY(0);
+                    }
+                }
+                
+                .in-bottom {
+                    @include transition-duration(0.75s);
+                    z-index: 3;
+                }
+            }
+
+            .in-bottom {
+                z-index: 1;
+            }
+
+            .card-wrapper{
+                @include fdp;
+                background: none;
+                height: 155px;
+                margin: 0 68px 10px;
+                padding: 0;
+                width:  264px;
+
+                &.small{
+                    transform: scale(.9) rotate(0deg);
+                    -moz-transform: scale(.9) rotate(0deg);
+                    -webkit-transform: scale(.9) rotate(0deg);
+                }
+
+                &.large{
+
+                }
+
+                figure{
+
+                    &.small{
+                        @include rounded(12px);
+                        @include box-shadow(1px 1px 2px grey);
+                        margin: 0 auto;
+                        height: 146px;
+                    }
+
+                    &.large{
+                        @include box-shadow(0 5px 10px 0 rgba(50, 50, 50, 0.20));
+                        @include rounded(30px);
+                        @include transition(all .5s, z-index 0s);
+                        left: auto;
+                        margin: -110px 0 0 -100px;
+                        top: auto;
+                    }
+                }
+
+                @media print {
+                    display: none !important;
+                }
+            }
+        }
+    }
+
+    .photo{
+
+        &.left{
+
+            .card-image{
+
+                &.small{
+                    width:  $card_small_width_ps1 - $banner_vertical_small_width;
+                    float: right;
+                }
+
+                &.large{
+                    width:  $card_large_width_ps1 - $banner_vertical_large_width;
+                    float: right;
+                }
+            }
+        }
+
+        &.right{
+
+            .card-image{
+
+                &.small{
+                    width:  $card_small_width_ps1 - $banner_vertical_small_width;
+                    float: left;
+                }
+
+                &.large{
+                    width:  $card_large_width_ps1 - $banner_vertical_large_width;
+                    float: left;
+                }
+            }
+        }
+
+        &.bottom{
+
+            .card-image{
+
+                &.small{
+                    height:  $card_small_height_ps1 - $banner_horizontal_small_height;
+                    width:  $card_small_width_ps1;
+                    float: left;
+                }
+
+                &.large{
+                    height:  $card_large_height_ps1 - $banner_horizontal_large_height;
+                    width:  $card_large_width_ps1;
+                    float: left;
+                }
+            }
+        }
+
+        &.top{
+
+            .card-image{
+
+                &.small{
+                    height:  $card_small_height_ps1 - $banner_horizontal_small_height;
+                    width:  $card_small_width_ps1;
+                    float: left;
+                    bottom: 0;
+                }
+
+                &.large{
+                    height:  $card_large_height_ps1 - $banner_horizontal_large_height;
+                    width:  $card_large_width_ps1;
+                    float: left;
+                }
+            }
+        }
+    }
+
+    .banner{
+        @include fdp;
+
+        &.small{
+            margin: 0;
+            max-height: $card_small_height_ps1;
+            max-width:  $card_small_width_ps1;
+
+            &.bottom{
+                height: $banner_horizontal_small_height;
+                width: $banner_horizontal_small_width;
+            }
+
+            &.top{
+                height: $banner_horizontal_small_height;
+                width: $banner_horizontal_small_width;
+                top: 0;
+            }
+
+            &.left{
+                height: $banner_vertical_small_height;
+                width: $banner_vertical_small_width;
+            }
+
+            &.right{
+                height: $banner_vertical_small_height;
+                width: $banner_vertical_small_width;
+            }
+        }
+
+        &.large{
+            @include transition(all .5s, z-index 0s);
+            margin: 0;
+            max-height: $card_large_height_ps1;
+            max-width:  $card_large_width_ps1;
+
+            &.bottom{
+                height: $banner_horizontal_large_height;
+                width: $banner_horizontal_large_width;
+            }
+
+            &.top{
+                height: $banner_horizontal_large_height;
+                width: $banner_horizontal_large_width;
+            }
+
+            &.left{
+                height: $banner_vertical_large_height;
+                width: $banner_vertical_large_width;
+            }
+
+            &.right{
+                height: $banner_vertical_large_height;
+                width: $banner_vertical_large_width;
+            }
+        }
+    }
+
+    //Default
+    &.previewstyle-0{
+
+        .card{
+
+            @media print {
+                height: auto !important;
+                padding: 0 !important;
+            }
+        }
+
+        .card-wrapper{
+            height: $card_large_height_ps0;
+
+            figure{
+
+                &.large{
+                    @include box-shadow(0);
+                    @include rounded(0);
+                    @include transition(none);
+                    background: none;
+                    height: $card_large_height_ps0;
+                    width:  $card_large_width_ps0;
+                    left: 0;
+                    margin: 0 auto;
+                    top: 0;
+                }
+
+                @media print {
+                    height: $card_large_height_ps0 !important;
+                    left: 0 !important;
+                    margin: 0 auto !important;
+                    top: 0 !important;
+                    width:  $card_large_width_ps0 !important;
+                }
+            }
+        }
+
+        .card-image{
+            position: relative;
+            z-index: 2;
+
+            &.small{
+                height: $card_small_height_ps0;
+                width:  $card_small_width_ps0;
+                margin: 0;
+            }
+
+            &.large{
+                @include transition(all .5s, z-index 0s);
+                height: $card_large_height_ps0;
+                width:  $card_large_width_ps0;
+            }
+
+            @media print{
+                height: $card_large_height_ps0 + 2 !important;
+                width:  $card_large_width_ps0 + 2 !important;
+                margin: -1px !important;
+            }
+        }
+
+        .message{
+            float: none;
+            left: 43px;
+            line-height: 110%;
+            margin: 0;
+            max-height: 120px;
+            padding: 0 10px;
+            position: absolute;
+            text-align: left;
+            top: 260px;
+            width: 515px;
+            z-index: 10;
+
+            @media print {
+                left: 63px !important;
+            }
+        }
+
+        .amount{
+            line-height: 100%;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            right: 45px;
+            top: 25px;
+            width: 140px;
+            z-index: 10;
+        }
+
+        &.animation{
+
+            .message{
+                left: auto;
+                padding: 0 60px 0 55px;
+                position: relative;
+                text-align: center;
+                top: auto;
+                width: 100%;
+
+                @media print {
+                    left: auto !important;
+                    margin: 20px 0 !important;
+                    padding: 0 !important;
+                }
+            }
+
+            .amount{
+                left: auto;
+                right: auto;
+                top: auto;
+                width: 100%;
+                z-index: 1;
+
+                @media print {
+                    position: relative !important;
+                }
+            }
+        }
+    }
+
+    //Cineplex
+    &.previewstyle-1{
+
+        .card{
+
+            @media print {
+                height: auto !important;
+                padding: 0 !important;
+            }
+        }
+
+        .card-wrapper{
+            height: $card_large_height_ps1;
+
+            figure{
+
+                &.large{
+                    @include box-shadow(0);
+                    @include rounded(0);
+                    @include transition(none);
+                    background: none;
+                    height: $card_large_height_ps1;
+                    width:  $card_large_width_ps1;
+                    left: 0;
+                    margin: 0 auto;
+                    top: 0;
+                }
+
+                @media print {
+                    height: $card_large_height_ps1 !important;
+                    left: 0 !important;
+                    margin: 0 auto !important;
+                    top: 0 !important;
+                    width:  $card_large_width_ps1 !important;
+                }
+            }
+        }
+
+        .card-image{
+            position: relative;
+            z-index: 2;
+
+            &.small{
+                height: $card_small_height_ps1 + 2;
+                margin: -1px;
+                width:  $card_small_width_ps1 + 2;
+            }
+
+            &.large{
+                @include transition(all .5s, z-index 0s);
+                height: $card_large_height_ps1 + 2;
+                margin: -1px;
+                width:  $card_large_width_ps1 + 2;
+            }
+
+            @media print{
+                height: $card_large_height_ps1 + 2 !important;
+                width:  $card_large_width_ps1 + 2 !important;
+                margin: -1px !important;
+            }
+        }
+
+        .message{
+            padding: 0 45px;
+        }
+
+        &.animation{
+
+            .message{
+
+                @media print {
+                    margin-top: 20px !important;
+                    padding: 0 !important;
+                }
+            }
+        }
+
+
+        .amount{
+            margin: 20px 0;
+        }
+    }
+
+    //Fairmont 
+    &.previewstyle-2{
+
+        .card{
+
+            @media print {
+                height: $card_large_height_ps2 + 120 !important;
+                padding: 0 !important;
+            }
+        }
+
+        .card-wrapper{
+            height: $card_large_height_ps2;
+            // height: 600px;
+            // width:  0px;
+
+            figure{
+                &.large{
+                    @include box-shadow(0 0 1px #ccc);
+                    @include rounded(0);
+                    @include transition(none);
+                    background: none;
+                    // height: $card_small_height_ps2 * 2;
+                    // width:  $card_small_width_ps2 * 2;
+
+                height: 600px;
+                width:  400px;
+                    left: 0;
+                    margin: 0 auto;
+                    top: 0;
+                }
+            }
+        }
+
+        .card-image{
+            position: relative;
+            z-index: 2;
+
+            &.small{
+                height: $card_small_height_ps2;
+                width:  $card_small_width_ps2;
+                margin: 0;
+            }
+
+            &.large{
+                @include transition(all .5s, z-index 0s);
+                    height: 600px;
+                    width:  400px;
+            }
+        }
+
+        &.animation{
+            
+            figure{
+
+                &.large{
+                    height: ($card_small_height_ps2 * 2) - 2;
+                    width:  ($card_small_width_ps2 * 2) - 2;
+                }
+            }
+
+            .card-image{
+
+                &.large{
+                    height: $card_small_height_ps2 * 2;
+                    width:  $card_small_width_ps2 * 2;
+                }
+            }
+
+            .message{
+
+                @media print {
+                    margin-top: $card_large_height_ps2 + 150 !important;
+                }
+            }
+        }
+
+        .message{
+            @include text-shadow(rgba(255, 255, 255, 0.7) 1px 1px 0);
+            float: none;
+            left: 110px;
+            margin: 0;
+            padding: 0 10px;
+            position: absolute;
+            top: 470px;
+            width: 380px;
+            z-index: 10;
+
+                @media #{$iPhone-landscape}{
+                    left: 80px;
+                }
+
+                @media #{$iPhone-portrait}{
+                    left: 80px;
+                }
+        }
+
+        .animation3{
+
+            .message{
+                @include border-box;
+                @include text-shadow(rgba(255, 255, 255, 0.7) 1px 1px 0);
+                float: none;
+                left: 0;
+                margin: 0;
+                padding: 0 12px;
+                position: absolute;
+                top: auto;
+                width: 100%;
+                z-index: 10;
+
+                @media print {
+                    margin: 465px 0 0 !important;
+                }
+            }
+
+            .amount{
+
+                @media print {
+                    position: absolute !important;
+                    width: 100px !important;
+                    top: 35px !important;
+                    right: 12px !important;
+                }
+            }
+        }
+
+        //Boston Pizza
+        &.previewstyle-3{
+            .card-wrapper{
+                height: 600px;
+                // width:  0px;
+
+                figure{
+                    &.large{
+                        @include box-shadow(0 0 1px #ccc);
+                        @include rounded(0);
+                        @include transition(none);
+                        background: none;
+                        height: $card_large_height_ps2;
+                        width:  $card_large_width_ps2;
+                        left: 0;
+                        margin: 0 auto;
+                        top: 0;
+                    }
+                }
+            }
+
+            .card-image{
+                position: relative;
+                z-index: 2;
+
+                &.small{
+                    height: $card_small_height_ps2;
+                    width:  $card_small_width_ps2;
+                    margin: 0;
+                }
+
+                &.large{
+                    @include transition(all .5s, z-index 0s);
+                    height: $card_large_height_ps2;
+                    width:  $card_large_width_ps2;
+                }
+            }
+
+            .message{
+                float: none;
+                left: 110px;
+                margin: 0;
+                padding: 0 10px;
+                position: absolute;
+                top: 470px;
+                width: 380px;
+                z-index: 10;
+                @include text-shadow(rgba(255, 255, 255, 0.7) 1px 1px 0);
+            }
+        }
+    }
+}

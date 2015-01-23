@@ -1,0 +1,182 @@
+/* Theme-1148 - The Keg*/
+,  h2,  label,  input,  textarea,  select{
+	color: #333;
+}
+input,  textarea,  select,  div#exp-widget{
+	border: solid 1px #d9d8d8;
+	background: #fff;
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f7f7f7 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f7f7f7));
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f7f7f7 100%);
+	background: -o-linear-gradient(top,  #ffffff 0%,#f7f7f7 100%);
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f7f7f7 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#f7f7f7 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f7f7f7',GradientType=0 );
+}
+input[type=checkbox]{
+	/*background: none;*/
+	/*border: none;*/
+	filter: none;
+}
+input::-webkit-input-placeholder{ /* WebKit browsers */
+    color: #999;
+}
+input:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+    color: #999;
+}
+input::-moz-placeholder{ /* Mozilla Firefox 19+ */
+    color: #999;
+}
+input:-ms-input-placeholder{ /* Internet Explorer 10+ */
+    color: #999;
+}
+textarea::-webkit-input-placeholder{ /* WebKit browsers */
+    color: #999;
+}
+textarea:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+    color: #999;
+}
+textarea::-moz-placeholder{ /* Mozilla Firefox 19+ */
+    color: #999;
+}
+textarea:-ms-input-placeholder{ /* Internet Explorer 10+ */
+    color: #999;
+}
+input[placeholder],  [placeholder],  *[placeholder]{
+    /*color:#999;*/
+}
+.button > span,  .half-button > span, 	/*buttons*/
+ul#delivery-content a.deliver-calendar, 			/*calendar*/
+#image-wrap .next,  #image-wrap .prev, 	/*img selector*/
+div#exp-widget button.ew-arrow,						/*expiration date*/ 
+#cart h2,											/*cart icon*/
+.udBox a, 											/*up-down*/
+div#cart-embed button.ew-arrow,
+.cart-button{ 
+	background-image: url('../../images/icons-898.png'); 
+}
+header ul#status-bar > li .theme-color-bg > div{ 
+	background: none; 
+    color: #000;
+}
+header ul#status-bar > li .theme-color-bg:after{
+	background: none;
+}
+a,  .button,  .half-button,
+div#preview-window-bg span#pw-close, 
+.terms-field > label strong{
+	color: #41372F;
+}
+.main-button{
+	color: #FFF;
+	border: none;
+}
+div#cart-embed.active{
+	background: rgba(255, 255, 255, 0.2);
+}
+
+/*Theme-1148 end*/
+
+
+.button, .half-button {
+    background: none repeat scroll 0 0 #000000;
+}
+.button:hover, .main-button {
+    background: none repeat scroll 0 0 #F73F30;
+}
+.button > span {
+    background: url("../../images/bg-btn-blk.png") repeat-x;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    display: block;
+    font-family: museo-sans,museo-sans-2,Arial,Helvetica,sans-serif;
+    font-weight: bold;
+    padding: 10px 20px 8px;
+    text-transform: uppercase;
+    font-size: 15px;
+    height: 39px;
+}
+.main-button > span {
+    background: url("../../images/bg-btn-red.png") repeat-x scroll center top transparent;
+}
+.button:hover > span{
+    background: none;
+}
+
+
+
+
+
+header ul#status-bar > li.status-page {
+    border: none;
+    display: inline;
+    float: left;
+    height: 35px;
+    position: relative;
+}
+header ul#status-bar > li .theme-color-bg:after {
+  border-radius: 0 0 0 0;
+}
+header ul#status-bar > li .theme-color-bg > div {
+	border-radius: 0;
+    display: inline;
+    font-size: 11px;
+    font-weight: bold;
+    height: 15px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+input, textarea, select {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C0C0C0;
+    float: left;
+    font-size: 12px;
+    margin: 0;
+    padding: 8px;
+    resize: none;
+    width: 180px;
+    height: 40px;
+}
+select{
+    /*height: 32px;*/
+}
+label {
+    clear: both;
+    color: #666666 !important;
+    display: block;
+    float: left;
+    font-family: arial;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0;
+    margin: 0 0 10px;
+    padding: 0;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 14px;
+
+    height: 15px;
+    padding: 0;
+}
+label span{
+    margin: 0 0 0 5px;
+}
+h2 {
+    color: #000000;
+    float: left;
+    font-family: Arial,sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    height: 13px;
+    margin: 0 0 10px;
+    padding: 0;
+    text-transform: uppercase;
+    width: 100%;
+}
+#delivery-type{
+    border-bottom: 1px solid #CCC;
+    height: 39px;
+}

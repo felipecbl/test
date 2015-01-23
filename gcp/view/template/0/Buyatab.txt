@@ -1,0 +1,6 @@
+Buyatab Test
+10 	Buyatab - Test [Preview Style 0]
+11 	Buyatab - Test [Preview Style 1]
+12 	Buyatab - Test [Preview Style 2]
+13 	Buyatab - Test [Mobile no Images]
+14 	Buyatab - Test [Mobile]

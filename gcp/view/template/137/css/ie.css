@@ -1,0 +1,61 @@
+header{
+   min-height: 45px;
+}
+.size-0 header{
+   min-height: 60px;
+}
+#cart-embed h2{
+	width: 160px;
+	clear: both;
+}
+.theme-color-bg{
+	background: none !important;
+}
+.theme-color-bg:after{
+	background: none !important;
+}
+span#notification-icon{
+	padding: 2px 4px !important;
+	/*height: 15px;*/
+}
+.theme-color-bg > div{
+	color: #666 !important;
+}
+div#cart-embed.active{
+	border: 1px solid #ebebeb;
+	padding: 12px 22px;
+}
+div#chars, div#chars-lines, div#char-line{
+	float: left;
+}
+div#cart-embed div.card-info{
+	width: 115px !important;
+}
+.half-button > span {
+	min-width: 45px;
+}
+div#control a{
+	width: 120px;
+	min-width: 175px;
+}
+div#control a span{
+	width: 160px;
+}
+a.half-button > span{
+	min-width: 55px;
+}
+div#cart-embed div.card-img{
+	margin: 5px 10px 0 0 !important;
+}
+#delivery-type{
+	width: 100%;
+}
+#exp-widget{
+	left: 0;
+}
+.validation-error{
+	background: #feebea !important;
+	border-color: #ebb6b6;
+	color: #ff3333;
+	z-index: 999;
+}

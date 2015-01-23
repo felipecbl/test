@@ -1,0 +1,59 @@
+<h1>Confirmation</h1>
+<div id="wrapper" class='receipt'>
+	<img src="images/watermark.png" id='watermark'>
+	<header>
+		<div id='sub-title'>
+			<hgroup>
+				<h2>Thank you for placing your order!</h2>
+			</hgroup>
+		</div>		
+	</header>
+
+	<div id="message">
+		<p>
+			<span class="bold"></span> Your order number is <span class="bold">{{{ OrderNumber }}}</span>. It will be processed shortly and once completed: 
+		</p>
+		<div class="action">
+		</br>
+			1. A receipt will be sent to <span class="bold">{{{ PurchaserName }}}</span> at {{{ PurchaserEmail }}}.
+		</div>
+		</br>
+		<div class="action">
+			{{#if_multi Cards.length}}
+				<span>2. The gift cards and details on how to use them will be sent to: </span> 
+			{{ else}}
+				<span>2. The gift card and details on how to use it will be sent to:</span>
+			{{/if_multi}}
+			
+			{{#each Cards}}
+			<p class="name-address">
+				<span class="bold">{{{ RecipientName }}} </span>
+				{{#if ShippingAddress }}
+					to {{{ ShippingAddress }}} 
+				{{/if}}
+				{{#if DeliveryDate }}
+				on {{{ DeliveryDate }}}
+				
+				{{/if}}
+				
+			</p>	
+			{{/each}}
+		</div>
+		
+	</div>
+
+	<footer>
+		<div id='sub-footer'>
+			<p>
+				If you have any questions or require further assistance, please email us at {{{ SupportEmail }}} or call us at {{{ SupportPhone }}}.
+			</p>
+		</div>	
+	</footer>
+
+</div>
+
+<div class="pages-nav nav-receipt">
+	<a href="javascript:window.print()" class='button main-button continue-button no-icon'>
+		<span>Print</span>
+	</a>
+</div>

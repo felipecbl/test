@@ -1,0 +1,140 @@
+#wrapper {
+    min-width: 100%;
+    position: relative;
+}
+
+.container{
+	width: $fixed-width;
+	margin: auto;
+
+	@media #{$iPhone-landscape}{
+		@include border-box;
+		overflow: hidden;
+		padding: 0;
+		width: 100%;
+	}
+
+	@media #{$iPhone-portrait}{
+		@include border-box;
+		overflow: hidden;
+		padding: 0;
+		width: 100%;
+	}
+}
+
+#content{
+	@include fdp;
+}
+
+#ecard-wrap{
+	@include fdp;
+	margin: 0 auto;
+	padding: 0 20px;
+	background: #fff;
+
+	&:empty{
+		visibility: hidden;
+	}
+
+	@media print {
+		padding: 0 !important;
+		margin: 0 auto !important;
+		width: 640px !important;
+	}
+}
+
+#card{
+	@include fdp;
+	background: #f8f6f5;
+	// width: 100%;
+	// margin: 110px 0 0;
+	margin: 110px $offset-left-margin 0;
+	width: $offset-width;
+
+	@media print {
+		box-sizing: border-box;
+		margin: 0;
+		width: 100%;
+	}
+
+}
+
+.how-use{
+	background: none;
+}
+
+.ecard{
+
+	.card-wrapper{
+		margin: -100px 0 0 0;
+	}
+}
+
+body.animation{
+	&.ecard{
+
+		#card{
+			background: none;
+			margin: 0;
+			width: 100%;
+
+		}
+
+		.how-use{
+			background: #f8f6f5;
+		}
+
+		.card-wrapper{
+			margin: 0;
+		}
+	}
+}
+
+#text{
+	@include fdp;
+
+}
+
+.previewstyle-0{
+	
+}
+
+.previewstyle-1{
+
+	.card-image{
+		height: 280px;
+		width:  460px;
+
+		@media #{$iPhone-landscape}{
+			width: 400px;
+			height: auto;
+		}
+
+		@media #{$iPhone-portrait}{
+			width: 500px;
+			height: auto;
+		}
+	}
+
+	.amount{
+		font-size: 24px;
+		margin: 30px 0 20px;
+		position: relative;
+		width: 100%;
+
+		@media #{$iPhone-landscape}{
+			font-size: $mobile-font-size + 10;
+		}
+
+		@media #{$iPhone-portrait}{
+			font-size: $mobile-font-size + 10;
+		}
+	}
+
+	.message{
+		margin: 0;
+		padding: 0 20px;
+		position: relative;
+		width: 100%;
+	}
+}

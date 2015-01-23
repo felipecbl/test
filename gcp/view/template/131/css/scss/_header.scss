@@ -1,0 +1,106 @@
+header{
+	@include border-box;
+	display: block;
+	float: left;
+	margin: 0 0 15px;
+	position: relative;
+	width: 100%;
+
+	#status-bar{
+		@include fdp;
+		@include border-box;
+		margin: 0;
+		width: 100%;
+
+		li{
+			height: 45px;
+			border-bottom: 1px solid #e5e5e5;
+		}
+	}
+
+	.titles-2 > .status-page{
+		width:  50%;
+	}
+	.titles-3 > .status-page{
+		width:  33%;
+	}
+
+	.status-page{
+		display: inline;
+		float: left;
+		position: relative;
+		background-color: #a9bcc7;
+		font-size: 11px;
+	}
+
+	.theme-color-bg{
+		// @include circle(40px);
+		// border-bottom: v
+		display: inline;
+		float: left;
+		height: 16px;
+		padding: 5px 0 0;
+		position: relative;
+		width: 100%;
+
+		& > div{
+			@include border-box;
+			color: #999;
+			display: inline;
+			float: left;
+			font-family: 'adobe-garamond-pro';
+			font-size: 11px;
+			font-weight: bold;
+			line-height: 100%;
+			padding: 5px 0 0;
+			position: relative;
+			text-align: center;
+			text-transform: uppercase;
+			width: 100%;
+		}
+	}
+
+	.active {
+		background-color: #fff;
+
+		> .theme-color-bg{
+			// background: $header-color;
+
+			& > div{
+				color: #000;
+			}
+		}
+	}
+
+	.page-title{
+		@include fdp;
+		font-family: "league-gothic";
+		font-size: 17px;
+		padding: 0;
+		text-align: center;
+		text-transform: uppercase;
+		width: 100%;
+		line-height: 100%;
+	}
+
+	#notification-icon {
+		@include shadow;
+		@include circle;
+		background: #FF0000;
+		border: 2px solid #FFFFFF;
+		color: #fff;
+		cursor: pointer;
+		display: block;
+		float: left;
+		font-family: Arial;
+		font-size: 12px;
+		// font-weight: bold;
+		height: 12px;
+		padding: 0 5px 5px;
+		position: absolute;
+		right: 60px;
+		text-align: center;
+		top: -18px;
+		width: auto;
+	}
+}

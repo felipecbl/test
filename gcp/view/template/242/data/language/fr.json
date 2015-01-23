@@ -1,0 +1,12 @@
+{
+    "customize" : {
+        "label" : {
+            "value": "Choisissez un montant"
+        },		
+		"plastic" : {
+			"text" : {
+                "page_info" : "La carte sera livrée à l'adresse indiquée<br><br>Les commandes de cartes-cadeaux en plastique passées avant 13 h (HE) seront traitées le même jour et envoyées selon le mode d’expédition choisi. Les commandes passées après 13 h (HE) seront traitées le jour suivant et envoyées selon le mode d’expédition choisi. <br><br>Les commandes de cartes-cadeaux en plastique passées lors de jours fériés seront traitées le jour ouvrable suivant et envoyées selon le mode d’expédition choisi."
+			}
+		}
+    }
+}

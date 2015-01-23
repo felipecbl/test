@@ -1,0 +1,18 @@
+{
+    "options" : {
+		"debugMode": false,
+    	"valueType" : "buttons",
+    	"cartScroll" : 2,
+    	"beforeStep" : "",
+    	"topSelector": false,
+    	"isWidth" : 540,
+    	"initHeight" : 0,
+    	"moneySign" : "$",
+		"showDollar": true,
+		"minCustomize": true,
+		"minCheckout": true,
+		"minHeader" : false,
+		"intro" : false,
+		"openCard": false
+    }
+}

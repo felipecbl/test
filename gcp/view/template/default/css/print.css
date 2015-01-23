@@ -1,0 +1,11 @@
+
+//Style for printing
+.no-printing{
+	display: none;
+	background: none;
+}
+
+.printing-only{
+	display: block !important;
+	
+}

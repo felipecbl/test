@@ -1,0 +1,14 @@
+#{$gcp-content}{
+	#preview-window-bg{
+		background: rgba(0, 0, 0, 0.5);
+		cursor: pointer;
+		display: none;
+		float: left;
+		height: 100%;
+		position: absolute;
+		width: 100%;
+		z-index: $z5;
+		top: 0;
+		left: 0;
+	}
+}

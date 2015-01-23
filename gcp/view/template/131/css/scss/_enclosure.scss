@@ -1,0 +1,26 @@
+#enclosures-preview{
+	@include fdp;
+	width: 100%;
+
+	.enclosure-image{
+		@include fdp;
+		@include margin-padding(20px 0, 10px 0);
+		@include width-height(50%, auto);
+		text-align: center;
+
+		span{
+			@include fdp;
+			margin: 10px 0 0;
+			text-align: center;
+			width: 100%;
+			text-transform: uppercase;
+		}
+
+		img{
+			@include rounded;
+			@include shadow;
+			height: auto;
+			max-width: 300px;
+		}
+	}
+}

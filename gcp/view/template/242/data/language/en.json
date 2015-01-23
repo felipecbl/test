@@ -1,0 +1,50 @@
+{
+	"customize" : {
+		"label" : {
+			"value" : "Select a value"
+		},		
+		"plastic" : {
+			"text" : {
+				"page_info" : "Orders for Plastic Cards placed before 1PM EST will be processed the same day and shipped according to the shipping option chosen. Orders placed after 1PM EST will be processed the following day and shipped according to the shipping option chosen. Orders for Plastic Cards placed on legal holidays will be processed the following business day and shipped according to the shipping option chosen.<br><br>Gift card(s) will be delivered to the provided address."
+			}
+		},
+		"print" : {
+			"title" : "Print",
+			"text" : {
+				"page_info" : "The E-Gift card(s) will be delivered to your email account instead of the recipient's, for you to hand deliver."
+			},
+			"detail" : {
+				"recipient_name" : "The name of the person you're giving the E-Gift Card to",
+				"from_name" : "The name of the person the E-Gift Card is from",
+				"from_email" : "So we can send the E-Gift Card to you to print it"
+			}
+		},
+		"email" : {
+			"text" : {
+				"page_info" : "The E-Gift card(s) will be delivered directly to the recipient's email account."
+			},
+			"detail" : {
+				"recipient_name" : "The person you're sending the E-Gift Card to",
+				"recipient_email" : "The email we're going to send the E-Gift Card to",
+				"from_name" : "The name of the person the E-Gift Card is from",
+				"delivery_date" : "Send the E-Gift Card now or someday in the future..."
+			}
+		},
+		"facebook" : {
+			"text" : {
+				"page_info" : "The E-Gift Card will be delivered to the recipient's Facebook account."
+			}
+		},
+		"sms" : {
+			"title" : "Text",
+			"text" : {
+				"page_info" : "The E-Gift Card(s) will be delivered to the recipient's phone by SMS/Text."
+			},
+			"detail" : {
+				"recipient_name" : "The name of the person you're sending the E-Gift Card to",
+				"from_name" : "The name of the person the E-Gift Card is from",
+				"delivery_date" : "Send the E-Gift Card now or someday in the future..."
+			}
+		}
+	}
+}

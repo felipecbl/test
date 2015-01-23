@@ -1,0 +1,24 @@
+{
+    "options" : {
+		"debugMode": false,
+    	"valueType" : "buttons",
+    	"cartScroll" : 2,
+    	"beforeStep" : "",
+    	"topSelector": false,
+    	"isWidth" : 440,
+    	"initHeight" : 0,
+    	"moneySign" : "$",
+		"showDollar": true,
+		"minCustomize": true,
+		"minCheckout": true,
+		"minHeader" : false,
+		"intro" : false,
+		"openCard": false,
+		"settings": {
+			"Merchant":{
+				"PreviewType": 0,
+				"Domain": "cpanel.local"
+			}
+		}
+    }
+}

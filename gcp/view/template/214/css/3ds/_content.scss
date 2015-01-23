@@ -1,0 +1,56 @@
+.content{
+	background: #3B3B3B;
+	padding: 0;
+}
+
+.wrap{
+	width: 980px;
+	margin: auto;
+	// padding: 15px;
+
+	&:empty{
+		visibility: none;
+	}
+}
+
+.wrap-bg{
+	background: #fff;
+	margin: auto;
+	padding: 0;
+	@include rounded(0 0 10px 10px);
+}
+
+#logo {
+	background: url("img/3ds-logo.gif") no-repeat scroll center center rgba(0, 0, 0, 0);
+	background-size: 137px 87px;
+	float: left;
+	height: 87px;
+	margin: 0 0 0 30px;
+	width: 137px;
+}
+
+.mod-banner{
+	height: 184px;
+	background: #000 url(img/3ds-hero.jpg) center top no-repeat;
+
+	.left {
+		float: left;
+		padding: 100px 0 5px;
+	}
+
+	.title {
+		color: #ffffff;
+		font-size: 10px;
+		font-family: times;
+		font-weight: 700;
+		line-height: 40px;
+		text-transform: uppercase;
+	}
+
+	.header {
+		font-size: 38px;
+		color: #ffffff;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+}

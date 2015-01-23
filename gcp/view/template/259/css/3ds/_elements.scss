@@ -1,0 +1,77 @@
+body{
+	background: #ECDECD;
+	color: #333;
+	font: $fs-micro $main-font;
+	height: auto;
+	line-height: 100%;
+	position: relative;
+}
+
+a{
+	outline: 0;
+	color: $link-color;
+}
+
+b{
+	font-weight: 700;
+}
+
+details{
+	display: inline-block;
+}
+
+footer{
+	@include border-box;
+	@include fdp;
+	background: #D6C493;
+	color: #311513;
+	font-size: 12px;
+	margin: 0;
+	text-align: center;
+	width: 100%;
+	padding: 20px 0;
+}
+
+header{
+	clear: both;
+	background: url("img/3ds-header-bg.png") repeat scroll left top #62030f;
+	border-bottom: 1px solid #ffffff;
+	content: "";
+	display: table;
+	position: relative;
+	margin: 0;
+    padding: 0;
+	width: 100%;
+
+    .header-tabs{
+		background-color: #e7d7ac;
+		background-image: url("img/3ds-header-shadow.png");
+		background-position: right bottom;
+		background-repeat: repeat-x;
+		display: block;
+		float: left;
+		overflow: hidden;
+		padding: 0.25em 0 0;
+		position: relative;
+		width: 100%;
+    }
+
+    .shadow{
+    	background-position: center top;
+    	background: url("img/3ds-shadow.png") repeat-x scroll left top rgba(0, 0, 0, 0);
+    	display: block;
+    	float: left;
+    	position: relative;
+    	width: 100%;
+    }
+}
+
+iframe{
+	width: 100%;
+}
+
+p{
+	@include fdp;
+	@include border-box;
+	width: 100%;
+}

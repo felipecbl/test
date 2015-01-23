@@ -1,0 +1,308 @@
+{
+	"title": "Buy a Gift Card for ",
+	"header" : {
+		"customize" : "customize",
+		"delivery" : "delivery",
+		"editcart" : "your cart",
+		"checkoutpage" : "checkout",
+		"billing" : "billing",
+		"purchaser" : "final"
+	},
+	"dialogs" : {
+		"yes" : "Yes",
+		"no" : "No",
+		"ok" : "Ok",
+		"cancel" : "Cancel",
+		"editing_card" : "A card is being edited. Are you sure you want to proceed?",
+		"load_local" : "There are cards pending in your cart since your last visit. Would you like to keep them?",
+		"delete_card" : "Are you sure you want to delete this card?",
+		"processing" : "Processing your data...",
+		"shipping_options" : "Shipping options",
+		"shipping_option" : "You must select one option",
+		"checkout_error" : "Sorry, your request couldn't be completed. Please contact the Customer Support using the contact below.",
+		"exception_error" : "There has been an unexpected error with your transaction. Please contact support at the information below before attempting again.",
+		"max_transaction" : "Sorry. You have reached the maximun value per transaction: "
+	},
+	"errors" : {
+		"quantity" : "Choose between 1 and 10",
+		"value" : "Minimum of ",
+		"maxvalue" : "Maximum of ",
+		"required" : "This field is required",
+		"optional_sender_name" : "The credit card name will be used instead",
+		"check" : "You must agree with the terms",
+		"group": "There are some errors. Please view fields above.",
+
+		"1002" : "The name on the credit card will be used",
+		"1003" : "Make sure your card has no CVD",
+		"1010" : "Required field",
+		"1012" : "Use a valid email address",
+		"1015" : "The credit card is expired",
+		"1016" : "Enter a valid credit card number",
+		"1017" : "Enter a valid Zip/Postal code",
+		"1018" : "Enter a valid United States zip code",
+		"1019" : "Enter a valid phone number",
+		"1030" : "The sender's email will be used",
+		"1032" : "The name on the credit card will be used",
+		"1033" : "The purchaser's email will be used",
+		"1022" : "A name shouldn't be longer than 50 chars",
+		"1025" : "A name shouldn't be longer than 50 chars",
+		"1035" : "For shipping notification matters",
+		"1034" : "Make sure you enter all the information"
+
+		},
+	"customize" : {
+		"text" : {
+			"title" : "customize your card",
+			"customize_card" : "CUSTOMIZE YOUR CARD",
+			"delivery_info" : "DELIVERY OPTIONS",
+			"change_card" : "CLICK HERE TO CHANGE DESIGN",
+			"change_design_bt" : "CHANGE DESIGN",
+			"preview_bt" : "PREVIEW",
+			"add_to_cart_bt" : "CONTINUE",
+			"update_cart_bt" : "SAVE CHANGES",
+			"go_to_delivery" : "CONTINUE ORDER",
+			"back_to_card": "BACK",
+			"bp-heading" : "HERE TO MAKE YOU HAPPY"
+		},
+		"label" : {
+			"quantity" : "Quantity",
+			"message" : "Message",
+			"value" : "Enter Amount $",
+			"email" : "Email",
+			"print" : "Print",
+			"facebook" : "Facebook",	
+			"bp-message" : "Go ahead, don’t be shy. Here is your chance to add a personal message to your card with some of those eloquent words you’re so well known for."
+		},
+		"detail" : {
+			"message" : "characters left",
+			"message_lines" : "remaining lines",
+			"value" : "Any value between ",
+			"value2" : "Select a value"
+		},
+		"placeholder" : {
+			"message" : "Add your personal message here...",
+			"value" : "$$$"
+		},
+		"email" : {
+			"title": "SEND BY EMAIL",
+			"text" : {
+				"page-heading" : "Send by Email",
+				"page_info" : "Send the E-Gift Card directly to your friend’s email inbox. Delivered within seconds, the email your friend receives will be on behalf of your email address. Once the transaction is complete, the E-Card will be emailed to the lucky recipient. "
+			},
+			"label" : {
+				"recipient_name" : "Recipient name",
+				"recipient_email" : "Recipient email",
+				"from_name" : "Sender name",
+				"delivery_date" : "Delivery date"
+			},
+			"detail" : {
+				"recipient_name" : "The name of the person you're sending the card to",
+				"recipient_email" : "The email we're going to send the card to",
+				"from_name" : "The name of the person the card is from",
+				"delivery_date" : "Send the card now or someday in the future..."
+			},
+			"placeholder" : {
+				"recipient_name" : "Full name",
+				"recipient_email" : "recipient@email.com",
+				"from_name" : "Your name",
+				"delivery_date" : ""
+			}
+		},	
+		"plastic" : {
+			"title" : "Mail",
+			"text" : {
+				"page-heading" : "Enter Shipping Information:",
+				"page_info" : "A plastic gift card will be delivered to the provided address.",
+				"shipping_info" : "Shipping information",
+				"shipping_option" : "Shipping option",
+				"new_address" : "You can select a preview added address free of charge or enter a new address and choose another shipping method.",
+				"disclaimer" : "<p>Overnight shipping is available for shipments delivered anywhere in Canada. In areas between major urban centres, some restrictions apply.</p><p>Orders placed before 3 p.m. Eastern Standard Time (EST) on a business day will be delivered the next business day. For example, orders placed prior to 3 p.m. EST on Monday will be delivered on Tuesday, while orders placed after 3 p.m. EST on Monday will be delivered on Wednesday.</p><p>Orders placed on Friday after 1 p.m. EST and on Saturday or Sunday will be delivered on Tuesday. Business days do not include holidays or weekends.</p>"
+			},
+			"label" : {
+				"recipient_name" : "Recipient name",
+				"recipient_email" : "Recipient email",
+				"from_name" : "Sender name",
+				"from_email" : "Sender email",
+				"address" : "Address",
+				"address2" : "Address 2",
+				"city" : "City",
+				"country" : "Country",
+				"state" : "State/Province",
+				"zip" : "Zip/Postal code",
+				"continue": "Continue",
+				"new_address": "New address"
+
+			},
+			"detail" : {
+				"recipient_name" : "The name of the person you're sending the card to",
+				"recipient_email" : "The email we're going to send the card to",
+				"from_name" : "The name of the person the card is from",
+				"from_email" : "So we can send the card to you to print it",
+				"name" : "Just like on the card",
+				"expiration" : "Month and year",
+				"address" : "Recipient's address",
+				"address2" : "Complement of the address",
+				"city" : "Recipient's city",
+				"country" : "Select Recipient's country",
+				"state" : "Select Recipient's State/Province",
+				"zip" : "Enter Recipient's Zip/Postal code"
+
+			},
+			"placeholder" : {
+				"recipient_name" : "Full name",
+				"from_name" : "Your name",
+				"address" : "1234 Your Street",
+				"address2" : "Suite 1002",
+				"city" : "Your city",
+				"country" : "Select your country",
+				"state" : "State/Province",
+				"zip" : "Your zip/postal code"
+			}
+		},
+		"print" : {
+			"title" : "PRINT AT HOME",
+			"text" : {
+				"page-heading" : "Print at home",
+				"page_info" : "Here’s your opportunity to see the excitement on someone’s face as they receive the gift of wings, pizza and sports from such a generous person… you! Pick the card you want to give someone, and we’ll send it to you so you can fold it and give it to them yourself. "
+			},
+			"label" : {
+				"recipient_name" : "Recipient name",
+				"recipient_email" : "Recipient email",
+				"from_name" : "Sender name",
+				"from_email" : "Sender email"
+
+			},
+			"detail" : {
+				"recipient_name" : "The name of the person you're sending the card to",
+				"recipient_email" : "The email we're going to send the card to",
+				"from_name" : "The name of the person the card is from",
+				"from_email" : "So we can send the card to you to print it"
+
+			},
+			"placeholder" : {
+				"recipient_name" : "Full name",
+				"recipient_email" : "recipient@email.com",
+				"from_name" : "Your name",
+				"from_email" : "you@email.com"
+			}
+		},
+	
+		"facebook" : {
+			"title" : "Facebook",
+			"text" : {
+				"page_info" : "The card will be delivered to the recipient's Facebook account."
+			},
+			"label" : {
+
+			},
+			"detail" : {
+
+			},
+			"placeholder" : {
+
+			}
+		},
+		"sms" : {
+			"title" : "SMS",
+			"text" : {
+				"page_info" : "The card will be delivered to the recipient's phone by SMS."
+			},
+			"label" : {
+
+			},
+			"detail" : {
+
+			},
+			"placeholder" : {
+
+			}
+		}
+	},
+	"checkout" : {
+		"text" : {
+			"info-block-header" : "Purchaser Information",
+			"info-block-text" : "Please complete the following information to begin checkout.",
+			"info-block-text-bln" : "Please complete the following information to continue checkout.",
+			"title" : "CHECKOUT",
+			"pay_bt" : "PURCHASE",
+			"card_info" : "Credit Card Info",
+			"billing_info" : "Billing Info",
+			"purchaser_info" : "Purchaser Info",
+			"back_to_cart": "EDIT CART",
+			"go_to_cc_billing": "CONTINUE",
+			"back_to_cc_billing": "BACK",
+			"go_to_purchaser_info": "CONTINUE",
+			"back_to_purchaser_info": "BACK"
+		},
+		"label" : {
+			"cc_number" : "Credit card number",
+			"cc_name" : "Name on card",
+			"cc_expiration" : "Expiration date",
+			"cc_cvd" : "CVD",
+			"cc_address" : "Address",
+			"cc_address2" : "Address 2",
+			"cc_city" : "City",
+			"cc_country" : "Country",
+			"cc_state" : "State/Province",
+			"cc_zip" : "Zip/Postal code",
+			"cc_phone" : "Billing phone number",
+			"cc_email" : "Email",
+			"cc_terms" : "I agree to the Terms/Conditions & that this purchase will display on my statement as <strong> \"e-Gift\"</strong>",
+			"cc_term_buyatab" : "I have agreed with the Buyatab Conditions" 
+		},
+		"detail" : {
+			"cc_number" : "",
+			"cc_name" : "Just like on the card",
+			"cc_expiration" : "Month and year",
+			"cc_cvd" : "What is CVD?",
+			"cvd_url" : "javascript:window.open('view/documentation/cvd.html', 'Terms', 'width=485,height=510, menubar=0, scrollbars=1, status=0, titlebar=0, toolbar=0'); return false;",
+			"cc_address" : "Billing address",
+			"cc_address2" : "",
+			"cc_city" : "Your city",
+			"cc_country" : "Select your country",
+			"cc_state" : "Select your State/Province",
+			"cc_zip" : "Enter your Zip/Postal code",
+			"cc_phone" : "Phone number on file with your financial institution",
+			"cc_email" : "So we can send you a confirmation",
+			"cc_terms" : "View Terms and Conditions",
+			"terms_url" : "javascript:window.open('view/documentation/terms.html', 'Terms', 'width=800,height=600, menubar=0, scrollbars=1, status=0, titlebar=0, toolbar=0'); return false;",
+			"cc_term_buyatab" : "I understand this purchase will display on my statament as \"e-Gift\"" 
+		},
+			"placeholder" : {
+			"cc_number" : "0000 0000 0000 0000",
+			"cc_name" : "Your Name",
+			"cc_expiration" : "00/0000",
+			"cc_cvd" : "123",
+			"cc_address" : "1234 Your Street",
+			"cc_address2" : "Suite 1002",
+			"cc_city" : "Your city",
+			"cc_country" : "Select your country",
+			"cc_state" : "State/Province",
+			"cc_zip" : "Your zip/postal code",
+			"cc_phone" : "+1 (555) 666-7777",
+			"cc_email" : "you@email.com" 
+			}			
+	},
+	"cart" : {
+		"text" : {
+			"title" : "Selected card",
+			"rcpt-name" : "Recipient's name",
+			"amount" : "Amount",
+			"delete" : "Remove",
+			"new_card" : "ADD ANOTHER CARD",
+			"checkout" : "CONTINUE TO CHECKOUT",
+			"summary" : "Total",
+			"sub_total" : "Sub-total",
+			"shipping_total" : "Shipping",
+			"empty" : "<center>Your cart is empty.</center>",
+			"check-out-info" : "Did you check everything twice? Take a look and make sure you have all the cards you want, because where we’re going from here, there’s no turning back."
+		}
+	},
+	"footer" : {
+		"text" : {
+			"customer_support": "Customer Support: ",
+			"direct_number": "Direct Number: 1-604-678-3275",
+			"buyatab_rights": "Buyatab Online Inc. All Rights Reserved"	
+		} 
+	}
+}

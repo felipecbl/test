@@ -1,0 +1,169 @@
+ #delivery-type, #custom-type {
+	@include border-box;
+	@include fdp;
+	// @include rounded;
+	clear: both;
+	margin: 0 0 10px;
+	// overflow: hidden;
+	padding: 0;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+
+	& > li{
+		@include border-box;
+		background: #e8e8e8;
+		border-bottom: 1px solid #ccc;
+		color: $theme-color;
+		cursor: pointer;
+		display: inline;
+		float: left;
+		font-family: arial;
+		font-size: 11px;
+		font-weight: bold;
+		height: 34px;
+		margin: 0 0 -1px 15px;
+		min-width: 130px;
+		padding: 10px 15px;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		&[data-dnature="plastic"] {
+			width: 100%;
+			margin: 0;
+			cursor: default;
+		}
+
+		&.dt-active{
+			background: #fff; 
+			color: #000;
+			border: 1px solid #ccc;
+			border-bottom: 1px solid #fff;
+		}
+
+		&:first-of-type{
+			border-radius: $rounded 0 0 $rounded;
+		}
+
+		&:last-of-type{
+			border-radius: 0 $rounded $rounded 0;
+		}
+
+		// & + li{
+		// 	border-left: none;
+		// }
+	}
+
+	// &.dnumber-2 > li{
+	// 	width: 50%;
+	// }
+	// &.dnumber-3 > li{
+	// 	width: 33.33%;
+	// }
+}
+
+.button{
+	@include rounded(4px);
+	// @include txt-shadow;
+	background: $theme-color;
+	// border: #{$border};
+	color: #fff;
+	float: $bt-float;
+	font-size: 11px;
+	font-weight: bold;
+	height: 18px;
+	margin: 0;
+	padding: 12px 30px 6px;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&:hover{
+		background: darken(#70a4bf, 5%);
+	}
+
+	&.main-bt{
+		background: #000;
+		// border: 1px solid $theme-color;
+		// color: #fff;
+
+		&:hover{
+			background: lighten(#000, 5%);
+		}
+	}
+
+	&.main-button{
+		@extend .button.main-bt;
+	}
+
+	&.update-cart{
+		display: none;
+	}
+
+	&.checkout{
+		display: none;
+	}
+
+	&.back-button{
+		float: left;
+	}
+
+	&.icon-bt{
+		color: #404040 !important;
+		height: 12px;
+		padding: 4px;
+		margin: 0 3px;
+		background: none;
+		border: none;
+	}
+
+	&.search-button{
+		@extend .main-bt;
+		@extend .fa;
+		@extend .fa-search;
+		font-size: 18px;
+		padding: 5px 25px 9px;
+	}
+}
+
+.half-button{
+	@extend .button;
+	@include margin-padding(10px 8px 0 0, 8px 10px 3px);
+	@include rounded(0);
+	background-color: #e8e8e8;
+	color: #347ea6;
+	float: left;
+	font-weight: 100;
+	font-size: $fs-micro ;
+
+	&:hover{
+		background: darken(#e8e8e8, 5%);
+	}
+	
+	&:last-child{
+		margin: 10px 0 0;
+	}
+}
+
+.pages-nav {
+	@include border-box;
+	width: 100%;
+	float: left;
+	margin: 20px 0 30px;
+	position: relative;
+}
+
+.cart-button{
+	@extend .fa;
+	font-size: 14px;
+	margin: 0 0 0 5px;
+	color: #000;
+
+	&.edit{
+		@extend .fa-pencil;
+	}
+
+	&.delete{
+		@extend .fa-trash-o;
+	}
+}

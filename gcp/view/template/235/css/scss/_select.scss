@@ -1,0 +1,92 @@
+
+/*
+*************************************************************************************
+*************************************************************************************
+*************************************************************************************
+                                    Selector
+*************************************************************************************
+*************************************************************************************
+*************************************************************************************
+*/
+
+ul.image-selector {
+  background: transparent;
+  height: 160px;
+  left: 40px;
+  list-style: none outside none;
+  margin: 0;
+  top: 0;
+  width: 440px;
+  position: relative;
+  li {
+    height: 160px;
+    width: 108px;
+    text-align: center;
+    cursor: pointer;
+    &.roundabout-in-focus {
+      cursor: pointer;
+      height: auto !important;
+      width: auto !important;
+    }
+    img {
+      width: 100%;
+      -moz-box-shadow:    3px 3px 5px #ccc;
+      -webkit-box-shadow: 3px 3px 5px #ccc;
+      box-shadow:         3px 3px 5px #ccc;
+    }
+  }
+}
+
+#carbonads-container .carbonad {
+  margin: 0 auto;
+}
+
+#image-wrap {
+  .prev, .next {
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    bottom: 60px;
+    z-index: 99999;
+  }
+  .prev {
+    background-position: -15px -490px;
+    left: 0;
+  }
+  .next {
+    background-position: -15px -450px;
+    right: 0;
+  }
+  .prev:active {
+    background-position: -16px -490px;
+    left: 0;
+  }
+  .next:active {
+    background-position: -14px -450px;
+    right: 0;
+  }
+}
+
+.always-visible {
+  display: block;
+}
+
+figure#image-wrap.always-visible {
+  float: left;
+  display: block;
+  position: relative;
+  width: 100%;
+  div#ulWrapper {
+    padding: 20px 40px 10px;
+  }
+}
+
+.always-visible div#ulWrapper {
+  display: block;
+}
+
+div#card-selector .button {
+  float: left;
+}

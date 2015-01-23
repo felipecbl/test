@@ -1,0 +1,58 @@
+.content{
+	// background: #F2F2F2;
+	padding: 0;
+}
+
+.wrap{
+	@include fdp;
+	width: 980px;
+	margin: auto;
+	// padding: 15px;
+	float: none;
+
+	&:empty{
+		visibility: none;
+	}
+}
+
+.wrap-bg{
+	// background: #fff;
+	margin: auto;
+	padding: 0;
+	@include rounded(0 0 10px 10px);
+}
+
+#logo {
+	background: url("img/logo.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	// background-size: 100px 76px;
+	float: left;
+	width: 107px;
+	height: 128px;
+	margin: 23px 0 0 49px;
+}
+
+.mod-banner{
+	height: 184px;
+	background: #000000;
+
+	.left {
+		float: left;
+		padding: 100px 0 5px;
+	}
+
+	.title {
+		color: #ffffff;
+		font-size: 10px;
+		font-family: times;
+		font-weight: 700;
+		line-height: 40px;
+		text-transform: uppercase;
+	}
+
+	.header {
+		font-size: 38px;
+		color: #ffffff;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+}

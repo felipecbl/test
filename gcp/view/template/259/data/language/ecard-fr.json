@@ -1,0 +1,126 @@
+var language = {
+	"card":{
+		"replay": "revoir animation",
+		"barcode_zoom": "Cliquer pour boomer",
+        "card_number": "Votre numéro Carte Tim est ",
+        "app_nickname": "CarteTimélectronique",
+        "barcode_info" : "Un code à barres doit être présenté pour réclamer cette carte électronique.  En cas de problème pour voir le code à barres, veuillez appeler au 1-888 229-3789"
+	},
+	"instructions":{
+		"title_txt": "Vous pouvez profiter de votre carte cadeau Tim Hortons de plusieurs façons et Vous n’avez plus qu’à présenter votre E-Carte dans votre restaurant Tim Hortons.",
+		"register_txt": "Enregistrer votre Carte Tim",
+		"title":{
+			"print": "Imprimer",
+			"bookmark": "Raccourci",
+			"timmyme": "MesTim app",
+			"passbook": "Passbook"
+		},
+		"description":{
+			"print": "Imprimer votre E-Carte",
+			"bookmark": "Créer un raccourci vers votre E-Carte dans votre navigateur",
+			"timmyme": "Ajouter la E-Carte à votre application MesTim (si installé)", 
+			"passbook": "Ajouter la E-Carte à votre portefeuille iPhone Passbook"
+		},
+		"link":{
+			"print": "Javascript:window.print()",
+			"bookmark": "#",
+			"timmyme": {
+				"apple": "", 
+				"android": "",
+				"blackberry": "",
+				"windows": ""
+			},
+			"passbook": "../PassbookTest.aspx"
+		},
+		"alert":{
+			"passbook": "Pour appliqué, cette E-Carte sur votre iPhone Passbook, voir cette E-Carte sur votre iPhone.",
+			"timmyme": "Pour appliqué, cette E-Carte sur votre application MesTim, voir cette E-Carte sur votre mobile."
+		}
+	},
+	// "actions":{
+	// 	"label":{
+	// 		"passbook": "Passbook",
+	// 		"bookmark": "Bookmark",
+	// 		"print": "Print"
+	// 	},
+	// 	"description":{
+	// 		"passbook": "Passbook",
+	// 		"bookmark": "Bookmark",
+	// 		"print": "Print"
+	// 	}
+	// },
+	"options":{
+		"title": "Autres options:",
+		"description":{
+			"download": "Télécharger l’application MesTim", 
+			"register": "Enregistrer votre E-Carte online",
+			"reload": "Recharger votre E-Carte", 
+			"buy_new": "Acheter des nouvelles cartes de cadeau", 
+			"regift": "Rediriger cette E-Carte à quelqu'un d'autre", 
+			"thank": "Dire merci à l'expéditeur", 
+			"animation": "Faire l'animation sur l'E-Carte" 
+		},
+		"label":{
+			"download": "Télécharger", 
+			"register": "Enregistrer",
+			"reload": "Recharger",
+			"buy_new": "Nouvel Achat",
+			"regift": "Retourner",
+			"thank": "Dire Merci",
+			"animation": "Jouer l'animation"
+		},
+		"link":{
+			"download": {
+				"default": "http://www.timhortons.com/ca/fr/about/mestim.php",
+				"apple": "http://itunes.apple.com/ca/app/timmyme/id483413328?mt=8&ls=1", 
+				"android": "https://market.android.com/details?id=com.ibm.timhortons.android&hl=en",
+				"blackberry": "http://appworld.blackberry.com/webstore/content/screenshots/13389?lang=en",
+				"windows": "http://www.windowsphone.com/en-ca/store/app/timmyme/1840052b-4645-4c06-a69b-a97a6950dd39"
+			},
+			"register": "https://timcard.prepaidaccess.com/consumer/?locale=fr_CA",
+			"reload": "Recharger",
+			"buy_new": "Nouvel Achat",
+			"regift": "Retourner",
+			"thank": "Dire Merci",
+			"animation": "Jouer l'animation"
+		}
+	},
+	"support": {
+		"label": "Support",
+		"link": "http://gcp2.vm/gcp/ecard.html",
+		"description": "Conditions d’utilisation: Les Cartes Cadeaux ne peuvent être remboursées. Vous devez être en possession de la Carte Cadeau si elle est utilisée comme moyen de paiement. Pour vous informer des autres conditions, veuillez <a href='http://www.timhortons.com/ca/fr/timcard/timcard-terms-conditions.php' title='BUYATAB.com'>&nbsp;cliquer ici. </a>"
+	},
+	"form":{
+		"title":{
+			"thank":"Email de remerciement",
+			"regift": "Retourner"
+		},
+		"description":{
+			"thank":"Envoyer un email de remerciement à l’expéditeur de la carte.",
+			"regift": "Envoyer cette e-carte à un autre destinataire."
+		},
+		"label":{
+			"subject": "Sujet",
+			"message": "Message",
+			"name": "Nom",
+			"email": "Email",
+			"your_email": "Votre adresse email"
+
+		},
+		"placeholder":{
+			"subject": "Merci",
+			"message": "Votre message ici",
+			"name": "Nom destinataire",
+			"email": "destinataire@email.com",
+			"your_email": "monadresse@email.com"
+
+		},
+		"buttons":{
+			"ok": "Ok",
+			"cancel": "Annuler"
+		}
+	}
+}
+
+
+

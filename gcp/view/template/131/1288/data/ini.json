@@ -1,0 +1,16 @@
+{
+    "options" : {
+		"debugMode": false,
+    	"valueType" : "buttons",
+		"cartScroll" : 5,
+		"beforeStep" : "Step ",
+    	"topSelector": true,
+		"isWidth" : 640,
+		"initHeight" : 525,
+		"moneySign" : "USD ",
+		"showDollar": false,
+		"minCustomize": false,
+		"minCheckout": false,
+		"minHeader" : true
+    }
+}

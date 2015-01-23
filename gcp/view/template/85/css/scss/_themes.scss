@@ -1,0 +1,90 @@
+// 				  Grey			Blue 			Red 			Grey 			nGrey 			Wine 			Gold			nGold			Green	 		Brown 			The Keg		Keg Mob			BP Mob		Roots Mob	Cineplex
+$themes			: 0				1				2				3				-3				4				5				-5				6				7;				//898		898.ui-mobile	1150		1651		1079
+$theme-colours 	: #a0a0a0 		#47a2d9 		red 			#a0a0a0 		#a0a0a0 		#5d0200 		#a67331			#a67331			#209346 		#3a2314;
+$bt-color 		: #909090 		$font-color 	$font-color 	$font-color 	$font-color 	$font-color 	$font-color		$font-color		$font-color 	$font-color;
+
+#{$gcp-content}{
+
+	@for $i from 1 through length($themes) {
+
+		&.theme-#{nth($themes, $i)} {
+
+			header{
+
+				.theme-color-bg{
+					border: 1px solid nth($theme-colours, $i);
+
+					& > div{
+						color: nth($theme-colours, $i);
+					}
+				}
+
+				.active {
+
+					.theme-color-bg{
+						background: nth($theme-colours, $i);
+
+						& > div{
+							color: #fff;
+						}
+						
+					}
+				}
+			}
+
+
+			.button{
+				color: nth($bt-color, $i);
+
+				&.main-bt{
+					background: nth($theme-colours, $i);
+					border: 1px solid nth($theme-colours, $i);
+					color: #fff;
+
+					&:hover{
+						background: darken(nth($theme-colours, $i), 5%);
+					}
+				}
+			}
+
+			#delivery-type, #custom-type{
+
+				& > li{
+					border: 1px solid nth($theme-colours, $i);
+					color: nth($theme-colours, $i);
+
+					& + li{
+						border-left: none;
+					}
+
+					&.dt-active{
+						background: nth($theme-colours, $i); 
+						color: #fff;
+					}
+				}
+			}
+
+			a{
+				color: nth($theme-colours, $i);
+			}
+
+			#cart-bar{
+                background-color: nth($theme-colours, $i);
+			}
+
+			&.cart-slider{
+				#cart-embed{
+					background-color: nth($theme-colours, $i);
+
+					.button{
+						background-color: nth($theme-colours, $i);
+					}
+				}
+			}
+
+            .progress-bar{
+                background-color: nth($theme-colours, $i);
+            }
+		}
+	}
+}

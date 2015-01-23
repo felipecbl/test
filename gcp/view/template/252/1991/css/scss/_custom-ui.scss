@@ -1,0 +1,21 @@
+.ui-datepicker{
+	z-index: $z4 !important;
+}
+
+.ui-spinner{
+	@include rounded;
+
+	input{
+		@include border-box;
+		background: $bt-bg;
+		font-family: 'oswaldbook';
+		font-size: $fs-micro;
+		border: none;
+		float: left;
+		font-size: 16px;
+		margin: 0;
+		padding: 5px 10px;	
+		width: 100px;	
+		text-transform: uppercase;
+	}
+}

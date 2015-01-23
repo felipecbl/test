@@ -1,0 +1,18 @@
+.ui-datepicker{
+	z-index: $z4 !important;
+}
+
+.ui-spinner{
+	@include rounded;
+
+	input{
+		@include border-box;
+		border: none;
+		float: left;
+		font-family: $main-font;
+		font-size: $fs-micro + 1;
+		margin: 0;
+		padding: 9px 10px 6px;
+		width: 100px;	
+	}
+}

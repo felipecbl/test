@@ -1,0 +1,41 @@
+{
+    "options" : {
+		"debugMode": false,
+    	"valueType" : "buttons",
+		"cartScroll" : 5,
+		"beforeStep" : "Step ",
+    	"topSelector": false,
+		"isWidth" : 640,
+		"initHeight" : 525,
+		"moneySign" : "USD ",
+		"showDollar": false,
+		"minCustomize": true,
+		"minCheckout": true,
+		"minHeader" : true,
+		"enclosureFrom" : true,
+		"enclosureTo" : true,
+		"hideMesageNoneEnclosure": true,
+		"additionalScript": ["account.js", "https://secure.fourseasons.com/content/dam/fourseasons/clientlibs/js/FS_mob_s_fsh_code.js", "analytics.js"],
+		"settings": {
+			"Style": {
+				"Size" : 0
+				},
+				"Amount":{
+					"Range": "100,250,500,750,10000"
+					},
+			"Merchant":{
+				"confirmationPage": true,
+				"IsMobile": true,
+				"IsPlastic": true,
+				"PreviewType": "4sp",
+				"IsElectronic": false,
+				"SMS": false,
+				"EC" : false,
+				"SFP": true,
+				"Facebook": {
+					"Enabled": false
+				}
+			}
+		}
+    }
+}

@@ -1,0 +1,76 @@
+figure#image-wrap {
+    background: none repeat scroll 0 0 #FFFFFF;
+    display: block;
+    float: left;
+    height: 150px;
+    position: relative;
+    width: 710px;
+    padding: 5px 40px;
+}
+div#ulWrapper{
+	background: none repeat scroll 0 0 #FFFFFF;
+    height: 150px;
+    padding: 0;
+    width: 710px;
+    z-index: 999;
+	display: block !important;
+}
+ul.image-selector {
+	background: none repeat scroll 0 0 #FFFFFF;
+    height: 150px;
+    left: 40px;
+    list-style: none outside none;
+    margin: 0;
+    top: 0;
+    width: 640px !important;
+    position: relative;
+}
+ul.image-selector li {
+	height: 150px ;
+	width: 200px ;
+	text-align: center;
+	cursor: pointer;
+}
+ul.image-selector li.roundabout-in-focus {
+	cursor: pointer;
+	height: 150px !important;
+	width: 200px !important;
+}
+ul.image-selector li img {
+	width: 100%;
+	border: 1px solid #efefef;
+    border-radius: 10px;
+    -web-border-radius: 10px;
+}
+.roundabout-in-focus, .roundabout-in-focus img{
+	width: 200px;
+	height: 150px;
+}
+#carbonads-container .carbonad {
+	margin: 0 auto;
+}
+div#ulWrapper .prev, div#ulWrapper .next {
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    bottom: 70px;
+    z-index: 99;
+}
+div#ulWrapper .prev{
+	background-position: -15px -490px;
+	left: 0;
+}
+div#ulWrapper .next {
+	background-position: -15px -450px;
+	right: 0;
+}
+div#ulWrapper .prev:active{
+	background-position: -16px -490px;
+	left: 0;
+}
+div#ulWrapper .next:active{
+	background-position: -14px -450px;
+	right: 0;
+}

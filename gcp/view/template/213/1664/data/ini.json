@@ -1,0 +1,39 @@
+{
+    "options" : {
+		"debugMode": false,
+    	"valueType" : "buttons",
+    	"cartScroll" : 2,
+    	"beforeStep" : "",
+    	"topSelector": false,
+    	"isWidth" : 440,
+    	"initHeight" : 0,
+    	"moneySign" : "USD ",
+		"showDollar": true,
+		"minCustomize": true,
+		"minCheckout": true,
+		"minHeader" : false,
+		"intro" : false,
+		"openCard": false,
+		"photoCard": false,
+		"settings": {
+			"Amount":{
+				"InitialAmount" : 10
+				},
+			"Merchant":{
+				"PreviewType" : 0,
+				"confirmationPage": false,
+				"MaxCards" : 30,
+				"EC" : true,
+				"SFP" : false,
+				"IsMobile": false,
+				"IsPlastic": false,
+				"IsElectronic": true,
+				"Language": "en",
+				"SMS": false,
+				"Facebook": {
+					"Enabled": false
+				}
+			}
+		}
+    }
+}

@@ -1,0 +1,29 @@
+.ui-datepicker{
+	z-index: $z4 !important;
+}
+
+.ui-spinner{
+	@include rounded(0);
+	border: none;
+	width: 100%;
+
+	input{
+		@include border-box;
+		background: $input-bg;
+		border: none;
+		float: left;
+		font-family: $main-font;
+		font-size: $fs-small + 2;
+		margin: 0;
+		padding: 12px 10px 10px;
+		width: 100%;
+	}
+}
+
+.quantity{
+	
+	.ui-widget-content .ui-state-default{
+		background: none;
+		border: none;
+	}
+}

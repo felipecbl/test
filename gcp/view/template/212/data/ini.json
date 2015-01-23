@@ -1,0 +1,23 @@
+{
+    "options" : {
+		"beforeStep" : "",
+		"cartScroll" : 2,
+		"debugMode": false,
+		"enclosureFrom" : true,
+		"enclosureTo" : true,
+		"initHeight" : 525,
+		"isWidth" : 640,
+		"minCheckout": true,
+		"minCustomize": true,
+		"minHeader" : true,
+		"moneySign" : "$ ",
+		"showDollar": true,
+    	"topSelector": false,
+    	"valueType" : "buttons",
+		"settings": {
+			"Merchant":{
+				"IsMobile": true
+			}
+		}
+    }
+}

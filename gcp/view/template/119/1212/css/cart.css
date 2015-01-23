@@ -1,0 +1,184 @@
+/*li#page-cart x div#cart-embed*/
+
+/*Common rules*/
+li#cart{
+	display: inline-block;
+}
+#cart h2{
+    background-position: 0 -370px;
+    background-repeat: no-repeat;
+    height: 20px;
+    margin: 0 0 15px;
+    padding: 6px 0 0 50px;
+}
+
+div.card-info > div > span{
+	font-weight: bold;
+}
+
+div.card-info{
+	float: left;
+	display: block;
+	position: relative;
+	margin: 0 0 5px 0;
+}
+div.s-total {
+    display: block;
+    float: left;
+    font-size: 20px;
+    margin: 0 0 10px;
+    position: relative;
+    width: 100%;
+}
+div.s-total span{
+	float: right;
+	margin: 0 5px 0 0;	
+}
+div.sb-total {
+    display: block;
+    float: left;
+    font-size: 12px;
+    margin: 0 0 5px;
+    position: relative;
+    width: 100%;
+}
+div.sb-total span{
+	float: right;
+	margin: 0 5px 0 0;	
+}
+/*Embed cart*/
+li#cart{
+	display: inline-block;
+	list-style: none;
+}
+div#cart-embed div#cards-wrapper{
+	float: left;
+	display: block;
+	position: relative;
+	max-height: 200px;
+	margin: 10px 0;
+	overflow: hidden;
+}
+div#cart-embed ul#cards{
+	-webkit-transition: margin-top .25s;
+	   -moz-transition: margin-top .25s;
+	    -ms-transition: margin-top .25s;
+	     -o-transition: margin-top .25s;
+	        transition: margin-top .25s;
+}
+
+div#cart-embed div#summary{
+	float: left;
+	display: block;
+	position: relative;
+	margin: 5px 0;
+	width: 100%;
+}
+div#cart-embed.active{
+	display: block;
+	width: 210px;
+	padding: 20px 30px 20px 25px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-webkit-box-shadow: 0 0 3px 0 #8f8f8f;
+	box-shadow: 0 0 3px 0 #8f8f8f;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 99;
+}
+div#cart-embed #cards > div > li{
+	float: left;
+	display: block;
+	position: relative;
+	margin: 0 0 20px;
+	padding: 0 0 10px;
+	border-bottom: 1px solid #dedede;
+}
+div#cart-embed div.card-info{
+	width: 138px;
+}
+div#cart-embed div.card-nav{
+	float: left;
+	width: 100%;
+	margin: 10px 0 0;
+}
+div#cart-embed div.card-img{
+	float: left;
+	margin: 5px 20px 0 0;
+}
+div#cart-embed div.card-img img {
+    box-shadow: 0 0 3px 0;
+    cursor: pointer;
+    height: 42px;
+    width: 56px;
+    margin: 0 0 0 2px;
+	float: left;
+	display: block;
+	position: relative;
+}
+div#cart-embed div.amount{
+	float: left;
+	font-size: 20px;
+}
+
+/*Non embed cart*/
+li#page-cart div#control{
+	float: left;
+	display: block;
+	position: relative;
+	width: 100%;
+	margin: 20px 0;
+}
+li#page-cart div#control a{
+	clear: none;
+	float: left;
+}
+li#page-cart div#control a.main-button{
+	float: right;
+    margin: 5px 2px 5px 0;
+}
+li#page-cart #cards > div > li{
+	float: left;
+	display: block;
+	position: relative;
+	margin: 0 0 20px;
+	padding: 0 0 10px;
+	width: 100%;
+	border-bottom: 1px solid #dedede;
+}
+li#page-cart div.card-img{
+	float: left;
+	margin: 0 20px 0 10px;
+}
+li#page-cart div.card-img img {
+    box-shadow: 0 0 3px 0;
+    cursor: pointer;
+    height: 42px;
+    width: 56px;
+	float: left;
+	display: block;
+	position: relative;
+}
+li#page-cart div.amount{
+	float: left;
+	font-size: 20px;
+	margin: 20px 20px 0;
+}
+
+li#page-cart div.card-nav{
+	float: right;
+	margin: 25px 0 0;
+}
+li#page-cart div.card-nav a.half-button{
+	float: right;
+	clear: both;
+}
+li#page-cart div.card-info{
+	height: 30px;
+	width: 350px;
+}
+li#page-cart div.card-info > div{
+	float: left;
+	width: 150px;
+}

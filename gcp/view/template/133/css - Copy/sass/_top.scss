@@ -1,0 +1,36 @@
+.user-nav {
+    background: url("../images/border-crystalized.png") repeat-x scroll center bottom #333333;
+    height: 45px;
+    padding: 15px 0 10px;
+}
+
+#tool-bar{
+	float: right;
+	display: block;
+	position: relative;
+	margin: 7px 20px 0 0;
+
+	li{
+		float: left;
+		display: inline-block;
+		position: relative;
+		font-size: 12px;
+		margin: 0 0 0 15px;
+
+		& + li:before{
+			color: #ccc;
+			content: "|";
+			margin: 0 15px 0 0;
+		}
+	}
+
+	a{
+		color: $top-link-color;
+		text-decoration: underline;
+		text-transform: lowercase;
+
+		&:hover{
+			color: darken($top-link-color, 10%);
+		}
+	}
+}

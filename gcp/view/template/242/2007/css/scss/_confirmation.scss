@@ -1,0 +1,34 @@
+#{$gcp-content}{
+	#confirmation-window-bg{
+		background: rgba(0, 0, 0, 0.5);
+		cursor: default;
+		display: none;
+		float: left;
+		height: 100%;
+		position: absolute;
+		width: 100%;
+		z-index: $z5;
+	}
+}
+
+.confirmation{
+	#{$gcp-content}{
+		min-height: 600px;
+
+		&.lang-en{
+			background: url('img/watermark.png');
+		}
+		&.lang-fr{
+			background: url('img/watermark-fr.png');
+		}
+	}
+
+	header{
+		height: auto;
+	}
+
+	#message{
+		@include fdp;
+		line-height: 200%;
+	}
+}

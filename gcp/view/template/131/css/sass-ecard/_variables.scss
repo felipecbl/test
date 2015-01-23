@@ -1,0 +1,41 @@
+$fixed-width 			: 640px !default;
+$main-font				: Georgia, times, Helvetica, Arial;
+$font-color 			: #404040;
+$general-rounded 		: 3px !default;
+$bg-color 				: #FFF;
+
+$mobile-font-size 		: 26px;
+
+$link-color 			: #404040;
+$top-link-color 		: #ccc;
+
+$instructions-bg 		: #ebf2fa;
+$bt-float 				: none !default;
+$bt-bg 					: #404040;
+
+$padded-width 			: $fixed-width - 42px;
+$offset-width           : 512px;
+$offset-left-margin 	: ($padded-width - $offset-width) / 2;
+
+
+/*************************************************
+**************************************************
+*****************Media Queries********************
+**************************************************
+**************************************************/
+
+$iPhone-5-landscape:    'only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape)';
+$iPhone-5-portrait:     'only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait)';
+
+$iPhone-landscape:      'only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape)';
+// $iPhone-landscape:      'screen and (min-width: 28.75em)';
+$iPhone-portrait:       'only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait)';
+
+$galaxi-s4-landscape:   'only screen and (min-device-width : 320px) and (max-device-width : 640px) and (orientation : landscape)';
+$galaxi-s4-portrait:    'only screen and (min-device-width : 320px) and (max-device-width : 640px) and (orientation : portrait )';
+
+$galaxi-s2-landscape:   'only screen and (min-device-width : 320px) and (max-device-width : 534px) and (orientation : landscape)';
+$galaxi-s2-portrait:    'only screen and (min-device-width : 320px) and (max-device-width : 534px) and (orientation : portrait )';
+
+$nexus-landscape:       'only screen and (min-device-width : 480px) and (max-device-width : 800px) and (orientation : portrait )';
+$nexus-portrait:        'only screen and (min-device-width : 480px) and (max-device-width : 800px) and (orientation : landscape)';

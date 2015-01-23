@@ -1,0 +1,106 @@
+// Structure
+$wrapper-width 				: 700px !default;
+$wrapper-with-cart			: 880px !default;
+$wrapper-padding			: 0 !default;
+$wrapper-padding-mobile		: 10px !default;
+$cart-width 				: 250px !default;
+$cart-margin 				: 40px !default;
+
+// Field
+$field-padding				: 20px 20px 15px !default;
+
+// General
+$gcp-content 				: '#buyatabContent';
+$images-path				: 'img/';
+$theme-color 				: #31A7E6 !default;
+$main-font					:'Proxima Nova', serif !default;
+$font-color 				: #15151a !default;
+$rounded 					: 0px !default;
+$bt-float 					: right !default;
+$bg-color 					: #f5f5f5 !default;
+$bg-transparent 			: rgba(0,0,0,0.5);
+
+$border-color 				: #e0e2e4;
+$border 					: 1px solid $border-color;
+
+// Lightbox size
+$lb-width 					: 800px !default;
+
+// Font sizes
+$fs-micro 					:  12px !default;
+$fs-small 					:  14px !default;
+$fs-medium 					:  18px !default;
+$fs-big 					:  28px !default;
+
+// Cards
+$card-small-width 			:  52px !default;
+$card-small-height 			:  35px !default;
+
+$card-medium-width 			: 197px !default;
+$card-medium-height 		:  39px !default;
+$card-medium-padding 		:  84px !default;
+$card-medium-radius 		:  10px !default;
+
+$card-photo-width 			: 200px !default;
+$card-photo-height 			: 124px !default;
+
+$card-big-width 			: 571px !default;
+$card-big-height 			: 360px !default;
+
+
+// Preview window
+$preview-window-width 		: 570px !default;
+$preview-window-padding		:  10px !default;
+$preview-value-margin 		: 10px 0 !default;
+$preview-value-position 	: relative !default;
+$preview-value-right 		:  auto !default;
+$preview-value-top 			:  auto !default;
+$preview-value-width		: 100% !default;
+$preview-message-fontsize 	:  18px !default;
+$preview-message-top 		: auto !default;
+$preview-message-position	: relative !default;
+$preview-message-padding 	:  15px !default;
+
+
+// Z-index
+$z-1 						: -1;
+$z1 						: 1;
+$z2 						: 10;
+$z3 						: 100;
+$z4 						: 1000;
+$z5 						: 10000;
+$z6 						: 100000;
+
+// $mobile-font-size 		: 26px;
+
+$link-color 				: $theme-color;
+$header-color 				: #c0c3c8;
+// $top-link-color 			: #ccc;
+
+// $instructions-bg 		: #ebf2fa;
+// $bt-float 				: none !default;
+$bt-bg 						: $theme-color;
+$bt-padding 				: 8px;
+
+
+/*************************************************
+**************************************************
+*****************Media Queries********************
+**************************************************
+**************************************************/
+
+$iPhone-5-landscape:    'only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape)';
+$iPhone-5-portrait:     'only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait)';
+
+$iPhone-landscape:      'only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape)';
+// $iPhone-landscape:      'screen and (min-width: 28.75em)';
+$iPhone-portrait:       'only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait)';
+
+$galaxi-s4-landscape:   'only screen and (min-device-width : 320px) and (max-device-width : 640px) and (orientation : landscape)';
+$galaxi-s4-portrait:    'only screen and (min-device-width : 320px) and (max-device-width : 640px) and (orientation : portrait )';
+
+$galaxi-s2-landscape:   'only screen and (min-device-width : 320px) and (max-device-width : 534px) and (orientation : landscape)';
+$galaxi-s2-portrait:    'only screen and (min-device-width : 320px) and (max-device-width : 534px) and (orientation : portrait )';
+
+$nexus-landscape:       'only screen and (min-device-width : 480px) and (max-device-width : 800px) and (orientation : portrait )';
+$nexus-portrait:        'only screen and (min-device-width : 480px) and (max-device-width : 800px) and (orientation : landscape)';

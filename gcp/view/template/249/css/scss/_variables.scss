@@ -1,0 +1,113 @@
+// Structure
+$wrapper-width 				: 640px !default;
+$wrapper-with-cart			: 880px !default;
+$wrapper-padding			: 40px !default;
+$wrapper-padding-mobile		: 10px !default;
+$cart-width 				: 250px !default;
+$cart-margin 				: 40px !default;
+
+
+// Colors
+$theme-color 				: #4FC3F6 !default;
+$bg-color 					: #fff    !default;
+$font-color 				: #18468f !default;
+
+$bg-transparent 			: rgba(0,0,0,0.5);
+$border-color 				: #e0e2e4 !default;
+$bt-bg 						: #4FC3F6 !default;
+$bt-main-bg					: #4FC3F6 !default;
+$bt-text-color				: #fff !default;
+$bt-main-text-color			: #fff !default;
+
+$header-color 				: #c21e33 !default;
+$header-text-color 			: $header-color !default;
+$input-color 				: #000		    !default;
+$label-color 				: #007DC1 		!default;
+$link-color 				: $theme-color  !default;
+$title-color				: $bt-bg	    !default;
+
+
+//Fonts
+$main-font					: 'halis_grs_book', Arial !default;
+$header-font 				: 'halis_grs_light' Arial !default;
+$input-font 				: $main-font   			  !default;
+$label-font 				: $bt-bg	  			  !default;
+$title-font 				: 'aracne_regularregular' !default;
+
+
+// Font sizes
+$fs-micro 					: 12px !default;
+$fs-small 					: 14px !default;
+$fs-medium 					: 18px !default;
+$fs-big 					: 28px !default;
+
+
+// General
+$border 					: 1px solid $border-color;
+$bt-float 					: right !default;
+$bt-padding 				: 12px;
+$field-padding				: 20px 20px 15px !default;
+$gcp-content 				: '#buyatabContent';
+$images-path				: 'img/';
+$rounded 					: 0 !default;
+
+
+// Lightbox size
+$lb-width 					: 800px !default;
+
+
+// Cards (Cineplex size)
+// $card-small-width 			:  52px !default;
+// $card-small-height 			:  35px !default;
+
+// $card-medium-width 			: 197px !default;
+// $card-medium-height 			:  39px !default;
+// $card-medium-padding 		:  84px !default;
+// $card-medium-radius 			:  10px !default;
+
+// $card-photo-width 			: 200px !default;
+// $card-photo-height 			: 124px !default;
+
+// $card-big-width 				: 571px !default;
+// $card-big-height 			: 360px !default;
+
+// Cards (Standard size)
+$card-small-width 			:  52px !default;
+$card-small-height 			:  42px !default;
+
+$card-medium-width 			: 200px !default;
+$card-medium-height 		:  40px !default;
+$card-medium-padding 		:  110px !default;
+$card-medium-radius 		:  10px !default;
+
+$card-photo-width 			: 197px !default;
+$card-photo-height 			: 124px !default;
+
+$card-big-width 			: 571px !default;
+$card-big-height 			: 428px !default;
+
+
+// Preview window
+$preview-window-width 		: 570px !default;
+$preview-window-padding		:  10px !default;
+
+$preview-value-margin 		: 10px 0 !default;
+$preview-value-position 	: relative !default;
+$preview-value-right 		:  auto !default;
+$preview-value-top 			:  auto !default;
+$preview-value-width		: 100% !default;
+
+$preview-message-fontsize 	:  18px !default;
+$preview-message-top 		: auto !default;
+$preview-message-position	: relative !default;
+$preview-message-padding 	:  15px !default;
+
+
+// Z-index
+$z-1 						: -1;
+$z1 						: 1;
+$z2 						: 10;
+$z3 						: 100;
+$z4 						: 1000;
+$z5 						: 10000;
+$z6 						: 100000;

@@ -1,0 +1,208 @@
+ #delivery-type, #custom-type {
+	@include border-box;
+	@include fdp;
+	@include rounded;
+	overflow: hidden;
+	clear: both;
+	margin: 0 0 10px;
+	width: 100%;
+
+	& > li{
+		@include border-box;
+		background: $bt-bg;
+		border: 1px solid $bt-bg;
+		color: #fff;
+		cursor: pointer;
+		display: inline;
+		float: left;
+		margin: 0;
+		height: 40px;
+		line-height: 100%;
+		padding: 12px 15px 0;
+		text-align: center;
+		text-decoration: none;
+		font-size: $fs-medium;
+		text-transform: uppercase;
+
+		&[data-dnature="plastic"] {
+			width: 100%;
+			margin: 0;
+			cursor: default;
+			// @include opacity: .5;
+		}
+
+		&:hover{
+
+		}
+
+		&.dt-active{
+			background: $bt-bg2; 
+			border: 1px solid $bt-bg2;
+			color: #fff; 
+		}
+
+		&:first-of-type{
+			// border-radius: $rounded 0 0 $rounded;
+		}
+
+		&:last-of-type{
+			// border-radius: 0 $rounded $rounded 0;
+		}
+
+		& + li{
+			border-left: none;
+		}
+	}
+
+	&.dnumber-2 > li{
+		width: 50%;
+	}
+	&.dnumber-3 > li{
+		width: 33.33%;
+	}
+}
+
+button{
+	@include transition(background 0.2s ease-in-out 0s);
+	background: $bt-bg;
+	border: #{$border};
+	color: $font-color;
+	
+	&:hover{
+		background: darken($bt-bg, 5%);
+	}
+}
+
+.button{
+	@include transition(background 0.2s ease-in-out 0s);
+	@include rounded();
+	@include txt-shadow;
+	background: $bt-bg;
+	border: 1px solid $bt-bg;
+	color: #fff;
+	float: $bt-float;
+	font-size: $fs-small;
+	font-weight: 100;
+	// height: 18px;
+	line-height: 100%;
+	margin: 0 0 0 10px;
+	padding: $bt-padding 25px;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&.add-to-cart{
+		padding: 14px 30px;
+	}
+
+	span{
+		@include fdp;
+		text-align: center;
+		width: 100%;
+
+		&:after{
+			// @extend .fa-caret-right;
+			@extend .fa;
+			@include fdp;
+			content: " \f0da";
+			float: right;
+			font-size: 15px;
+			margin: -2px 0 0px 5px;
+		}
+	}
+
+	&:hover{
+		background: darken($bt-bg, 5%);
+	}
+
+	&.main-bt{
+		background: $bt-bg2;
+		border: 1px solid $bt-bg2;
+		color: #fff;
+
+		&:hover{
+			background: darken($bt-bg2, 5%);
+		}
+	}
+
+	&.main-button{
+		@extend .button.main-bt;
+	}
+
+	&.add-to-cart{
+		@extend .button.main-bt;
+	}
+
+	&.update-cart{
+		display: none;
+	}
+
+	&.new-card{
+		display: none;
+	}
+	&.checkout{
+		display: none;
+	}
+
+	&.back-button{
+		float: left;
+	}
+
+	&.icon-bt{
+		color: #404040 !important;
+		height: 12px;
+		padding: 4px;
+		margin: 0 3px;
+		background: none;
+		border: none;
+	}
+
+	&.search-button{
+		@extend .main-bt;
+		@extend .fa;
+		@extend .fa-search;
+		font-size: 18px;
+		padding: 5px 25px 9px;
+	}
+}
+
+.values-wrap{
+	@include fdp;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	margin: 10px 0 0;
+	width: 100%;
+
+	.half-button{
+		@extend .button;
+		@include margin-padding(0, 8px 0);
+		border: 1px solid $bt-bg;
+		font-size: $fs-small;
+		text-align: center;
+		width: 40px;
+	}
+}
+
+.pages-nav {
+	@include border-box;
+	width: 100%;
+	float: left;
+	margin: 20px 0 30px;
+	position: relative;
+}
+
+.cart-button{
+	@extend .fa;
+	font-size: 14px;
+	margin: 0 0 0 5px;
+
+	&.edit{
+		@extend .fa-pencil;
+	}
+
+	&.delete{
+		@extend .fa-trash-o;
+	}
+}
