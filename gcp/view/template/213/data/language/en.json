@@ -1,7 +1,0 @@
-{
-	"checkout" : {
-		"detail" : {
-			"terms_url" : "javascript:window.open('view/documentation/lux_terms_en.html', 'Terms', 'width=800,height=600, menubar=0, scrollbars=1, status=0, titlebar=0, toolbar=0'); return false;"
-		}			
-	}
-}
